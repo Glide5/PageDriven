@@ -1069,7 +1069,7 @@ html,body{margin:0}
 @media (max-width:900px){.ecards.tight .ecard{padding:24px}}
 
 /* Work index: tabs right above the grid, no tinted band */
-.band.wk-list{padding-top:0;margin-top:clamp(-64px,-4.5vw,-28px)}
+.band.wk-list{padding-top:0;margin-top:clamp(-24px,-1.6vw,-8px)}
 .wk-list .wgrid{margin-top:28px}
 
 .phero.tight-b{padding-bottom:clamp(28px,3vw,44px)}
@@ -1078,15 +1078,7 @@ html,body{margin:0}
 .t-grid.eq{columns:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
 .t-grid.eq .tcard{margin:0;flex:1 1 300px;max-width:calc((100% - 32px)/3);display:flex;flex-direction:column;gap:18px}
 .t-grid.eq .tcard p{flex:1}
-.skip-link{position:fixed;left:16px;top:8px;transform:translateY(-160%);z-index:100;background:#fff;padding:10px 16px;border-radius:8px;box-shadow:var(--shadow)}
-.skip-link:focus{transform:none}
-.form-step{display:grid;gap:16px;min-width:0}
-.field input,.field textarea,.field select{width:100%;min-width:0}
-dialog{max-height:calc(100dvh - 32px);overflow-y:auto}
-section[id],article[id],main[id]{scroll-margin-top:96px}
-.hero{padding-bottom:clamp(80px,10vw,140px)}
-#wave{opacity:.35}
-@media(max-width:560px){.m-in{padding:24px}.hero h1{overflow-wrap:break-word}.nav-in{gap:8px}.nav .nav-cta .btn{padding-inline:12px}}
 @media (max-width:1000px){.t-grid.eq .tcard{max-width:calc((100% - 16px)/2)}}
 @media (max-width:680px){.t-grid.eq .tcard{max-width:100%}}
 
+.phero.roomy-b{padding-bottom:clamp(72px,8vw,116px)}

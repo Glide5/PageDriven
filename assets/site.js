@@ -6,13 +6,6 @@ var hasG = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !==
 var hasT = typeof window.THREE !== "undefined";
 function $(id){ return document.getElementById(id); }
 function each(sel,fn,root){ Array.prototype.forEach.call((root||document).querySelectorAll(sel),fn); }
-/* Static hosting has no delivery endpoint. Save an honest, local-only draft. */
-function saveDraft(filename, text){
-  var url=URL.createObjectURL(new Blob([text],{type:"text/plain;charset=utf-8"}));
-  var a=document.createElement("a"); a.href=url; a.download=filename;
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(function(){ URL.revokeObjectURL(url); },1000);
-}
 
 var PROCESS = [
   ["Diagnose","We review your offer, audience, traffic source, current page, competitors, and conversion goal."],
@@ -43,15 +36,12 @@ if(menu){
 }
 var mBtn=$("mnavBtn"), mNav=$("mnav");
 if(mBtn && mNav){
-  function closeMobile(){ mNav.hidden=true; mBtn.setAttribute("aria-expanded","false"); mBtn.setAttribute("aria-label","Open menu"); document.documentElement.classList.remove("mnav-open"); }
-  document.addEventListener("keydown",function(e){ if(e.key==="Escape" && !mNav.hidden){ closeMobile(); mBtn.focus(); } });
-  window.matchMedia("(min-width:901px)").addEventListener("change",function(e){ if(e.matches) closeMobile(); });
   mBtn.addEventListener("click",function(){
     var open=mNav.hidden; mNav.hidden=!open; mBtn.setAttribute("aria-expanded",String(open));
     mBtn.setAttribute("aria-label",open?"Close menu":"Open menu"); document.documentElement.classList.toggle("mnav-open",open);
     if(open && hasG && !reduce) gsap.from("#mnav .mnav-in > *",{y:12,opacity:0,duration:.35,stagger:.03,ease:"power2.out"});
   });
-  each("#mnav a, #mnav [data-open-contact]",function(a){ a.addEventListener("click",closeMobile); });
+  each("#mnav a",function(a){ a.addEventListener("click",function(){ mNav.hidden=true; mBtn.setAttribute("aria-expanded","false"); document.documentElement.classList.remove("mnav-open"); }); });
 }
 var mbar=$("mbar"), ctaEl=document.querySelector(".cta");
 function onScrollUI(){
@@ -172,8 +162,8 @@ if(dlg){
     s1.hidden=step!==1; s2.hidden=step!==2; s3.hidden=step!==3; mActs.hidden=step===3; mBack.hidden=step!==2; err.textContent="";
     mProg.style.width=(step===1?50:100)+"%";
     mStep.textContent= step===3 ? "Done" : "Step "+step+" of 2";
-    mTitle.textContent= step===1 ? "Which page should Riz review?" : step===2 ? "Your review draft details" : "Draft saved";
-    mNext.innerHTML = step===1 ? 'Continue <span class="arr">→</span>' : 'Save review draft <span class="arr">↓</span>';
+    mTitle.textContent= step===1 ? "Which page should Riz review?" : step===2 ? "Where should the review go?" : "You're on the list";
+    mNext.innerHTML = step===1 ? 'Continue <span class="arr">→</span>' : 'Send my review request <span class="arr">→</span>';
   };
   openReview=function(svc){
     if(svc) $("f-svc").value=svc;
@@ -196,8 +186,8 @@ if(dlg){
       var n=$("f-name").value.trim(), em=$("f-email").value.trim();
       if(!n){ err.textContent="Add your name so Riz knows who to address."; return; }
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ err.textContent="Enter a valid email address, for example you@company.com."; return; }
-      saveDraft("pagedriven-review-draft.txt","PageDriven review draft — NOT SENT\nPage: "+$("f-url").value.trim()+"\nService: "+$("f-svc").value+"\nName: "+n+"\nEmail: "+em);
-      $("okTitle").textContent="Review draft saved, "+n.split(" ")[0]+".";
+      /* Hook: POST the form data to your lead endpoint here. */
+      $("okTitle").textContent="Thanks, "+n.split(" ")[0]+". Request received.";
       step=3; renderStep();
     }
   });
@@ -217,8 +207,8 @@ if(cdlg){
     if(!n){ er.textContent="Add your name."; return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ er.textContent="Enter a valid email address, for example you@company.com."; return; }
     if(m.length<5){ er.textContent="Add a short message so Riz knows what you need."; return; }
-    saveDraft("pagedriven-message-draft.txt","PageDriven message draft — NOT SENT\nName: "+n+"\nEmail: "+em+"\n\n"+m);
-    $("cForm").hidden=true; $("cOk").hidden=false; $("cOkT").textContent="Message draft saved, "+n.split(" ")[0]+".";
+    /* Hook: POST the message to your inbox or CRM here. */
+    $("cForm").hidden=true; $("cOk").hidden=false; $("cOkT").textContent="Thanks, "+n.split(" ")[0]+". Message received.";
   });
 }
 
@@ -230,9 +220,9 @@ each(".inline-review",function(f){
     if(!/^(https?:\/\/)?[\w-]+(\.[\w-]+)+/.test(g("url").value.trim())){ er.textContent="Enter the page address, for example yourbusiness.com/landing-page."; return; }
     if(!g("name").value.trim()){ er.textContent="Add your name so Riz knows who to address."; return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g("email").value.trim())){ er.textContent="Enter a valid email address, for example you@company.com."; return; }
-    saveDraft("pagedriven-review-draft.txt","PageDriven review draft — NOT SENT\nPage: "+g("url").value.trim()+"\nName: "+g("name").value.trim()+"\nEmail: "+g("email").value.trim());
+    /* Hook: POST the form data to your lead endpoint here. */
     er.textContent=""; f.querySelector(".ir-fields").hidden=true; var ok=f.querySelector(".ir-ok"); ok.hidden=false;
-    ok.querySelector("h3").textContent="Review draft saved. No request has been sent.";
+    ok.querySelector("h3").textContent="Thanks, "+g("name").value.trim().split(" ")[0]+". Request received.";
   });
 });
 
@@ -377,8 +367,8 @@ if(chat){
     where:"Working with businesses and agencies across the US and Canada. Remote collaboration with daily availability for meetings during US business hours."
   };
   var ANS = {
-    review:{t:"A page review looks at where one page may be losing momentum. You can save a review draft here. Online delivery is not connected, so no request will be sent.",act:["Prepare a review draft","review"]},
-    price:{t:"Pricing is scoped to the page, platform, and how much copy is involved. No price list or online delivery endpoint was supplied.",act:["Prepare a review draft","review"]},
+    review:{t:"The free page review is a short, personal look at one page: where it's most likely losing momentum and the three highest-impact fixes. It takes a page URL and an email to start.",act:["Start my free review","review"]},
+    price:{t:"Pricing is scoped to the page, the platform and how much copy is involved. Send the page through the free review and Riz will include a quote with the fixes.",act:["Start my free review","review"]},
     time:{t:FAQ.time}, platform:{t:FAQ.platform}, agency:{t:FAQ.agency,act:["See agency partnerships","agency"]},
     ab:{t:FAQ.ab}, who:{t:FAQ.who}, where:{t:FAQ.where},
     results:{t:"CaseLeap is a good example. After the first iteration, average homepage time went from 3 to 18 seconds and quick backs fell from 21.4% to 11.8%.",act:["Read the CaseLeap story","case"]}
@@ -388,7 +378,8 @@ if(chat){
   var scrollLog=function(){ log.scrollTop=log.scrollHeight; };
   var runAct=function(a){
     if(a==="review"){ toggleChat(false); openReview(); }
-    else if(a==="case" || a==="agency"){ toggleChat(false); scrollToEl($(a==="case"?"work":"agency"),96); }
+    else if(a==="case"){ window.location.href="work-caseleap.html"; }
+    else if(a==="agency"){ window.location.href="agency-partners.html"; }
   };
   var addMsg=function(who,text,act){
     var m=document.createElement("div"); m.className="msg "+who; m.textContent=text;
@@ -404,21 +395,21 @@ if(chat){
     text=text.trim(); if(!text) return;
     addMsg("me",text);
     if(awaitingEmail){
-      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)){ awaitingEmail=false; botSay("This assistant cannot send messages or email. Please use the contact form to save a local draft."); }
+      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)){ awaitingEmail=false; /* Hook: send the transcript + email to your inbox or CRM here. */ botSay("Thanks. Riz will reply to "+text+" personally."); }
       else botSay("That doesn't look like an email address. Try something like you@company.com.");
       return;
     }
     for(var i=0;i<INTENTS.length;i++){ if(INTENTS[i][0].test(text)){ answer(INTENTS[i][1]); return; } }
-    botSay("I only have scripted answers about the services, process, platforms, and work shown here. For another question, use the contact form to save a draft. Nothing is sent from this chat.");
+    awaitingEmail=true;
+    botSay("Good question for Riz directly. Leave your email and he'll get back to you during US business hours.");
   };
-  QUICK[0][0]="Prepare a page review";
   QUICK.forEach(function(q){ var b=document.createElement("button"); b.type="button"; b.textContent=q[0]; b.addEventListener("click",function(){ addMsg("me",q[0]); answer(q[1]); }); quick.appendChild(b); });
   $("chatForm").addEventListener("submit",function(e){ e.preventDefault(); handle(cin.value); cin.value=""; });
   var toggleChat=function(open){
     if(open===undefined) open=panel.hidden;
     panel.hidden=!open; chat.classList.toggle("open",open); fab.setAttribute("aria-expanded",String(open)); teaser.hidden=true;
     if(open){
-      if(!chatStarted){ chatStarted=true; botSay("Welcome to the PageDriven FAQ assistant. These are scripted answers from this site, not a live conversation with Riz. Pick a question below.",null,400); }
+      if(!chatStarted){ chatStarted=true; botSay("Hi, I'm Riz, founder of PageDriven. Ask me anything about your landing page or website, or pick a question below.",null,400); }
       if(hasG && !reduce) gsap.fromTo(panel,{opacity:0,y:16,scale:.97},{opacity:1,y:0,scale:1,duration:.35,ease:"power3.out"});
       setTimeout(function(){ cin.focus(); },60);
     }

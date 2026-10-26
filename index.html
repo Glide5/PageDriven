@@ -1,60 +1,571 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PageDriven — conversion-focused landing pages, websites, and agency partnerships led by Riz.">
-  <meta name="theme-color" content="#5452F6">
-  <title>PageDriven — Landing pages &amp; websites</title>
-  <link rel="icon" href="assets/img/i0.webp" type="image/webp">
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/site.js" defer></script>
-</head>
-<body id="top">
-<a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>PageDriven</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="PageDriven plans, writes, designs, and builds conversion-focused landing pages and websites for service businesses and the agencies behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
 <header class="nav" id="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="PageDriven home"><span class="logo-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M5 15V5h6a3 3 0 0 1 0 6H5m5 0 5 4" stroke="white" stroke-width="2"/></svg></span><span>Page<b>Driven</b></span></a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <div class="nav-item"><button id="svcBtn" type="button" aria-expanded="false" aria-controls="svcMenu">Services <span aria-hidden="true">⌄</span></button><div class="mega" id="svcMenu"><div class="mega-in"><div class="mega-grid">
-        <a href="#landing"><img src="assets/img/i8.webp" width="48" height="48" alt=""><b>Landing pages</b><small>One page. One clear action.</small></a>
-        <a href="#websites"><img src="assets/img/i9.webp" width="48" height="48" alt=""><b>Websites</b><small>Responsive website production.</small></a>
-        <a href="#improve"><img src="assets/img/i6.webp" width="48" height="48" alt=""><b>UX improvements</b><small>Review, refine, improve.</small></a>
-        <a href="#agency"><img src="assets/img/i7.webp" width="48" height="48" alt=""><b>Agency partnerships</b><small>White-label production support.</small></a>
-      </div></div></div></div>
-      <a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    <a href="index.html" class="logo" aria-label="PageDriven home">
+      <span class="logo-mark" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 2l8 5-3.4.9L6 11.5z" fill="#fff"/></svg></span>
+      Page<b>Driven</b>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="nav-item">
+        <button type="button" id="svcBtn" aria-expanded="false" aria-controls="svcMenu">Services <svg class="ico-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mega" id="svcMenu"><div class="mega-in">
+          <div class="mega-grid"><a href="landing-pages.html"><img src="assets/img/i4.webp" alt="" width="48" height="48"><b>Landing Page Sprints</b><small>Campaign pages built around one clear action</small></a><a href="conversion-websites.html"><img src="assets/img/i5.webp" alt="" width="48" height="48"><b>Conversion-Focused Websites</b><small>Sites structured around how buyers decide</small></a><a href="cro-audits.html"><img src="assets/img/i6.webp" alt="" width="48" height="48"><b>CRO Audits &amp; Quick Wins</b><small>Find and fix what&#x27;s costing you conversions</small></a><a href="ongoing-optimization.html"><img src="assets/img/i7.webp" alt="" width="48" height="48"><b>Ongoing Conversion Support</b><small>A conversion partner after launch</small></a></div>
+          <div class="mega-foot"><span>Not sure where to start?</span><a href="#" data-open-review>Get a free page review →</a></div>
+        </div></div>
+      </div>
+      <a href="work.html">Work</a>
+      <a href="agency-partners.html">Agency Partners</a>
+      <a href="about.html">About</a>
     </nav>
-    <div class="nav-cta"><button class="btn btn-primary" data-open-contact>Get in touch <span class="arr" aria-hidden="true">↗</span></button><button class="burger" id="mnavBtn" aria-controls="mnav" aria-expanded="false" aria-label="Open menu"><span class="b-menu" aria-hidden="true">☰</span><span class="b-x" aria-hidden="true">✕</span></button></div>
+    <div class="nav-cta">
+      <button class="btn btn-primary" data-open-review><span><span class="nl">Get My </span>Free Review</span> <span class="arr">→</span></button>
+      <button class="burger" id="mnavBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg class="b-menu ico-svg" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="b-x ico-svg" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
   </div>
 </header>
-<nav id="mnav" aria-label="Mobile navigation" hidden><div class="mnav-in"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a><button class="btn btn-primary" data-open-contact>Get in touch</button></div></nav>
-<main id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <canvas id="wave" aria-hidden="true" data-art='{"bg":"#FFFFFF","dark":"#A79CFF","light":"#5452F6","width":0.13,"phase":0.7,"twist":1.8,"pts":[[-0.1,0.87],[0.3,0.28],[0.65,1.3],[1.1,0.62]]}'></canvas>
-    <div class="wrap hero-in"><div class="pill"><i>PageDriven</i> Strategy · Copy · Design · Development</div><h1 id="hero-title">Landing pages built around <span class="mute">one clear action.</span></h1><p class="lede">Conversion-focused copy, clean design, and responsive development for businesses and digital agencies.</p><div class="hero-ctas"><button class="btn btn-primary" data-open-review>Prepare a page review <span class="arr" aria-hidden="true">→</span></button><a class="btn btn-ghost" href="#services">Explore services <span class="arr" aria-hidden="true">↓</span></a></div><p class="note-sm">Review and contact forms save a draft. Online delivery is not connected yet.</p></div>
-  </section>
-  <section class="band mist" id="services" aria-labelledby="services-title"><div class="wrap svc-layout">
-    <div class="svc-side"><p class="eyebrow">Services</p><h2 class="h2" id="services-title">A clear path.<br><span class="mute">From page to action.</span></h2><ul class="svc-nav"><li><a href="#landing" class="on">Landing pages</a></li><li><a href="#websites">Website production</a></li><li><a href="#improve">UX improvements</a></li><li><a href="#agency">Agency partnerships</a></li></ul><p>Built on your chosen platform, without a migration you don’t need.</p></div>
-    <div class="svc-list">
-      <article class="svc-card s1" id="landing"><div class="svc-body"><div class="svc-title"><img src="assets/img/i8.webp" width="60" height="60" loading="lazy" alt=""><h3>Landing pages</h3></div><p class="svc-tag">One page. One conversion goal.</p><p>Review the offer, audience, and traffic source. Map the page flow, then write and design around a clear action.</p><ul><li>Conversion-focused copy and design</li><li>Responsive, accessible implementation</li></ul><div class="svc-foot"><span class="svc-meta"><span>Strategy</span><span>Copy &amp; design</span><span>Build</span></span><button class="tlink" data-open-review data-service="Landing pages">Prepare a review <span aria-hidden="true">→</span></button></div></div></article>
-      <article class="svc-card s2" id="websites"><div class="svc-body"><div class="svc-title"><img src="assets/img/i9.webp" width="60" height="60" loading="lazy" alt=""><h3>Website production</h3></div><p class="svc-tag">Build where your website lives.</p><p>Website and location-page production on your chosen platform, with responsive layouts and technical support.</p><div class="svc-meta"><span>Webflow</span><span>WordPress</span><span>Shopify</span><span>And more</span></div><div class="svc-foot"><button class="tlink" data-open-contact>Discuss a website <span aria-hidden="true">→</span></button></div></div></article>
-      <article class="svc-card s3" id="improve"><div class="svc-body"><div class="svc-title"><img src="assets/img/i6.webp" width="60" height="60" loading="lazy" alt=""><h3>UX improvements</h3></div><p class="svc-tag">Review. Refine. Improve.</p><p>Review the current page and conversion goal, then prioritize evidence-based improvements. Reliable experiments need sufficient traffic and trustworthy tracking.</p><div class="svc-foot"><button class="tlink" data-open-review data-service="UX improvements">Prepare a page review <span aria-hidden="true">→</span></button></div></div></article>
-      <article class="svc-card s4" id="agency"><div class="svc-body"><div class="svc-title"><img src="assets/img/i7.webp" width="60" height="60" loading="lazy" alt=""><h3>Agency partnerships</h3></div><p class="svc-tag">Support behind your agency.</p><p>White-label landing pages, location pages, website production, UX improvements, and technical support for SEO, PPC, and digital agencies.</p><div class="svc-foot"><button class="tlink" data-open-contact>Discuss a partnership <span aria-hidden="true">→</span></button></div></div></article>
+<nav id="mnav" aria-label="Mobile" hidden><div class="mnav-in">
+  <span class="lbl">Services</span><a href="landing-pages.html"><img src="assets/img/i4.webp" alt="" width="36" height="36">Landing Page Sprints</a><a href="conversion-websites.html"><img src="assets/img/i5.webp" alt="" width="36" height="36">Conversion-Focused Websites</a><a href="cro-audits.html"><img src="assets/img/i6.webp" alt="" width="36" height="36">CRO Audits &amp; Quick Wins</a><a href="ongoing-optimization.html"><img src="assets/img/i7.webp" alt="" width="36" height="36">Ongoing Conversion Support</a><hr>
+  <a href="index.html" aria-current="page">Home</a><a href="work.html">Work</a><a href="agency-partners.html">Agency Partners</a><a href="about.html">About</a><a href="book.html">Book a call</a>
+  <button class="btn btn-primary" data-open-review>Get My Free Page Review <span class="arr">→</span></button>
+</div></nav>
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="h-hero">
+  <canvas id="wave" data-wave="full" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <span class="pill g-in"><i>CRO-led</i> Conversion-focused web design for paid &amp; organic traffic</span>
+    <h1 id="h-hero" class="g-in"><span class="mute">Turn more of your existing traffic into</span> leads and bookings.</h1>
+    <p class="lede g-in">PageDriven plans, writes, designs, and builds conversion-focused landing pages and websites for service businesses and the agencies behind them, on the platform you already use.</p>
+    <div class="hero-ctas g-in">
+      <div class="cta-stack"><button class="btn btn-primary" data-open-review>Get My Free Page Review <span class="arr">→</span></button><p class="micro2"><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg>No Obligation</span><i class="mdiv" aria-hidden="true"></i><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Response within 1 day</span></p></div>
     </div>
-  </div></section>
-  <section class="band" id="work" aria-labelledby="work-title"><div class="wrap"><div class="sec-head"><p class="eyebrow">Work</p><h2 class="h2" id="work-title">CaseLeap <span class="mute">· first iteration</span></h2><p class="lede">The existing project records these homepage engagement results after the first iteration.</p></div><div class="metrics mt-l"><div class="metric"><span class="big">3 → 18s</span><b>Average homepage time</b></div><div class="metric"><span class="big">21.4%</span><b>Quick backs before</b></div><div class="metric"><span class="big">11.8%</span><b>Quick backs after</b></div></div><p class="note-sm mt-l">A full case study, project screenshots, source data, and other project details were not included in the supplied files.</p></div></section>
-  <section class="band night process" id="process" aria-labelledby="process-title"><canvas class="bgfx" data-fx="orbit" aria-hidden="true"></canvas><div class="wrap"><div class="sec-head center"><p class="eyebrow">The process</p><h2 class="h2" id="process-title">From first look <span class="mute">to ongoing improvement.</span></h2></div>
-    <div class="arc-wrap" id="arcWrap"><div class="dome"></div><svg class="arc-svg" viewBox="0 0 1000 540" aria-hidden="true"><path d="M60 500 A440 440 0 0 1 940 500" fill="none" stroke="rgba(255,255,255,.15)"/><path id="arcProg" d="M60 500 A440 440 0 0 1 940 500" fill="none" stroke="#A79CFF" stroke-width="2" stroke-dasharray="1382.3" stroke-dashoffset="1382.3"/><g id="arcNodes"></g><circle id="cometGlow" r="14" fill="#A79CFF" opacity=".2"/><circle id="comet" r="5" fill="#fff"/></svg><div id="arcLabels"></div><div class="dome-in" aria-live="polite"><p class="n" id="stepN">STEP 01 / 05</p><h3 id="stepT">Diagnose</h3><p id="stepB">We review your offer, audience, traffic source, current page, competitors, and conversion goal.</p></div></div>
-    <ol class="steps-list" id="stepsList"><li><h3>Diagnose</h3><p>Review the offer, audience, and conversion goal.</p></li><li><h3>Structure</h3><p>Map the page flow.</p></li><li><h3>Write &amp; design</h3><p>Create copy and design around a clear action.</p></li><li><h3>Build</h3><p>Responsive, accessible implementation.</p></li><li><h3>Improve</h3><p>Watch performance signals during ongoing engagements.</p></li></ol>
-  </div></section>
-  <section class="band" id="about" aria-labelledby="about-title"><div class="wrap phero-in"><div class="phero-copy"><p class="eyebrow">About PageDriven</p><h2 class="h2" id="about-title">Led by Riz.<br><span class="mute">Built with a specialist team.</span></h2><p class="lede">Riz leads discovery, conversion strategy, and final quality review on every engagement, supported by a specialist copy, design, and development team.</p><p>Working remotely with businesses and agencies across the US and Canada, with availability for meetings during US business hours.</p><button class="btn btn-primary" data-open-contact>Get in touch <span class="arr" aria-hidden="true">→</span></button></div><div class="portrait"><img src="assets/img/riz-waist.webp" width="400" height="560" loading="lazy" alt="Riz, founder of PageDriven"></div></div></section>
-  <section class="band mist" id="faq" aria-labelledby="faq-title"><div class="wrap split-lr"><div class="sec-head"><p class="eyebrow">Questions</p><h2 class="h2" id="faq-title">Before <span class="mute">we begin.</span></h2></div><div class="faq"><details><summary>Which platforms do you work with?<i aria-hidden="true"></i></summary><div class="ans">Webflow, WordPress, Shopify, Unbounce, ClickFunnels, HighLevel, HubSpot, Wix, and more. We build where your page already lives.</div></details><details><summary>How is pricing determined?<i aria-hidden="true"></i></summary><div class="ans">Pricing is scoped to the page, platform, and how much copy is involved. A price list was not included in this project.</div></details><details><summary>Do you work with agencies?<i aria-hidden="true"></i></summary><div class="ans">Yes. White-label landing pages, location pages, website production, UX improvements, and technical support are available for SEO, PPC, and digital agencies.</div></details><details><summary>Can I send a message from this site?<i aria-hidden="true"></i></summary><div class="ans">Online delivery is not connected yet. The contact and review forms validate your details and download a text draft to your device. Nothing is sent to PageDriven.</div></details></div></div></section>
-  <section class="cta-band"><div class="wrap"><div class="cta"><div class="cta-bg" aria-hidden="true"><i></i><i></i></div><div class="cta-copy"><p class="eyebrow">Your next page</p><h2>Start with a closer look.<br><span class="mute">Then choose the next step.</span></h2><button class="btn btn-primary" data-open-review>Prepare a page review <span class="arr" aria-hidden="true">→</span></button><p class="note-sm">Saves a draft to your device. Nothing is sent.</p></div><div class="cta-person"><img id="riz" src="assets/img/riz-full.webp" loading="lazy" width="300" height="600" alt="Riz"></div></div></div></section>
+    <div class="badges g-in" aria-label="Track record">
+      <div>
+        <svg class="upw" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2.5l14.5 8.3v16.6L20 37.5 5.5 27.4V10.8z" fill="#14A800"/><path d="M20 11.2l2.7 5.5 6 .9-4.35 4.25 1.03 6-5.38-2.83-5.38 2.83 1.03-6-4.35-4.25 6-.9z" fill="#fff"/></svg>
+        <div><b>Top Rated</b><small>on Upwork</small></div>
+      </div>
+      <div><span class="big">100%</span><div><b>Job Success</b><small>Completed contracts</small></div></div>
+      <div><span class="big">5.0</span><div><b class="stars" aria-label="5 stars">★★★★★</b><small>Client rating</small></div></div>
+      <div><span class="big">+13%</span><div><b>Client profits</b><small>Average lift</small></div></div>
+    </div>
+  </div>
+  <div class="platforms">
+    <p>Built on the platforms you already use</p>
+    <div class="marquee"><div class="marquee-track">
+      <span>Webflow</span><span>WordPress</span><span>HighLevel</span><span>Unbounce</span><span>Shopify</span><span>HubSpot</span><span>ClickFunnels</span><span>Elementor</span><span>Wix</span>
+      <span aria-hidden="true">Webflow</span><span aria-hidden="true">WordPress</span><span aria-hidden="true">HighLevel</span><span aria-hidden="true">Unbounce</span><span aria-hidden="true">Shopify</span><span aria-hidden="true">HubSpot</span><span aria-hidden="true">ClickFunnels</span><span aria-hidden="true">Elementor</span><span aria-hidden="true">Wix</span>
+    </div></div>
+  </div>
+</section>
+
+<!-- 2. FEATURED CASE STUDY BENTO -->
+<section class="band mist" id="case" aria-labelledby="h-case">
+  <div class="bgfx gridbg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Featured case study · CaseLeap</span>
+      <h2 id="h-case" class="h2">From a 3-second glance to an <span class="mute">18-second visit.</span></h2>
+      <p class="lede">CaseLeap was already attracting visitors. We used GA4 and Microsoft Clarity to find where the homepage was losing attention, then refined the message, surfaced proof earlier, clarified the CTA hierarchy and reduced conversion friction.</p>
+    </div>
+
+    <div class="bento">
+      <div class="cell b-compare reveal">
+        <div class="compare" data-sweep style="--split:50%">
+          <span class="cmp-label l">Before</span><span class="cmp-label r">After</span>
+          <div class="cmp-pane cmp-before">
+            <div class="mock">
+              <div class="navl"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="hd" style="width:70%"></span>
+              <span class="ln"></span><span class="ln" style="width:85%"></span><span class="ln" style="width:60%"></span>
+              <div class="btns"><i></i><i></i><i></i></div>
+              <span class="imgb"></span>
+              <span class="ln"></span><span class="ln" style="width:72%"></span>
+            </div>
+          </div>
+          <div class="cmp-pane cmp-after">
+            <div class="mock after">
+              <div class="navl"><i style="background:var(--violet)"></i><i style="flex:0 0 40px"></i><i style="flex:0 0 40px"></i><i style="flex:0 0 80px;background:var(--ink);height:14px;border-radius:999px"></i></div>
+              <span class="hd"></span><span class="hd v"></span>
+              <span class="ln"></span><span class="ln" style="width:70%"></span>
+              <div class="btns"><i></i><i></i></div>
+              <div class="trust"><b>★★★★★</b> Trusted by US marketing teams</div>
+              <div class="logos"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="quote"><span class="ln" style="background:#D9DCEA"></span><span class="ln" style="width:60%;background:#D9DCEA"></span></div>
+            </div>
+          </div>
+          <div class="cmp-handle" aria-hidden="true"></div>
+          <input class="cmp-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the CaseLeap homepage before and after">
+          <div class="cmp-foot"><span>CaseLeap homepage · Iteration 1</span><span>Drag to compare</span></div>
+        </div>
+      </div>
+
+      <div class="cell b-changed reveal">
+        <span class="k"><i></i>What changed</span>
+        <ul class="checks">
+          <li>Outcome-led hero messaging</li>
+          <li>Trust and testimonials moved closer to the decision point</li>
+          <li>Clearer primary and secondary CTA paths</li>
+          <li>Simpler forms and improved mobile conversion UX</li>
+        </ul>
+        <a class="tlink" href="work-caseleap.html">Read the CaseLeap story <span>→</span></a>
+      </div>
+
+      <div class="cell b-m reveal" style="--c:var(--cyan)">
+        <span class="k"><i></i>Avg. time on homepage</span>
+        <div class="big"><span data-count="6" data-suffix="×">6×</span></div>
+        <span class="delta">3s → 18s</span>
+        <div class="bars" aria-label="Seconds on page: before 3, after 18">
+          <div class="bar"><span>Before</span><span class="tr"><span class="fl" style="--w:16.67%"></span></span><span>3s</span></div>
+          <div class="bar after"><span>After</span><span class="tr"><span class="fl" style="--w:100%"></span></span><span>18s</span></div>
+        </div>
+      </div>
+
+      <div class="cell b-m reveal" style="--c:var(--mint)">
+        <span class="k"><i></i>Events per homepage visit</span>
+        <div class="big"><span data-count="45" data-prefix="+" data-suffix="%">+45%</span></div>
+        <span class="delta">3.34 → 4.84</span>
+        <svg class="spark" viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0F9F84" stop-opacity=".2"/><stop offset="1" stop-color="#0F9F84" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0 56 L60 54 L120 55 L150 50 L180 30 L240 22 L300 18 L300 70 L0 70Z" fill="url(#sg)"/>
+          <path class="draw" d="M0 56 L60 54 L120 55 L150 50 L180 30 L240 22 L300 18" fill="none" stroke="#0F9F84" stroke-width="2"/>
+          <line x1="150" x2="150" y1="6" y2="70" stroke="#CBD1E0" stroke-dasharray="3 3"/>
+          <circle cx="300" cy="18" r="4" fill="#0F9F84"/>
+        </svg>
+      </div>
+
+      <div class="cell b-m reveal" style="--c:var(--pink)">
+        <span class="k"><i></i>Quick backs</span>
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+          <div class="big"><span data-count="45" data-prefix="−" data-suffix="%">−45%</span></div>
+          <svg class="ring" viewBox="0 0 100 100" aria-label="Quick backs fell from 21.4% to 11.8%">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#E8EBF2" stroke-width="10"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#C9CEDD" stroke-width="10" stroke-dasharray="53.8 251.3" transform="rotate(-90 50 50)"/>
+            <circle cx="50" cy="50" r="28" fill="none" stroke="#E07AAE" stroke-width="8" stroke-linecap="round" stroke-dasharray="20.8 175.9" transform="rotate(-90 50 50)"/>
+          </svg>
+        </div>
+        <span class="delta">21.4% → 11.8% of visits</span>
+        <p class="sub" style="color:var(--ink-3);font-size:13.5px;margin-top:auto">Outer ring: before · inner ring: after</p>
+      </div>
+
+      <div class="cell b-quote reveal">
+        <div class="bq-copy">
+          <div class="qm" aria-hidden="true">“</div>
+          <blockquote>Rizvi is a one-stop shop and consistently executes at a high level. His communication is excellent so we always know where things stand day to day.</blockquote>
+          <div class="who">
+            <span class="logo-tile" style="background:var(--night)">CL</span>
+            <div><b>Andrew, Founder</b><small>CaseLeap (company of Levitate Media)</small></div>
+          </div>
+          <button class="btn btn-primary" data-open-review>Get results like CaseLeap <span class="arr">→</span></button>
+        </div>
+        <div class="bq-portrait" aria-hidden="true"><img src="assets/img/andrew.webp" alt="" width="227" height="341"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. WHERE PAGES LEAK -->
+<section class="band night" id="leaks" aria-labelledby="h-prob">
+  <canvas class="bgfx" data-fx="dots" aria-hidden="true"></canvas>
+  <div class="wrap split">
+    <div class="split-head">
+      <span class="eyebrow">Where pages leak</span>
+      <h2 id="h-prob" class="h2" style="font-size:clamp(30px,3.4vw,42px)">Why good traffic leaves <span class="mute">without converting</span></h2>
+      <p style="color:rgba(255,255,255,.66)">If any of these sound familiar, the fix is usually on the page, before the ad budget.</p>
+      <div><button class="btn btn-primary" data-open-review>Find my page's leaks <span class="arr">→</span></button></div>
+    </div>
+    <div class="icon-grid">
+      <div class="icon-item reveal">
+        <img src="assets/img/i0.webp" alt="" width="92" height="92">
+        <h3>The message doesn't match the ad</h3>
+        <p>Visitors expect one thing from your ad, then land on a page that tells a different story.</p>
+        <span class="cost">Cost: the click breaks on arrival</span>
+      </div>
+      <div class="icon-item reveal">
+        <img src="assets/img/i1.webp" alt="" width="92" height="92">
+        <h3>The page looks fine but doesn't persuade</h3>
+        <p>Design alone doesn't convert. The page needs a clear offer, relevant proof, and a logical flow.</p>
+        <span class="cost">Cost: interest without action</span>
+      </div>
+      <div class="icon-item reveal">
+        <img src="assets/img/i2.webp" alt="" width="92" height="92">
+        <h3>The platform limits the execution</h3>
+        <p>Every platform behaves differently. A good page has to work inside the tool you already use.</p>
+        <span class="cost">Cost: compromises nobody planned</span>
+      </div>
+      <div class="icon-item reveal">
+        <img src="assets/img/i3.webp" alt="" width="92" height="92">
+        <h3>Budget keeps growing before the page is fixed</h3>
+        <p>More traffic only makes the leak more expensive while the page isn't doing its job.</p>
+        <span class="cost">Cost: rising cost per lead</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CHOOSE YOUR PATH -->
+<section class="band" aria-labelledby="h-paths" style="padding-block:clamp(56px,6vw,84px)">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Choose your path</span>
+      <h2 id="h-paths" class="h2" style="font-size:clamp(28px,3.4vw,44px)">Whether you run the ads or run the business, <span class="mute">the page still has to do the converting.</span></h2>
+    </div>
+    <div class="paths">
+      <a class="path reveal" href="landing-pages.html">
+        <img src="assets/img/i8.webp" alt="" width="96" height="96">
+        <h3>For service businesses</h3>
+        <p>Pages that turn existing traffic into calls, bookings and quote requests.</p>
+        <span class="tlink">See landing page sprints <span>→</span></span>
+      </a>
+      <a class="path reveal" href="agency-partners.html">
+        <img src="assets/img/i9.webp" alt="" width="96" height="96">
+        <h3>For marketing agencies</h3>
+        <p>White-label pages and production capacity, without another full-time hire.</p>
+        <span class="tlink">See agency partnerships <span>→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHAT WE DO -->
+<section class="band mist" id="services" aria-labelledby="h-svc">
+  <div class="wrap svc-layout">
+    <aside class="svc-side">
+      <span class="eyebrow">What we do</span>
+      <h2 id="h-svc" class="h2" style="font-size:clamp(32px,3.6vw,46px)">Four ways to fix <span class="mute">the page that costs you leads.</span></h2>
+      <p class="lede" style="font-size:17px">Strategy, copy, design, and platform build, combined around one clear conversion goal.</p>
+      <ul class="svc-nav" id="svcNav">
+        <li><a href="#svc-1" class="on"><img src="assets/img/i4.webp" alt="" width="34" height="34">Landing Page Sprints</a></li>
+        <li><a href="#svc-2"><img src="assets/img/i5.webp" alt="" width="34" height="34">Conversion-Focused Websites</a></li>
+        <li><a href="#svc-3"><img src="assets/img/i6.webp" alt="" width="34" height="34">CRO Audits &amp; Quick Wins</a></li>
+        <li><a href="#svc-4"><img src="assets/img/i7.webp" alt="" width="34" height="34">Ongoing Conversion Support</a></li>
+      </ul>
+      <div><button class="btn btn-primary" data-open-review>Get My Free Page Review <span class="arr">→</span></button></div>
+    </aside>
+
+    <div class="svc-list">
+      <article class="svc-card s1" id="svc-1">
+        <div class="viz" aria-hidden="true">
+          <div class="viz-base" data-speed="-3"></div>
+          <div class="viz-accent" data-speed="5"></div>
+          <div class="vcard" style="left:8%;top:12%;width:42%" data-speed="-8">
+            <span class="k">Google Ads · search</span>
+            <div style="margin-top:6px;font-weight:600;color:var(--ink);font-size:14px">Spinal decompression in Frisco</div>
+            <div style="color:var(--mint);font-size:12px;margin-top:2px">Ad · drx.friscorehab.com</div>
+          </div>
+          <div class="vline" style="left:28%;top:42%;width:0;height:12%;border-width:0 0 0 1px"></div>
+          <div class="vcard" style="left:14%;top:54%;width:48%;display:grid;gap:7px" data-speed="4">
+            <span class="k">Landing page headline</span>
+            <span style="font-weight:600;color:var(--ink);font-size:14px">Relief for back pain, without surgery</span>
+            <span class="mini-bar" style="width:80%"></span>
+            <span style="height:24px;width:120px;border-radius:999px;background:var(--violet);margin-top:2px"></span>
+          </div>
+          <div class="vcard ink" style="right:6%;top:20%;width:30%" data-speed="11">
+            <span class="k">Message match</span>
+            <div style="font-size:24px;font-weight:600;margin-top:4px;letter-spacing:-.03em">Aligned</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.6)">ad promise → page headline</div>
+          </div>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title"><img src="assets/img/i4.webp" alt="" width="60" height="60"><h3>Landing Page Sprints</h3></div>
+          <p class="svc-tag">Campaign pages built around one clear action.</p>
+          <p>We plan, write, design, and build a page matched to the traffic it receives, on your existing platform.</p>
+          <ul>
+            <li>A page that says the same thing your ad promised</li>
+            <li>One clear action per page instead of competing links</li>
+            <li>Tracking wired in so performance reads campaign by campaign</li>
+          </ul>
+          <div class="svc-foot"><div class="svc-meta"><span>5–7 business days</span><span>Unbounce · Webflow · HighLevel</span></div><a class="tlink" href="landing-pages.html">Explore Landing Page Sprints <span>→</span></a></div>
+        </div>
+      </article>
+
+      <article class="svc-card s2" id="svc-2">
+        <div class="viz" aria-hidden="true">
+          <div class="viz-base" style="inset:10% 6% 8% 26%" data-speed="-3"></div>
+          <div class="viz-accent" style="inset:22% 64% 0 0" data-speed="6"></div>
+          <div class="vcard ink" style="left:40%;top:7%;width:22%;text-align:center" data-speed="-6"><span class="k">Home</span><div style="font-size:12px;margin-top:2px;color:rgba(255,255,255,.7)">Book a call</div></div>
+          <div class="vline" style="left:24%;top:24%;width:52%;height:10%;border-width:1px 1px 0 1px"></div>
+          <div class="vcard" style="left:7%;top:36%;width:32%" data-speed="5"><span class="k">Service</span><div style="font-weight:600;color:var(--ink);margin-top:4px">Request a quote</div><span class="pillx p-lo" style="margin-top:6px">1 job · 1 action</span></div>
+          <div class="vcard" style="left:58%;top:36%;width:34%" data-speed="9"><span class="k">Location</span><div style="font-weight:600;color:var(--ink);margin-top:4px">Call the Plano team</div><span class="pillx p-lo" style="margin-top:6px">1 job · 1 action</span></div>
+          <div class="vcard" style="left:30%;top:70%;width:40%;display:grid;gap:6px" data-speed="-5"><span class="k">Lead capture</span><span style="font-size:12px;color:var(--mint)">● GA4 events connected</span></div>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title"><img src="assets/img/i5.webp" alt="" width="60" height="60"><h3>Conversion-Focused Websites</h3></div>
+          <p class="svc-tag">Websites designed around the next customer action.</p>
+          <p>Structure comes first: what each page is for, who it speaks to, and what it asks people to do.</p>
+          <ul>
+            <li>Every page has one job and one primary action</li>
+            <li>Messaging that answers buyer questions in the order they have them</li>
+            <li>A maintainable build your team can update</li>
+          </ul>
+          <div class="svc-foot"><div class="svc-meta"><span>Webflow · WordPress · Shopify · HubSpot</span></div><a class="tlink" href="conversion-websites.html">Explore Conversion-Focused Websites <span>→</span></a></div>
+        </div>
+      </article>
+
+      <article class="svc-card s3" id="svc-3">
+        <div class="viz" aria-hidden="true">
+          <div class="viz-base" data-speed="-3"></div>
+          <div class="viz-accent" data-speed="5"></div>
+          <div class="vcard" style="left:7%;top:10%;width:56%;display:grid;gap:9px" data-speed="-7">
+            <span class="k">Prioritized fixes</span>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Rewrite hero for search intent</span><span class="pillx p-hi">High</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Move reviews beside the form</span><span class="pillx p-hi">High</span></div>
+            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Trim form to 3 fields</span><span class="pillx p-lo">Quick win</span></div>
+          </div>
+          <div class="vcard ink" style="right:6%;top:30%;width:28%" data-speed="10">
+            <span class="k">Rebuild needed?</span>
+            <div style="font-size:22px;font-weight:600;margin-top:4px">Not yet</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.6)">fix the page first</div>
+          </div>
+          <div class="vcard" style="left:20%;top:66%;width:38%" data-speed="4">
+            <span class="k">Session recordings</span>
+            <div style="display:flex;gap:4px;margin-top:8px;align-items:end;height:30px">
+              <i style="flex:1;height:90%;background:var(--violet);border-radius:3px"></i><i style="flex:1;height:70%;background:var(--lilac);border-radius:3px"></i><i style="flex:1;height:40%;background:#D9D6FF;border-radius:3px"></i><i style="flex:1;height:22%;background:#E6E9F2;border-radius:3px"></i><i style="flex:1;height:12%;background:#E6E9F2;border-radius:3px"></i>
+            </div>
+          </div>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title"><img src="assets/img/i6.webp" alt="" width="60" height="60"><h3>CRO Audits &amp; Quick Wins</h3></div>
+          <p class="svc-tag">Find and fix the friction costing you conversions.</p>
+          <p>We review the page against the traffic pointed at it, report where momentum is lost, and fix the quick wins where scope allows.</p>
+          <ul>
+            <li>A prioritized list of fixes ranked by impact and effort</li>
+            <li>Quick wins implemented in the same engagement</li>
+            <li>A clear call on whether a rebuild is justified, or not</li>
+          </ul>
+          <div class="svc-foot"><div class="svc-meta"><span>Led personally by Riz</span></div><a class="tlink" href="cro-audits.html">Explore CRO Audits &amp; Quick Wins <span>→</span></a></div>
+        </div>
+      </article>
+
+      <article class="svc-card s4" id="svc-4">
+        <div class="viz" aria-hidden="true">
+          <div class="viz-base" style="inset:10% 6% 8% 26%" data-speed="-3"></div>
+          <div class="viz-accent" style="inset:22% 64% 0 0" data-speed="6"></div>
+          <div class="vcard" style="left:32%;top:9%;width:58%" data-speed="-6">
+            <span class="k">Monthly readout</span>
+            <svg viewBox="0 0 240 60" style="width:100%;height:56px;margin-top:6px"><path d="M0 52 C40 50 60 44 90 40 S150 26 180 20 S220 10 240 8" fill="none" stroke="#0F9F84" stroke-width="2"/><g fill="#0F9F84"><circle cx="90" cy="40" r="3"/><circle cx="180" cy="20" r="3"/><circle cx="240" cy="8" r="3.5"/></g></svg>
+          </div>
+          <div class="vcard" style="left:7%;top:50%;width:38%;display:grid;gap:6px" data-speed="8">
+            <span class="k">Backlog</span>
+            <span style="display:flex;gap:8px;align-items:center;color:var(--ink)"><i style="width:8px;height:8px;border-radius:50%;background:var(--mint)"></i>New location page</span>
+            <span style="display:flex;gap:8px;align-items:center;color:var(--ink)"><i style="width:8px;height:8px;border-radius:50%;background:var(--amber)"></i>Pricing page proof</span>
+          </div>
+          <div class="vcard ink" style="left:56%;top:58%;width:34%" data-speed="4">
+            <span class="k">Shipped this month</span>
+            <div style="font-size:20px;font-weight:600;margin-top:4px">Copy · UX · Pages</div>
+          </div>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title"><img src="assets/img/i7.webp" alt="" width="60" height="60"><h3>Ongoing Conversion Support</h3></div>
+          <p class="svc-tag">A conversion partner after launch.</p>
+          <p>We watch how pages perform, keep an improvement backlog current, and ship changes plus new campaign pages as the offer evolves.</p>
+          <ul>
+            <li>Pages that keep improving between campaigns</li>
+            <li>A prioritized backlog that stays current</li>
+            <li>Direct access to Riz for strategy calls</li>
+          </ul>
+          <div class="svc-foot"><div class="svc-meta"><span>Predictable cadence</span><span>White-label for agencies</span></div><a class="tlink" href="ongoing-optimization.html">Explore Ongoing Conversion Support <span>→</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. PROCESS -->
+<section class="band night process" id="process" aria-labelledby="h-proc">
+  <canvas class="bgfx" data-fx="orbit" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Process</span>
+      <h2 id="h-proc" class="h2">The method behind <span class="mute">every page we ship</span></h2>
+    </div>
+    <div class="arc-wrap" id="arcWrap">
+      <svg class="arc-svg" viewBox="0 0 1000 540" aria-hidden="true">
+        <defs>
+          <linearGradient id="arcG" x1="0" x2="1"><stop offset="0" stop-color="#3A9FD6"/><stop offset=".5" stop-color="#A79CFF"/><stop offset="1" stop-color="#E07AAE"/></linearGradient>
+          <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".3" stop-color="#A79CFF" stop-opacity=".5"/><stop offset="1" stop-color="#A79CFF" stop-opacity="0"/></radialGradient>
+        </defs>
+        <path d="M60 500 A440 440 0 0 1 940 500" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.5"/>
+        <path id="arcProg" d="M60 500 A440 440 0 0 1 940 500" fill="none" stroke="url(#arcG)" stroke-width="2" stroke-dasharray="1382.3" stroke-dashoffset="1382.3"/>
+        <line x1="0" y1="500" x2="60" y2="500" stroke="rgba(255,255,255,.16)"/><line x1="940" y1="500" x2="1000" y2="500" stroke="rgba(255,255,255,.16)"/>
+        <g id="arcNodes"></g>
+        <circle id="cometGlow" cx="60" cy="500" r="34" fill="url(#glow)"/>
+        <circle id="comet" cx="60" cy="500" r="5" fill="#fff"/>
+      </svg>
+      <div class="dome"></div>
+      <div class="dome-in" aria-live="polite">
+        <span class="n" id="stepN">STEP 01 / 05</span>
+        <h3 id="stepT">Diagnose</h3>
+        <p id="stepB">We review your offer, audience, traffic source, current page, competitors, and conversion goal.</p>
+      </div>
+      <div id="arcLabels"></div>
+    </div>
+    <ol class="steps-list" id="stepsList"></ol>
+  </div>
+</section>
+
+<section class="band hs" id="work" aria-label="Client work">
+  <div class="wrap work-head">
+    <div class="sec-head"><span class="eyebrow">Client work</span><h2 class="h2">Find out how we've helped businesses <span class="mute">just like yours</span></h2></div>
+    <a class="tlink" href="work.html">See all case studies <span>→</span></a>
+  </div>
+  <div class="hs-outer" data-lenis-prevent><div class="hs-track"><a class="wcard" href="work-frisco-spinal-rehab.html" draggable="false" style="--c:#0B2545;--cd:#06162B;--wf:17"><div class="wtop"><span class="wordmark" style="font:600 32px/1 var(--f-sans);letter-spacing:-.03em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">Frisco Spinal Rehab</span><span class="wpill">Landing page</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:-28,&quot;zoom&quot;:1.35,&quot;bg&quot;:&quot;#0B2545&quot;,&quot;dark&quot;:&quot;#06162B&quot;,&quot;light&quot;:&quot;#C9DDF7&quot;,&quot;pts&quot;:[[-0.15,0.95],[0.35,0.05],[0.55,1.15],[1.15,0.15]],&quot;width&quot;:0.24,&quot;twist&quot;:1.6,&quot;phase&quot;:0.4}" aria-hidden="true"></canvas></div><span class="wind">Healthcare</span><h3>How we rebuilt Frisco Spinal Rehab&#x27;s <span class="mute">Google Ads funnel around patients</span></h3><p class="wsub">Rebuilt a spinal decompression funnel around patient concerns, stronger proof, one consistent offer and a clearer form journey.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-levitate-media.html" draggable="false" style="--c:#5452F6;--cd:#2F28B8;--wf:18"><div class="wtop"><span class="wordmark" style="font:600 38px/1 var(--f-sans);letter-spacing:.18em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">LEVITATE</span><span class="wpill">UX audit</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:18,&quot;zoom&quot;:1.1,&quot;bg&quot;:&quot;#5452F6&quot;,&quot;dark&quot;:&quot;#2F28B8&quot;,&quot;light&quot;:&quot;#ECEAFF&quot;,&quot;pts&quot;:[[-0.2,0.35],[0.4,1.25],[0.6,-0.25],[1.2,0.75]],&quot;width&quot;:0.26,&quot;twist&quot;:2.2,&quot;phase&quot;:1.1}" aria-hidden="true"></canvas></div><span class="wind">Video production</span><h3>How we found what earns attention <span class="mute">on Levitate Media&#x27;s service pages</span></h3><p class="wsub">Analyzed visitor behavior across six service pages to find which content earned attention and where UX refinements could lift lead capture.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-outdoor-living-remodeling.html" draggable="false" style="--c:#3A9FD6;--cd:#1D6FA3;--wf:19"><div class="wtop"><span class="wordmark" style="font:500 40px/1 var(--f-sans);letter-spacing:-.04em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">Outdoor Living</span><span class="wpill">Website</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:58,&quot;zoom&quot;:1.2,&quot;bg&quot;:&quot;#3A9FD6&quot;,&quot;dark&quot;:&quot;#1D6FA3&quot;,&quot;light&quot;:&quot;#E6F4FC&quot;,&quot;pts&quot;:[[0.1,1.2],[0.05,0.2],[0.95,0.95],[0.9,-0.2]],&quot;width&quot;:0.22,&quot;twist&quot;:1.3,&quot;phase&quot;:2.0}" aria-hidden="true"></canvas></div><span class="wind">Home remodeling</span><h3>How we redesigned a remodeler&#x27;s site <span class="mute">to match the spaces it builds</span></h3><p class="wsub">A phased Elementor redesign that turned an aging, SEO-driven website into a polished, conversion-focused experience.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-lourcey-photography.html" draggable="false" style="--c:#0E1220;--cd:#05070D;--wf:25"><div class="wtop"><span class="wordmark" style="font:300 52px/1 var(--f-sans);letter-spacing:-.05em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">Lourcey</span><span class="wpill">Website</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:-10,&quot;zoom&quot;:1.5,&quot;bg&quot;:&quot;#0E1220&quot;,&quot;dark&quot;:&quot;#05070D&quot;,&quot;light&quot;:&quot;#E9ECF5&quot;,&quot;pts&quot;:[[-0.2,0.78],[0.36,0.02],[0.62,1.06],[1.2,0.26]],&quot;width&quot;:0.28,&quot;twist&quot;:1.8,&quot;phase&quot;:0.2}" aria-hidden="true"></canvas></div><span class="wind">Photography</span><h3>How we built Lourcey an image-led site <span class="mute">that stays fast on mobile</span></h3><p class="wsub">An image-led Webflow redesign that balances visual storytelling with mobile usability, performance and search visibility.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-one10-driving-school.html" draggable="false" style="--c:#D9699E;--cd:#A9467A;--wf:27"><div class="wtop"><span class="wordmark" style="font:700 56px/1 var(--f-sans);letter-spacing:-.06em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">one10</span><span class="wpill">Website</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:34,&quot;zoom&quot;:1.05,&quot;bg&quot;:&quot;#D9699E&quot;,&quot;dark&quot;:&quot;#A9467A&quot;,&quot;light&quot;:&quot;#FFE6F1&quot;,&quot;pts&quot;:[[-0.15,0.75],[0.45,-0.3],[0.5,1.3],[1.15,0.3]],&quot;width&quot;:0.25,&quot;twist&quot;:2.4,&quot;phase&quot;:0.8}" aria-hidden="true"></canvas></div><span class="wind">Education</span><h3>How we built One10 a custom <span class="mute">enrollment and payment flow</span></h3><p class="wsub">A custom WordPress theme combining a distinctive brand with Moneris payments and a tailored course-enrollment checkout.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-rset-wellness.html" draggable="false" style="--c:#D38A2E;--cd:#9C5F14;--wf:24"><div class="wtop"><span class="wordmark" style="font:700 50px/1 var(--f-sans);letter-spacing:.12em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">RSET</span><span class="wpill">Landing page</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:162,&quot;zoom&quot;:1.25,&quot;bg&quot;:&quot;#D38A2E&quot;,&quot;dark&quot;:&quot;#9C5F14&quot;,&quot;light&quot;:&quot;#FFEFD2&quot;,&quot;pts&quot;:[[1.2,0.9],[0.6,-0.2],[0.3,1.25],[-0.2,0.25]],&quot;width&quot;:0.24,&quot;twist&quot;:1.5,&quot;phase&quot;:1.6}" aria-hidden="true"></canvas></div><span class="wind">Wellness ecommerce</span><h3>How we put RSET&#x27;s subscription saving <span class="mute">at the point of choice</span></h3><p class="wsub">Redesigned the page and copy around subscription and discount offers so the saving shows at the point of choice.</p><span class="wmore">Learn more <span>→</span></span></a><a class="wcard" href="work-stain-guys.html" draggable="false" style="--c:#E0735B;--cd:#B04C36;--wf:17"><div class="wtop"><span class="wordmark" style="font:500 34px/1 var(--f-sans);letter-spacing:-.03em;font-size:calc(var(--wf) * var(--wk, 1) * 1px)">Local Services</span><span class="wpill">Landing page</span></div><div class="wart"><canvas data-art="{&quot;angle&quot;:-48,&quot;zoom&quot;:1.4,&quot;bg&quot;:&quot;#E0735B&quot;,&quot;dark&quot;:&quot;#B04C36&quot;,&quot;light&quot;:&quot;#FFE6DE&quot;,&quot;pts&quot;:[[-0.1,1.15],[0.2,0.4],[0.75,0.6],[1.1,-0.15]],&quot;width&quot;:0.3,&quot;twist&quot;:2.0,&quot;phase&quot;:2.6}" aria-hidden="true"></canvas></div><span class="wind">Local home services</span><h3>How we turned a colour page <span class="mute">into a quote request funnel</span></h3><p class="wsub">Turned a colour-browsing page into a free quote request funnel for high-intent organic visitors.</p><span class="wmore">Learn more <span>→</span></span></a></div></div>
+  <div class="wrap"><div class="hs-ctrl">
+    <div class="hs-progress" aria-hidden="true"><i></i></div><span class="hs-count">01 / 07</span>
+    <div class="hs-btns">
+      <button class="hs-btn hs-prev" type="button" aria-label="Previous case study"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M11 4L6 9l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="hs-btn hs-next" type="button" aria-label="Next case study"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M7 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div></div>
+</section>
+<!-- 8. TESTIMONIALS -->
+<section class="band night" aria-labelledby="h-test">
+  <div class="bgfx aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Client words</span>
+      <h2 id="h-test" class="h2">Marketing teams and agencies <span class="mute">who stopped guessing</span></h2>
+    </div>
+    <div class="t-grid"><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“Working with Rizvi has been a dream come true for our marketing department. Before working with him we were utilizing different contractors for site design, development, and CRO. Rizvi is a one-stop shop and consistently executes at a high level. Planning to use him ongoing for a long time to come.”</p><div class="who"><span class="logo-tile" style="background:#12345E">CL</span><div><b>Andrew</b><small>Founder, CaseLeap &amp; Levitate Media</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“If you&#x27;re looking for somebody who gets sh*t done, doesn&#x27;t need hand-holding, and speaks and writes well, Riz is your man! He&#x27;s been working alongside us for over 6 months, and it&#x27;s been a pleasure. Knows his craft, is well-versed, and communicates clearly.”</p><div class="who"><span class="logo-tile" style="background:#E0735B">RC</span><div><b>Danny Thomas</b><small>RevConstruct, Marketing Agency, CA</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“Rizvi has been a pleasure to work with. He is very sharp and understands his craft well. The landing page he built for us has been a major upgrade and he went above and beyond integrating MS Clarity for tracking and optimization.”</p><div class="who"><span class="logo-tile" style="background:#3A9FD6">FS</span><div><b>Dr. David Kaff</b><small>Frisco Spinal Rehab, TX</small></div></div></figure><figure class="tcard video"><div class="vplayer"><button class="vposter" type="button" data-yt="E-EcIqCFIIs" aria-label="Play the video testimonial from Larry Lourcey"><canvas data-art="{&quot;angle&quot;:-10,&quot;zoom&quot;:1.5,&quot;bg&quot;:&quot;#0E1220&quot;,&quot;dark&quot;:&quot;#05070D&quot;,&quot;light&quot;:&quot;#E9ECF5&quot;,&quot;pts&quot;:[[-0.2,0.78],[0.36,0.02],[0.62,1.06],[1.2,0.26]],&quot;width&quot;:0.28,&quot;twist&quot;:1.8,&quot;phase&quot;:0.2}" aria-hidden="true"></canvas><span class="vtag">Video testimonial</span><span class="vname">Larry Lourcey · Lourcey Photography</span><span class="vplay" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.8v12.4L16.4 10z" fill="#5452F6"/></svg></span></button></div><p>Larry talks through the Webflow rebuild of his photography site and what it was like working together.</p><div class="who"><span class="logo-tile" style="background:rgba(255,255,255,.16)">LP</span><div><b>Larry Lourcey</b><small>Lourcey Photography, TX</small></div></div><a class="vlink" href="https://www.youtube.com/watch?v=E-EcIqCFIIs" target="_blank" rel="noopener">Watch on YouTube <span aria-hidden="true">↗</span></a></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“Rizvi delivered exceptional landing page design and refinement with a sharp web design eye and conversion-focused approach. Clear communication, fast turnaround, clean responsive files. Highly recommend for landing page and CRO work.”</p><div class="who"><span class="logo-tile" style="background:#0F9F84">FB</span><div><b>Wes Kennedy</b><small>FBL Coaching Inc, Canada</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“He was receptive to feedback, detail-oriented in execution, and showed a genuine commitment to quality rather than rushing work just to finish. That mattered a lot to us, especially in the healthcare space where clarity and precision are critical.”</p><div class="who"><span class="logo-tile" style="background:#5452F6">WJ</span><div><b>Izaiah Jacobson</b><small>WJMeda, NY</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“Rizvi did an excellent job building my new landing page. He was responsive, professional, and easy to work with. He quickly understood what I was trying to accomplish, incorporated feedback without hesitation, and delivered a polished landing page.”</p><div class="who"><span class="logo-tile" style="background:#D38A2E">JW</span><div><b>Dr. Jason Wayne</b><small>Certified Chiropractor, TX</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“Rizvi did a fantastic job with our client&#x27;s landing pages. Communication was clear, the timeline was met, and he was quick to make changes or requests we had. We will be using him for more projects in the future!”</p><div class="who"><span class="logo-tile" style="background:#E0735B">RC</span><div><b>Danny Thomas</b><small>RevConstruct, Marketing Agency, CA</small></div></div></figure><figure class="tcard"><span class="stars" aria-label="5 stars">★★★★★</span><p>“He did a good job improving a landing page.”</p><div class="who"><span class="logo-tile" style="background:#D9699E">TP</span><div><b>Tim Peacock</b><small>Marketing Agency Owner, AZ</small></div></div></figure></div>
+  </div>
+</section>
+
+<section class="band" id="faq" aria-labelledby="h-faq">
+  <div class="wrap split">
+    <div class="split-head">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="h-faq" class="h2" style="font-size:clamp(30px,3.4vw,42px)">Questions before <span class="mute">the first call</span></h2>
+      <p>Still unsure? Ask in the chat, or email Riz directly.</p>
+      <div class="mailbox"><code id="mail">hello@pagedriven.com</code><button class="copy" type="button" data-copy="hello@pagedriven.com" data-copy-el="mail">Copy</button></div>
+    </div>
+    <div class="faq"><details open><summary>How long does a landing page take?<i aria-hidden="true"></i></summary><p class="ans">Most landing pages are completed in 5–7 business days, depending on scope and feedback rounds. Rush timelines are available.</p></details><details><summary>How is the free page review different from a paid CRO audit?<i aria-hidden="true"></i></summary><p class="ans">The free page review is a short, personal look at one page: where it&#x27;s most likely losing momentum and the three highest-impact fixes. A CRO audit is a comprehensive paid engagement with a full page and funnel review against traffic data, prioritized findings, and quick-win implementation where scope allows.</p></details><details><summary>What do you need from us to get started?<i aria-hidden="true"></i></summary><p class="ans">Your offer details, any relevant assets, brand guidelines if you have them, and examples you like. We guide you through the rest.</p></details><details><summary>Which platforms do you build on?<i aria-hidden="true"></i></summary><p class="ans">Webflow, WordPress, Shopify, Unbounce, ClickFunnels, HighLevel, HubSpot, Wix, and more. We build where your page already lives, so you do not need to migrate.</p></details><details><summary>Do you run A/B tests?<i aria-hidden="true"></i></summary><p class="ans">Where it makes sense. Reliable experiments need sufficient traffic and trustworthy tracking. We&#x27;ll tell you honestly whether your traffic supports testing, and prioritize direct, evidence-based improvements when it doesn&#x27;t.</p></details><details><summary>Do you work with agencies?<i aria-hidden="true"></i></summary><p class="ans">Yes. We provide white-label landing pages, location pages, website production, UX improvements, and technical support for SEO, PPC, and digital agencies.</p></details><details><summary>Who actually does the work?<i aria-hidden="true"></i></summary><p class="ans">Riz leads discovery, conversion strategy, and final quality review on every engagement, supported by a specialist copy, design, and development team.</p></details><details><summary>Where are you based, and how do you handle time zones?<i aria-hidden="true"></i></summary><p class="ans">Working with businesses and agencies across the US and Canada. Remote collaboration with daily availability for meetings during US business hours.</p></details></div>
+  </div>
+</section>
+<section class="cta-band" aria-labelledby="h-cta">
+  <div class="wrap">
+    <div class="cta">
+      <div class="cta-bg" aria-hidden="true"><i></i><i></i></div>
+      <div class="cta-copy">
+        <h2 id="h-cta">Get a free review of the page <span class="mute">costing you leads.</span></h2>
+        <p style="max-width:48ch">Riz personally reviews your page and sends back where it&#x27;s losing momentum, plus the three highest-impact fixes in priority order.</p>
+        <div class="cta-stack"><button class="btn btn-primary" data-open-review>Get My Free Page Review <span class="arr">→</span></button><p class="micro2"><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg>No Obligation</span><i class="mdiv" aria-hidden="true"></i><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Response within 1 day</span></p></div>
+      </div>
+      <div class="cta-person">
+        <svg class="cta-arrow" viewBox="0 0 128 100" aria-hidden="true">
+          <path id="arrowPath" d="M110 29C100 27 89 27 80 28C60 30 41 37 28 50C16 62 12 78 18 92"/>
+          <path id="arrowHead" d="M7.5 83.5c4 3 7 5.6 10.5 8.5 1.2-4.2 1.4-8.6.9-13.2"/>
+        </svg>
+        <div class="cta-name"><b>Rizvi (Riz)</b><small>PageDriven founder &amp;<br>conversion strategist</small></div>
+        <img id="riz" src="assets/img/riz-waist.webp" alt="Riz, founder and conversion strategist at PageDriven" width="337" height="470">
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="footer"><div class="wrap f-in"><div class="f-top"><div class="f-lead"><h2 class="f-title">A clearer page.<br><span>A clearer next step.</span></h2><button class="f-pill" data-open-contact>Prepare a message <span class="f-pill-ic" aria-hidden="true">↗</span></button></div><nav class="f-cols" aria-label="Footer"><div><span class="f-lab">Explore</span><ul><li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#about">About</a></li></ul></div><div><span class="f-lab">Learn more</span><ul><li><a href="#process">Process</a></li><li><a href="#faq">FAQ</a></li><li><a href="#top">Back to top ↑</a></li></ul></div><div><span class="f-lab">Contact</span><p>A direct email address and booking link were not supplied.</p></div></nav></div><div class="f-base"><p>PageDriven</p><p>Landing pages · Websites · Agency partnerships</p></div><div class="f-markbox" aria-hidden="true"><span class="f-mark">Page<span>Driven</span></span></div></div></footer>
-<dialog id="review" aria-labelledby="m-title"><form id="reviewForm" class="m-in" novalidate><div class="m-top"><div><p class="eyebrow" id="m-step">Step 1 of 2</p><h2 id="m-title">Which page should Riz review?</h2></div><button type="button" class="m-x" id="mClose" aria-label="Close review">✕</button></div><p class="m-note">Draft only: no request is sent. Save your details as a text file.</p><div class="m-prog" aria-hidden="true"><i id="mProg"></i></div><div id="s1" class="form-step"><div class="field"><label for="f-url">Page address</label><input id="f-url" name="url" type="text" inputmode="url" autocomplete="url" placeholder="yourbusiness.com/landing-page"></div><div class="field"><label for="f-svc">Service</label><select id="f-svc" name="service"><option>Landing pages</option><option>Website production</option><option>UX improvements</option><option>Agency partnerships</option></select></div></div><div id="s2" class="form-step" hidden><div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name"></div><div class="field"><label for="f-email">Email address</label><input id="f-email" name="email" type="email" autocomplete="email"></div></div><div id="s3" class="m-ok" hidden><h3 id="okTitle">Draft saved</h3><p>Your download contains the review details. No request has been sent.</p></div><p id="mErr" class="err" role="alert"></p><div id="mActs" class="m-acts"><button id="mBack" class="btn btn-ghost" type="button" hidden>Back</button><button id="mNext" class="btn btn-primary" type="submit">Continue →</button></div></form></dialog>
-<dialog id="contact" aria-labelledby="contact-title"><div class="m-in"><div class="m-top"><h2 id="contact-title">Prepare a message</h2><button id="cClose" class="m-x" aria-label="Close contact">✕</button></div><p class="m-note">Online delivery is not connected. Save a text draft to your device; nothing is sent.</p><form id="cForm" class="form-step" novalidate><div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name"></div><div class="field"><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email"></div><div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="4"></textarea></div><p id="cErr" class="err" role="alert"></p><button class="btn btn-primary" type="submit">Save message draft ↓</button></form><div id="cOk" class="m-ok" hidden><h3 id="cOkT">Draft saved</h3><p>Your message was downloaded. It has not been sent to PageDriven.</p></div></div></dialog>
-<div class="chat" id="chat"><div class="chat-teaser" id="chatTeaser" hidden><button class="ct-x" id="ctX" aria-label="Dismiss tip">✕</button>Questions about PageDriven?<button class="go" id="ctGo">Open the FAQ assistant →</button></div><section class="chat-panel" id="chatPanel" aria-label="Scripted FAQ assistant" hidden><div class="chat-head"><img src="assets/img/chat-riz.webp" width="40" height="40" alt=""><div><b>PageDriven FAQ</b><small>Scripted answers · not a live chat</small></div><button id="chatClose" aria-label="Close FAQ assistant">✕</button></div><div class="chat-log" id="chatLog" role="log" aria-live="polite"></div><div class="chat-quick" id="chatQuick" aria-label="Suggested questions"></div><form class="chat-form" id="chatForm"><label class="sr" for="chatIn">Ask a question</label><input id="chatIn" autocomplete="off" placeholder="Ask about services…"><button type="submit" aria-label="Send question"><span style="color:white" aria-hidden="true">↑</span></button></form></section><button class="chat-fab" id="chatFab" aria-controls="chatPanel" aria-expanded="false" aria-label="Toggle FAQ assistant"><img src="assets/img/chat-riz.webp" width="44" height="44" alt=""><span class="lbl">Questions?</span><span class="x" aria-hidden="true">✕</span></button></div>
-<noscript><p class="wrap">JavaScript is disabled. Services, work, about, and FAQ content are available; forms and the FAQ assistant require JavaScript.</p></noscript>
-</body>
-</html>
+<footer class="footer">
+  <div class="wrap f-in">
+    <div class="f-top">
+      <div class="f-lead">
+        <p class="f-title">You’ve reached the bottom <span>of the funnel.</span></p>
+        <a class="f-pill" href="book.html">Book a call<span class="f-pill-ic"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <div><span class="f-lab">Email us</span><a class="f-mail" href="mailto:hello@pagedriven.com">hello@pagedriven.com</a></div>
+      </div>
+      <nav class="f-cols" aria-label="Footer">
+        <div><span class="f-lab">Services</span><ul><li><a href="landing-pages.html">Landing Page Sprints</a></li><li><a href="conversion-websites.html">Conversion-Focused Websites</a></li><li><a href="cro-audits.html">CRO Audits &amp; Quick Wins</a></li><li><a href="ongoing-optimization.html">Ongoing Conversion Support</a></li><li><a href="agency-partners.html">Agency partnerships</a></li></ul></div>
+        <div><span class="f-lab">Company</span><ul><li><a href="work.html">Work</a></li><li><a href="about.html">About</a></li><li><a href="book.html">Book a call</a></li><li><button type="button" data-open-review>Free page review</button></li><li><button type="button" data-open-contact>Contact</button></li></ul></div>
+        <div><span class="f-lab">Availability</span><p class="f-hours">Daily, during<br>US business hours</p><span class="f-lab" style="margin-top:28px">Follow</span><ul><li><a href="https://facebook.com/pagedriven" target="_blank" rel="noopener">Facebook<span class="f-ur"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li><li><a href="https://instagram.com/pagedriven" target="_blank" rel="noopener">Instagram<span class="f-ur"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li></ul></div>
+        <p class="f-tag">Planned by a strategist.<br>Built to be measured.</p>
+        <p class="f-loc">Remote, across<br>the US &amp; Canada</p>
+      </nav>
+    </div>
+    <div class="f-base"><span>© 2026 PageDriven. All rights reserved.</span><span class="f-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></span></div>
+  </div>
+  <div class="wrap"><div class="f-markbox"><span class="f-mark" aria-hidden="true">Page<span>Driven</span></span></div></div>
+</footer>
+<div class="mbar" id="mbar"><button class="btn btn-primary" data-open-review>Get My Free Page Review <span class="arr">→</span></button></div>
+
+<!-- Chat widget -->
+<div class="chat" id="chat">
+  <div class="chat-teaser" id="chatTeaser" hidden>
+    <button class="ct-x" id="ctX" type="button" aria-label="Dismiss message">✕</button>
+    Hi, I'm Riz. Want a quick read on why your page isn't converting?
+    <button class="go" id="ctGo" type="button">Ask me anything →</button>
+  </div>
+  <section class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with Riz" hidden>
+    <header class="chat-head">
+      <img src="assets/img/chat-riz.webp" alt="" width="40" height="40">
+      <div><b>Riz · PageDriven</b><small>Replies during US business hours</small></div>
+      <button type="button" id="chatClose" aria-label="Close chat"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </header>
+    <div class="chat-log" id="chatLog" aria-live="polite" data-lenis-prevent></div>
+    <div class="chat-quick" id="chatQuick" data-lenis-prevent></div>
+    <form class="chat-form" id="chatForm">
+      <label for="chatIn" class="sr">Message</label>
+      <input id="chatIn" autocomplete="off" placeholder="Ask about your page…">
+      <button type="submit" aria-label="Send message"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h11M10 4.5L14.5 9 10 13.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </form>
+  </section>
+  <button class="chat-fab" id="chatFab" type="button" aria-expanded="false" aria-controls="chatPanel">
+    <img src="assets/img/chat-riz.webp" alt="" width="44" height="44"><span class="lbl">Ask Riz</span>
+    <span class="x" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 14 14"><path d="M3 3l8 8M11 3l-8 8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+    <span class="sr">Chat with Riz</span>
+  </button>
+</div>
+
+<dialog id="review" aria-labelledby="m-title">
+  <form class="m-in" id="reviewForm" novalidate>
+    <div class="m-top">
+      <div style="display:grid;gap:6px"><span class="eyebrow" id="m-step">Step 1 of 2</span><h3 id="m-title">Which page should Riz review?</h3></div>
+      <button class="m-x" type="button" id="mClose" aria-label="Close">✕</button>
+    </div>
+    <div class="m-prog"><i id="mProg"></i></div>
+    <div id="s1" style="display:grid;gap:16px">
+      <div class="field"><label for="f-url">Page URL</label><input id="f-url" name="url" type="url" inputmode="url" placeholder="https://yourbusiness.com/landing-page" autocomplete="url"></div>
+      <div class="field"><label>What should this page get you more of?</label>
+        <div class="goals" role="group" aria-label="Goal">
+          <label><input type="radio" name="goal" value="Calls" id="g1" checked><span>Calls</span></label>
+          <label><input type="radio" name="goal" value="Bookings" id="g2"><span>Bookings</span></label>
+          <label><input type="radio" name="goal" value="Quote requests" id="g3"><span>Quote requests</span></label>
+          <label><input type="radio" name="goal" value="Sales" id="g4"><span>Sales</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="f-svc">Service</label>
+        <select id="f-svc" name="service"><option>Free Page Review</option><option>Landing Page Sprints</option><option>Conversion-Focused Websites</option><option>CRO Audits &amp; Quick Wins</option><option>Ongoing Conversion Support</option><option>Agency Partnerships</option><option>Not sure yet</option></select>
+      </div>
+    </div>
+    <div id="s2" hidden style="display:grid;gap:16px">
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="Jordan Lee"></div>
+      <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="jordan@company.com"></div>
+    </div>
+    <div id="s3" hidden class="m-ok">
+      <span class="tick"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M7 13.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <h3 id="okTitle">Request received</h3>
+      <p>Riz will look at where the page loses momentum and send back the three highest-impact fixes.</p>
+    </div>
+    <p class="err" id="mErr" role="alert"></p>
+<div id="mActs" class="m-acts"><button type="button" class="btn btn-ghost" id="mBack" hidden>Back</button><div class="cta-stack full"><button type="submit" class="btn btn-primary" id="mNext">Continue <span class="arr">→</span></button><p class="micro2"><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.3 2.3 4.3-4.6"/></svg>No Obligation</span><i class="mdiv" aria-hidden="true"></i><span><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Response within 1 day</span></p></div></div>
+  </form>
+</dialog><dialog id="contact" aria-labelledby="c-title">
+  <div class="m-in">
+    <div class="m-top"><div style="display:grid;gap:6px"><span class="eyebrow">Contact</span><h3 id="c-title">Send Riz a message</h3></div><button class="m-x" type="button" id="cClose" aria-label="Close">✕</button></div>
+    <form id="cForm" novalidate style="display:grid;gap:16px">
+      <div class="field"><label for="c-name">Your name</label><input id="c-name" autocomplete="name" placeholder="Jordan Lee"></div>
+      <div class="field"><label for="c-email">Work email</label><input id="c-email" type="email" autocomplete="email" placeholder="jordan@company.com"></div>
+      <div class="field"><label for="c-msg">How can we help?</label><textarea id="c-msg" placeholder="Tell us about the page, the traffic and what you'd like to improve."></textarea></div>
+      <p class="err" id="cErr" role="alert"></p>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><span class="m-note">Replies during US business hours</span><button class="btn btn-primary" type="submit" style="height:44px">Send message <span class="arr">→</span></button></div>
+    </form>
+    <div id="cOk" class="m-ok" hidden><span class="tick"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M7 13.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3 id="cOkT">Message received</h3><p>Riz will reply by email.</p></div>
+  </div>
+</dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/site.js"></script>
+</body></html>
