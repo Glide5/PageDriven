@@ -24,7 +24,7 @@ for i in (8, 9, *range(10, 16)): shutil.copy(os.path.join(BASE, "images", f"i{i}
 shutil.copy(os.path.join(BASE, "images", "team.webp"), f"{OUT}/assets/img/team.webp")
 shutil.copy(os.path.join(BASE, "images", "andrew.webp"), f"{OUT}/assets/img/andrew.webp")
 shutil.copy(os.path.join(BASE, "images", "chat-riz.webp"), f"{OUT}/assets/img/chat-riz.webp")
-for n in ("logo.webp", "logo-foot.webp", "levitate-logo.webp") + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
+for n in ("logo.webp", "logo-foot.webp") + tuple(f"{c}-logo.webp" for c in ("levitate", "frisco", "lourcey", "one10", "rset")) + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
 IMG = {f"I{i}": f"assets/img/i{i}.webp" for i in range(16)}
 IMG.update(RIZ="assets/img/riz-waist.webp", AVATAR="assets/img/avatar.webp")
 def img_paths(s):
@@ -295,7 +295,12 @@ WCARD = {
  "stain-guys": ("Landing page", "Local home services", "How we turned a colour page", "into a quote request funnel"),
 }
 # client logos centred over a card's wave art (white artwork on transparent background)
-WCARD_LOGO = {"levitate-media": '<img class="wart-logo" src="assets/img/levitate-logo.webp" alt="" width="640" height="156">'}
+def _logo(n, h): return f'<img class="wart-logo" src="assets/img/{n}-logo.webp" alt="" width="640" height="{h}">'
+def _word(t): return f'<span class="wart-word" aria-hidden="true">{e(t)}</span>'
+WCARD_LOGO = {"levitate-media": _logo("levitate", 156), "frisco-spinal-rehab": _logo("frisco", 189), "lourcey-photography": _logo("lourcey", 154),
+              "one10-driving-school": _logo("one10", 189), "rset-wellness": _logo("rset", 112),
+              # no logo artwork: bold white wordmark at the same visual height
+              "caseleap": _word("CaseLeap"), "outdoor-living-remodeling": _word("Outdoor Living"), "stain-guys": _word("Local Services")}
 def wcard(slug, attrs=""):
     a, (pill, ind, h, hm) = WART[slug], WCARD[slug]
     size = max(17, round(int(re.search(r"(\d+)px", a["font"]).group(1)) * .48))

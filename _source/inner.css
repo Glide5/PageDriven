@@ -666,4 +666,7 @@ html,body{margin:0}
 .cell.b-quote{grid-template-columns:1fr;padding:36px 40px}
 .cell.b-quote .bq-copy{padding-bottom:0}
 @media (max-width:1000px){.cell.b-quote{padding:28px}}
-.wart-logo{position:absolute;z-index:2;left:50%;top:50%;width:48%;height:auto;transform:translate(-50%,-50%);filter:drop-shadow(0 6px 22px rgba(20,14,90,.35));pointer-events:none;user-select:none;-webkit-user-drag:none}
+/* client logo or wordmark centred over a project card's wave art; every logo fits the same box */
+.wart{container-type:inline-size}
+.wart-logo{position:absolute;z-index:2;left:50%;top:50%;width:auto;height:auto;max-width:50%;max-height:30%;transform:translate(-50%,-50%);filter:drop-shadow(0 6px 22px rgba(20,14,90,.35));pointer-events:none;user-select:none;-webkit-user-drag:none}
+.wart-word{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;color:#fff;font-weight:700;font-size:10.5cqw;line-height:1;letter-spacing:-.035em;text-shadow:0 4px 22px rgba(20,14,90,.35);pointer-events:none;user-select:none}
