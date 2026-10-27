@@ -129,6 +129,12 @@ p{margin:0}
 .b-changed{grid-column:span 4}
 .b-m{grid-column:span 4}
 .b-quote{grid-column:span 12;display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px 48px;padding:36px 40px}
+/* featured case study: title on the left, CTA at the right end of the same row */
+.case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px}
+.case-head .sec-head{flex:1 1 auto;min-width:0}
+.case-head .btn{flex:none}
+@media (max-width:640px){.case-head{flex-direction:column;align-items:flex-start}}
+.case-lede{margin-top:16px}
 @media (max-width:1000px){.b-compare,.b-changed,.b-quote{grid-column:span 12}.b-m{grid-column:span 6}.b-m:last-of-type{grid-column:span 12}.b-quote{grid-template-columns:1fr;padding:28px}}
 @media (max-width:640px){.b-m,.b-m:last-of-type{grid-column:span 12}}
 .compare{position:relative;height:100%;min-height:460px;user-select:none;touch-action:pan-y}
