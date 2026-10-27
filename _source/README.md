@@ -31,16 +31,13 @@ Never edit the generated `*.html` or `assets/site.css`/`assets/site.js` in the r
 directly; the next build overwrites them. `api/submit.js` and `package.json` are edited by hand.
 
 ## Forms → riz@gopagedriven.com
-Every form posts to `/api/submit`, which emails the submission through [Resend](https://resend.com)
-with reply-to set to the visitor. Set these in **Vercel → Project → Settings → Environment Variables**
-(Production and Preview), then redeploy:
+Every lead form (the review modal, the contact modal, the inline review form on Book and Work,
+and the chat widget's "leave your email") posts to Formspree at `https://formspree.io/f/xwllyvv`,
+set as `FORM_ENDPOINT` in `site.js`. Formspree emails each submission to the address set on that
+form in the Formspree dashboard (riz@gopagedriven.com). The visitor's `email` field is used as reply-to.
 
-| Name | Value |
-|---|---|
-| `RESEND_API_KEY` | Resend API key (required) |
-| `FORM_TO_EMAIL` | `riz@gopagedriven.com` (default) |
-| `FORM_FROM_EMAIL` | `PageDriven <forms@gopagedriven.com>`, once `gopagedriven.com` is verified in Resend |
-
-Without `RESEND_API_KEY`, the function returns an error. Visitors then see
-"Couldn't send right now. Please email riz@gopagedriven.com instead." See `.env.example`.
+The success message appears only after Formspree answers `ok: true`. On any error, visitors see
+"Couldn't send right now. Please email riz@gopagedriven.com instead." If Formspree rejects the
+email address, they see the usual email hint instead.
+No Vercel environment variables are needed. `api/submit.js` (the earlier Resend function) is no longer called.
 In the claude.ai preview, and when a page is opened as a local file, forms only simulate a send.
