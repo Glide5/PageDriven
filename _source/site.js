@@ -152,19 +152,30 @@ each("[data-copy]",function(b){
   });
 });
 
-/* ---------- Form delivery: POST to the Vercel function (api/submit.js), which emails riz@gopagedriven.com ---------- */
-var FORM_ENDPOINT="/api/submit", FORM_INBOX="riz@gopagedriven.com";
+/* ---------- Form delivery: POST to Formspree, which emails every submission to riz@gopagedriven.com ---------- */
+var FORM_ENDPOINT="https://formspree.io/f/xwllyvv", FORM_INBOX="riz@gopagedriven.com";
 /* no backend behind the claude.ai preview or a local file, so submissions there are only simulated */
 var FORM_PREVIEW=location.protocol==="file:" || /(^|\.)(claude\.ai|claudeusercontent\.com|anthropic\.com)$/.test(location.hostname);
 var FORM_FAIL='Couldn\u2019t send right now. Please email <a href="mailto:'+FORM_INBOX+'">'+FORM_INBOX+'</a> instead.';
+var FORM_NAME={review:["Free page review","Page review request from "],contact:["Contact","New message from "],chat:["Chat widget","Chat question from "]};
+/* resolves only once Formspree answers {ok:true}; anything else rejects, with .field set when Formspree flags a field */
 function sendForm(kind,data,form){
   var hp=form && form.querySelector('[name="website"]');
-  data.kind=kind; data.page=location.pathname; data.website=hp ? hp.value : "";
+  if(hp && hp.value) return Promise.resolve({}); /* spam trap: real visitors never fill the hidden "website" field */
+  data.form=FORM_NAME[kind][0]; data.page=location.pathname; data._subject=FORM_NAME[kind][1]+(data.name||data.email);
   if(FORM_PREVIEW) return Promise.resolve({preview:true});
+  var body=new FormData(); Object.keys(data).forEach(function(k){ body.append(k,data[k]); });
   var ctl=("AbortController" in window) ? new AbortController() : null, timer=setTimeout(function(){ if(ctl) ctl.abort(); },15000);
-  return fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data),signal:ctl?ctl.signal:undefined})
-    .then(function(r){ clearTimeout(timer); if(!r.ok) throw new Error("HTTP "+r.status); return {}; },function(e){ clearTimeout(timer); throw e; });
+  return fetch(FORM_ENDPOINT,{method:"POST",headers:{"Accept":"application/json"},body:body,signal:ctl?ctl.signal:undefined})
+    .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){
+      clearTimeout(timer);
+      if(r.ok && j.ok) return {};
+      var errs=j.errors||[], e=new Error(errs.map(function(x){ return x.message; }).join("; ")||j.error||"HTTP "+r.status);
+      e.field=errs[0] && errs[0].field; throw e;
+    }); })
+    .catch(function(e){ clearTimeout(timer); if(window.console) console.warn("Form not sent:",e.message); throw e; });
 }
+function formError(e){ return e && e.field==="email" ? "Enter a valid email address, for example you@company.com." : FORM_FAIL; }
 function formBusy(btn,on){
   if(!btn) return;
   if(on){ btn.setAttribute("data-label",btn.innerHTML); btn.disabled=true; btn.textContent="Sending\u2026"; }
@@ -217,7 +228,7 @@ if(dlg){
         formBusy(mNext,false);
         $("okTitle").textContent="Thanks, "+n.split(" ")[0]+". Request received.";
         step=3; renderStep(); previewNote(s3,res);
-      },function(){ formBusy(mNext,false); err.innerHTML=FORM_FAIL; });
+      },function(e){ formBusy(mNext,false); err.innerHTML=formError(e); });
     }
   });
   each("[data-open-review]",function(b){ b.addEventListener("click",function(e){ e.preventDefault(); openReview(b.getAttribute("data-service")); }); });
@@ -240,7 +251,7 @@ if(cdlg){
     sendForm("contact",{name:n,email:em,message:m},$("cForm")).then(function(res){
       formBusy(cbtn,false); $("cForm").hidden=true; $("cOk").hidden=false; $("cOkT").textContent="Thanks, "+n.split(" ")[0]+". Message received.";
       previewNote($("cOk"),res); $("cForm").reset();
-    },function(){ formBusy(cbtn,false); er.innerHTML=FORM_FAIL; });
+    },function(e){ formBusy(cbtn,false); er.innerHTML=formError(e); });
   });
 }
 
@@ -256,7 +267,7 @@ each(".inline-review",function(f){
     sendForm("review",{url:g("url").value.trim(),goal:g("goal")?g("goal").value:"",service:"Free Page Review",name:nm,email:g("email").value.trim()},f).then(function(res){
       formBusy(ibtn,false); f.querySelector(".ir-fields").hidden=true; var ok=f.querySelector(".ir-ok"); ok.hidden=false;
       ok.querySelector("h3").textContent="Thanks, "+nm.split(" ")[0]+". Request received."; previewNote(ok,res);
-    },function(){ formBusy(ibtn,false); er.innerHTML=FORM_FAIL; });
+    },function(e){ formBusy(ibtn,false); er.innerHTML=formError(e); });
   });
 });
 
@@ -391,7 +402,7 @@ if($("arcWrap")){
 var chat=$("chat");
 if(chat){
   var panel=$("chatPanel"), fab=$("chatFab"), log=$("chatLog"), quick=$("chatQuick"), cin=$("chatIn"), teaser=$("chatTeaser");
-  var chatStarted=false, awaitingEmail=false;
+  var chatStarted=false, awaitingEmail=false, chatQ="";
   var FAQ = {
     time:"Most landing pages are completed in 5–7 business days, depending on scope and feedback rounds. Rush timelines are available.",
     platform:"Webflow, WordPress, Shopify, Unbounce, ClickFunnels, HighLevel, HubSpot, Wix, and more. We build where your page already lives, so you do not need to migrate.",
@@ -420,8 +431,9 @@ if(chat){
     if(act){ var b=document.createElement("button"); b.type="button"; b.className="act"; b.textContent=act[0]; b.addEventListener("click",function(){ runAct(act[1]); }); m.appendChild(document.createElement("br")); m.appendChild(b); }
     log.appendChild(m); scrollLog(); return m;
   };
+  var typing=function(){ var ty=document.createElement("div"); ty.className="msg bot typing"; ty.innerHTML="<i></i><i></i><i></i>"; log.appendChild(ty); scrollLog(); return ty; };
   var botSay=function(text,act,delay){
-    var ty=document.createElement("div"); ty.className="msg bot typing"; ty.innerHTML="<i></i><i></i><i></i>"; log.appendChild(ty); scrollLog();
+    var ty=typing();
     setTimeout(function(){ ty.remove(); addMsg("bot",text,act); }, reduce?0:(delay||650));
   };
   var answer=function(key){ var a=ANS[key]; botSay(a.t,a.act); };
@@ -429,12 +441,20 @@ if(chat){
     text=text.trim(); if(!text) return;
     addMsg("me",text);
     if(awaitingEmail){
-      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)){ awaitingEmail=false; /* Hook: send the transcript + email to your inbox or CRM here. */ botSay("Thanks. Riz will reply to "+text+" personally."); }
+      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)){
+        awaitingEmail=false; var ty=typing();
+        sendForm("chat",{email:text,message:chatQ},null).then(function(res){
+          ty.remove(); addMsg("bot","Thanks. Riz will reply to "+text+" personally."+(res.preview?" (Preview only: this wasn\u2019t sent.)":""));
+        },function(e){
+          ty.remove(); awaitingEmail=true;
+          addMsg("bot",e.field==="email" ? "That doesn't look like an email address. Try something like you@company.com." : "Couldn\u2019t send that right now. Try again, or email "+FORM_INBOX+".");
+        });
+      }
       else botSay("That doesn't look like an email address. Try something like you@company.com.");
       return;
     }
     for(var i=0;i<INTENTS.length;i++){ if(INTENTS[i][0].test(text)){ answer(INTENTS[i][1]); return; } }
-    awaitingEmail=true;
+    awaitingEmail=true; chatQ=text;
     botSay("Good question for Riz directly. Leave your email and he'll get back to you during US business hours.");
   };
   QUICK.forEach(function(q){ var b=document.createElement("button"); b.type="button"; b.textContent=q[0]; b.addEventListener("click",function(){ addMsg("me",q[0]); answer(q[1]); }); quick.appendChild(b); });
