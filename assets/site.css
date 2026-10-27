@@ -710,7 +710,7 @@ html,body{margin:0}
 
 .svc-band{grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:32px}
 @media (max-width:860px){.svc-band{grid-template-columns:1fr;padding:24px}.svc-band img{width:64px;height:64px}}
-@media (max-width:520px){.nav-in{gap:10px}.nav .nav-cta .nl{display:none}.logo{font-size:17px}}
+@media (max-width:520px){.nav-in{gap:10px}.nav .nav-cta .nl{display:none}.logo img{height:26px}}
 
 /* ===== Landing page: full-screen problem statement ===== */
 .pfocus{position:relative;background:var(--mist);min-height:100vh;display:grid;align-items:center;padding-block:clamp(64px,8vw,104px);overflow:hidden}
@@ -918,10 +918,8 @@ html,body{margin:0}
 .f-base{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-top:clamp(56px,6vw,88px);font-size:13px;color:rgba(255,255,255,.72)}
 .f-legal{display:flex;gap:20px}
 .f-legal a:hover{color:#fff}
-.f-markbox{margin-top:clamp(-28px,-1.6vw,-8px)}
-.f-mark{display:block;width:max-content;white-space:nowrap;font-size:17.4vw;line-height:1.12;font-weight:600;letter-spacing:-.06em;color:rgba(255,255,255,.13);margin-left:-.035em;padding-bottom:.11em}
-.f-mark span{color:rgba(142,140,255,.3)}
-@media (min-width:1232px){.f-mark{font-size:206px}}
+.f-markbox{margin-top:clamp(28px,4vw,56px)}
+.f-logo{display:block;width:100%;height:auto;margin-bottom:clamp(20px,3vw,40px)}
 @media (max-width:1000px){.f-top{grid-template-columns:1fr}.f-title{max-width:16ch}}
 @media (max-width:640px){.f-cols{grid-template-columns:1fr 1fr;gap:36px 20px}.f-cols > div:nth-child(3){grid-column:1/-1}.f-tag{grid-column:1/-1}.f-loc{grid-column:1/-1}.f-cols a,.f-cols button,.f-hours{font-size:15px}.f-base{flex-direction:column}}
 
@@ -961,7 +959,7 @@ html,body{margin:0}
 .wgd-pic.s1{background:radial-gradient(55% 55% at 50% 38%,#E6E3FF,transparent 72%),linear-gradient(180deg,var(--t-violet),#DAD7FF)}
 .wgd-pic.s2{background:radial-gradient(55% 55% at 50% 38%,#DDF0FA,transparent 72%),linear-gradient(180deg,var(--t-cyan),#CDE6F5)}
 .wgd-riz{position:absolute;left:50%;top:9%;height:128%;width:auto;max-width:none;transform:translateX(-50%)}
-.wgd-team{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 10%}
+.wgd-team{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 @media (max-width:900px){
   .wgd-lines,.wgd-stick{display:none}
   .wgd-row::before{display:none}
@@ -1082,3 +1080,35 @@ html,body{margin:0}
 @media (max-width:680px){.t-grid.eq .tcard{max-width:100%}}
 
 .phero.roomy-b{padding-bottom:clamp(72px,8vw,116px)}
+.logo img{display:block;height:32px;width:auto}
+@media (max-width:520px){.logo img{height:26px}}
+/* before/after slider with real screenshots */
+.cmp-pane.shot{padding:0;overflow:hidden;background:#0B1430}
+.cmp-pane.shot img{position:absolute;left:0;right:0;top:56px;bottom:0;width:100%;height:calc(100% - 56px);object-fit:cover;object-position:50% 0;pointer-events:none;user-select:none;-webkit-user-drag:none}
+/* form delivery: spam trap, sending state, preview note */
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.btn[disabled]{opacity:.7;cursor:progress}
+.pv-note{font-size:12.5px;color:var(--ink-3);background:var(--mist);border-radius:10px;padding:8px 12px;max-width:36ch}
+.err a{color:inherit;text-decoration:underline}
+@media (max-width:560px){.cmp-label .cl-d{display:none}}
+/* case study hero: single live-site screenshot in a browser frame */
+.shotcard{margin:0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),0 40px 80px -40px rgba(11,37,69,.45)}
+.sc-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#F3F5F9;border-bottom:1px solid var(--line)}
+.sc-bar i{width:9px;height:9px;border-radius:50%;background:#FF5F57}
+.sc-bar i:nth-child(2){background:#FEBC2E}.sc-bar i:nth-child(3){background:#28C840}
+.sc-url{margin-left:10px;display:inline-flex;align-items:center;gap:6px;min-width:0;max-width:62%;padding:3px 12px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:11.5px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-url svg{flex:none;color:#9AA3B8}
+.sc-view{position:relative;overflow:hidden;background:#F5F6F8}
+.sc-view img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.shotcard.tall .sc-view img{animation:shotpan 20s ease-in-out 1.2s infinite alternate}
+.shotcard.tall:hover .sc-view img{animation-play-state:paused}
+@keyframes shotpan{0%,10%{object-position:50% 0}90%,100%{object-position:50% 100%}}
+@media (prefers-reduced-motion:reduce){.shotcard.tall .sc-view img{animation:none}}
+/* CaseLeap quote card without a portrait: copy spans the card */
+.cell.b-quote{grid-template-columns:1fr;padding:36px 40px}
+.cell.b-quote .bq-copy{padding-bottom:0}
+@media (max-width:1000px){.cell.b-quote{padding:28px}}
+/* client logo or wordmark centred over a project card's wave art; every logo fits the same box */
+.wart{container-type:inline-size}
+.wart-logo{position:absolute;z-index:2;left:50%;top:50%;width:auto;height:auto;max-width:50%;max-height:30%;transform:translate(-50%,-50%);filter:drop-shadow(0 6px 22px rgba(20,14,90,.35));pointer-events:none;user-select:none;-webkit-user-drag:none}
+.wart-word{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;color:#fff;font-weight:700;font-size:10.5cqw;line-height:1;letter-spacing:-.035em;text-shadow:0 4px 22px rgba(20,14,90,.35);pointer-events:none;user-select:none}

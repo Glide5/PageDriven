@@ -1,0 +1,889 @@
+{
+ "SITE": {
+  "name": "PageDriven",
+  "email": "hello@pagedriven.com",
+  "facebook": "https://facebook.com/pagedriven",
+  "instagram": "https://instagram.com/pagedriven",
+  "coverage": "Working with businesses and agencies across the US and Canada.",
+  "availability": "Remote collaboration with daily availability for meetings during US business hours.",
+  "positioning": "Conversion-focused web design for businesses already investing in traffic.",
+  "coreMessage": "Turn more of your existing traffic into leads, bookings, and sales."
+ },
+ "CTA": {
+  "primary": "Get My Free Page Review",
+  "secondary": "See Client Results",
+  "nav": "Get My Free Review"
+ },
+ "FOUNDER_COPY": "Hi, I'm Riz, founder and conversion strategist at PageDriven.",
+ "UPWORK_PROFILE_URL": null,
+ "PROOF": [
+  {
+   "label": "Top Rated on Upwork",
+   "sub": "Verified freelancer status"
+  },
+  {
+   "label": "100% Job Success Score",
+   "sub": "On completed contracts"
+  },
+  {
+   "label": "5.0 client rating",
+   "sub": "Across completed projects"
+  }
+ ],
+ "AUDIENCES": [
+  {
+   "title": "For Service Businesses",
+   "body": "Landing pages and websites that turn existing traffic into qualified calls, bookings, quote requests, and sales.",
+   "href": "/services/landing-pages",
+   "linkLabel": "See landing page sprints"
+  },
+  {
+   "title": "For Marketing Agencies",
+   "body": "White-label landing pages, location pages, website production, UX improvements, and technical support without another full-time hire.",
+   "href": "/agency-partners",
+   "linkLabel": "See agency partnerships"
+  }
+ ],
+ "SERVICE_CTAS": {
+  "landing-pages": {
+   "service": "Landing Page Sprints",
+   "primary": "Get a Landing Page Quote",
+   "secondary": "See Landing Pages",
+   "secondaryHref": "#work"
+  },
+  "conversion-websites": {
+   "service": "Conversion-Focused Websites",
+   "primary": "Get a Website Quote",
+   "secondary": "See Website Work",
+   "secondaryHref": "#work"
+  },
+  "cro-audits": {
+   "service": "CRO Audits & Quick Wins",
+   "primary": "Request an Audit",
+   "secondary": "See Audit Examples",
+   "secondaryHref": "#audit-examples"
+  },
+  "ongoing-optimization": {
+   "service": "Ongoing Conversion Support",
+   "primary": "Discuss CRO Support",
+   "secondary": "See What's Included",
+   "secondaryHref": "#included"
+  }
+ },
+ "AGENCY_CTA": {
+  "service": "Agency Partnerships",
+  "primary": "Discuss a Partnership",
+  "secondary": "How Partnerships Work",
+  "secondaryHref": "#how-partnerships-work"
+ },
+ "SERVICES": [
+  {
+   "slug": "landing-pages",
+   "name": "Landing Page Sprints",
+   "short": "Campaign landing pages planned, written, designed, and built around one clear action — on the platform you already use.",
+   "headline": "Campaign landing pages built around one clear action.",
+   "headlineHighlight": "one clear action",
+   "subheadline": "For service businesses and agencies sending paid or organic traffic to pages that don't carry the campaign. We plan, write, design, and build a page matched to the traffic it receives — on your existing platform.",
+   "problemTitle": "The ad does the work. The page loses it.",
+   "problemBody": "A visitor clicks an ad that makes a specific promise, then lands on a homepage, a generic service page, or a template that tells a different story. The message breaks, the next step is unclear, and the click you paid for goes nowhere.",
+   "outcomes": [
+    "A page that says the same thing your ad promised, so the click continues instead of breaking",
+    "One clear action per page — call, booking, quote, or purchase — instead of competing links",
+    "Tracking wired in so performance can be read campaign by campaign",
+    "A page your team can edit without a developer for routine changes"
+   ],
+   "includes": [
+    "Offer, audience, and traffic-source discovery led by Riz",
+    "Message hierarchy and page structure mapped before design",
+    "Conversion copy written for the campaign, not repurposed from the site",
+    "Responsive design and build on your existing platform",
+    "Form, tracking, and thank-you flow wired and tested",
+    "Final quality review before handover"
+   ],
+   "steps": [
+    {
+     "title": "Brief",
+     "body": "We review your offer, audience, ad or keyword intent, and the platform the page will live on."
+    },
+    {
+     "title": "Structure",
+     "body": "The page flow is mapped first — which sections earn the click's continuation and which earn the conversion."
+    },
+    {
+     "title": "Write & design",
+     "body": "Copy and layout are built around one action, with proof placed where hesitation happens."
+    },
+    {
+     "title": "Build & test",
+     "body": "The page is built on your platform, wired for tracking, and reviewed on real devices before handover."
+    }
+   ],
+   "proofNames": [
+    "Dr. David Kaff",
+    "Dr. Jason Wayne",
+    "Danny Thomas"
+   ],
+   "platforms": [
+    "Unbounce",
+    "Webflow",
+    "HighLevel",
+    "ClickFunnels",
+    "WordPress",
+    "Shopify",
+    "HubSpot"
+   ],
+   "faqs": [
+    {
+     "q": "How long does a landing page sprint take?",
+     "a": "Most landing pages are completed in 5–7 business days, depending on scope and feedback rounds. Rush timelines are available."
+    },
+    {
+     "q": "Do we need to move platforms?",
+     "a": "No. We build where your page already lives — Unbounce, Webflow, HighLevel, ClickFunnels, WordPress, Shopify, HubSpot, and more — so a migration never lands on your roadmap."
+    },
+    {
+     "q": "What do you need from us to start?",
+     "a": "Your offer details, the campaign or traffic source the page serves, brand assets if you have them, and examples you like. We guide you through the rest."
+    },
+    {
+     "q": "Who writes the copy?",
+     "a": "We do. Conversion copy is written for the campaign as part of the sprint — not pulled from your existing site and pasted into a new layout."
+    },
+    {
+     "q": "Can you white-label this for our agency?",
+     "a": "Yes. We produce white-label landing pages for SEO, PPC, and digital agencies. See the agency partners page for how that works."
+    }
+   ]
+  },
+  {
+   "slug": "conversion-websites",
+   "name": "Conversion-Focused Websites",
+   "short": "Full websites structured around how buyers actually decide — built to carry both paid and organic traffic.",
+   "headline": "Websites designed around the next customer action—not just the next scroll.",
+   "headlineHighlight": "next customer action",
+   "subheadline": "For service businesses whose site has to earn leads from real traffic, not just exist. Structure comes first: what each page is for, who it speaks to, and what it asks people to do.",
+   "problemTitle": "A good-looking site that doesn't sell.",
+   "problemBody": "Most business websites were built to look finished, not to move a buyer. Every page tries to say everything, the navigation sends visitors sideways, and the only real call to action is a contact form buried in the footer.",
+   "outcomes": [
+    "A site where every page has one job and one primary action",
+    "Messaging that answers the questions buyers actually have, in the order they have them",
+    "Clear paths to enquiry for both paid and organic visitors",
+    "A maintainable build your team can update without breaking structure"
+   ],
+   "includes": [
+    "Site structure and page-by-page conversion intent",
+    "Messaging framework across home, service, and location pages",
+    "Copywriting and design for every template",
+    "Build on your chosen platform with responsive, accessible markup",
+    "Lead capture, analytics, and event tracking connected",
+    "Handover documentation so your team can maintain it"
+   ],
+   "steps": [
+    {
+     "title": "Map",
+     "body": "We define what each page is for, who it speaks to, and the single action it asks for — before any design begins."
+    },
+    {
+     "title": "Write",
+     "body": "The messaging framework and page copy come first, so design serves the message rather than decorating it."
+    },
+    {
+     "title": "Design & build",
+     "body": "Templates are designed and built on your platform with responsive, accessible markup."
+    },
+    {
+     "title": "Launch & hand over",
+     "body": "Lead capture and analytics are connected, tested, and documented so your team can maintain the site."
+    }
+   ],
+   "proofNames": [
+    "Wes Kennedy",
+    "Izaiah Jacobson",
+    "Danny Thomas"
+   ],
+   "platforms": [
+    "Webflow",
+    "WordPress",
+    "Shopify",
+    "HubSpot",
+    "HighLevel"
+   ],
+   "faqs": [
+    {
+     "q": "Do you rebuild on our current platform?",
+     "a": "Usually, yes. We build on Webflow, WordPress, Shopify, HubSpot, HighLevel, and similar platforms. If the current platform genuinely can't support the structure the site needs, we'll say so and explain why before recommending any change."
+    },
+    {
+     "q": "Can you keep our existing content?",
+     "a": "We keep what earns its place. Most sites we see say too much in the wrong order, so content is usually restructured and rewritten around buyer decisions rather than reused as-is."
+    },
+    {
+     "q": "How is this different from a normal web design project?",
+     "a": "Structure and messaging come before design. Every page is planned around a specific visitor and a specific action, so the finished site has a job instead of just a look."
+    },
+    {
+     "q": "Do you handle SEO?",
+     "a": "We build with sound technical fundamentals — semantic markup, page structure, metadata, and performance — and structure pages around search intent. Ongoing SEO campaigns sit with your SEO partner, and we work well alongside them."
+    },
+    {
+     "q": "Who does the work?",
+     "a": "Riz leads discovery, conversion strategy, and final quality review on every engagement, supported by a specialist copy, design, and development team."
+    }
+   ]
+  },
+  {
+   "slug": "cro-audits",
+   "name": "CRO Audits & Quick Wins",
+   "short": "A comprehensive, paid review of what is costing you conversions — with prioritized fixes, not a generic scorecard.",
+   "headline": "Find and fix the friction costing you conversions.",
+   "headlineHighlight": "costing you conversions",
+   "subheadline": "For teams already spending on traffic who want a proper diagnosis before committing to a rebuild. We review the page against the traffic pointed at it, report where momentum is lost, and fix the quick wins where scope allows.",
+   "problemTitle": "Traffic keeps arriving. The page keeps leaking.",
+   "problemBody": "When conversions stall, the instinct is to buy more traffic or start a rebuild. Both are expensive guesses. The cheaper question is where the current page loses people — message, structure, design, or offer — and which fixes are worth doing first.",
+   "outcomes": [
+    "A prioritized list of fixes, ranked by expected impact and effort",
+    "Quick wins implemented in the same engagement where scope allows",
+    "A clear recommendation on whether a rebuild is justified — or not",
+    "A plan you can act on with us, with your own team, or with another partner"
+   ],
+   "includes": [
+    "Review of the page against its traffic source and ad or query intent",
+    "Message, structure, design, and offer assessment",
+    "Prioritized list of fixes, ranked by expected impact",
+    "Implementation of the quick wins where scope allows",
+    "Clear recommendation on whether a rebuild is justified"
+   ],
+   "steps": [
+    {
+     "title": "Context",
+     "body": "We gather the traffic sources, campaign intent, analytics access, and conversion goal before reviewing anything."
+    },
+    {
+     "title": "Review",
+     "body": "The page is assessed section by section against the traffic it receives — message match, structure, design, and offer."
+    },
+    {
+     "title": "Report",
+     "body": "Findings come back as a prioritized plan: what's broken, why it matters, and the order to fix it in."
+    },
+    {
+     "title": "Fix",
+     "body": "Quick wins are implemented where scope allows, with a clear recommendation on anything that needs a larger engagement."
+    }
+   ],
+   "proofNames": [
+    "Tim Peacock",
+    "Dr. David Kaff",
+    "Wes Kennedy"
+   ],
+   "faqs": [
+    {
+     "q": "How is this different from the free page review?",
+     "a": "The free page review is a short, personal look at one page — where it's most likely losing momentum and the three highest-impact fixes. A CRO audit is a comprehensive paid engagement: full page and funnel review against traffic data, prioritized findings, and quick-win implementation where scope allows."
+    },
+    {
+     "q": "Do you need analytics access?",
+     "a": "It helps. Where analytics or session data is available we use it; where it isn't, the audit still works — it's just grounded in message, structure, and heuristics rather than behavior data."
+    },
+    {
+     "q": "Will you tell us to rebuild?",
+     "a": "Only if the findings justify it. Many audits end with a short list of fixes to the existing page, and we'll say so plainly when that's the answer."
+    },
+    {
+     "q": "Do you run A/B tests as part of an audit?",
+     "a": "No. Experimentation depends on sufficient traffic and reliable tracking to produce readable results. Where that's in place, we can recommend what to test — as part of ongoing optimization, not a one-off audit."
+    },
+    {
+     "q": "Who actually does the audit?",
+     "a": "Riz personally leads the review and the findings report — every audit, no exceptions."
+    }
+   ],
+   "note": {
+    "title": "Free page review vs. a paid CRO audit",
+    "body": "The free page review is a focused, personal review of one page — the likely momentum-killers and the three highest-impact fixes. A CRO audit is a comprehensive paid engagement: deeper analysis against your traffic and tracking, a prioritized fix list, and quick-win implementation. Start with the free review; we'll tell you if a full audit is warranted."
+   }
+  },
+  {
+   "slug": "ongoing-optimization",
+   "name": "Ongoing Conversion Support",
+   "short": "A conversion partner after launch — continuous improvement, new pages, and production capacity on a predictable cadence.",
+   "headline": "A conversion partner after launch.",
+   "headlineHighlight": "after launch",
+   "subheadline": "For businesses and agencies running traffic continuously. We watch how pages perform, keep an improvement backlog current, and ship copy, design, and build changes — plus new campaign pages as the offer evolves.",
+   "problemTitle": "Pages quietly degrade between campaigns.",
+   "problemBody": "Launch is the best a page ever looks. Then offers change, campaigns rotate, and nobody owns the page — so conversion work stalls until the next expensive rebuild. An ongoing engagement keeps someone accountable for performance in between.",
+   "outcomes": [
+    "Pages that keep improving instead of aging between campaigns",
+    "A prioritized improvement backlog that stays current",
+    "New campaign and location pages shipped as the offer evolves",
+    "Direct access to Riz for strategy calls and prioritization"
+   ],
+   "includes": [
+    "Regular review of page performance signals",
+    "Prioritized improvement backlog kept current",
+    "Copy, design, and build changes shipped on a predictable cadence",
+    "New campaign and location pages as needed",
+    "Direct access to Riz for strategy calls"
+   ],
+   "steps": [
+    {
+     "title": "Baseline",
+     "body": "We review current pages, tracking, and traffic to establish what 'working' looks like before changing anything."
+    },
+    {
+     "title": "Prioritize",
+     "body": "Findings and ideas go into a ranked backlog, so effort always goes to the highest-impact work first."
+    },
+    {
+     "title": "Ship",
+     "body": "Copy, design, and build changes ship on a predictable cadence, with quality review before anything goes live."
+    },
+    {
+     "title": "Review",
+     "body": "We watch performance signals, report what changed and what it did, and re-prioritize the backlog."
+    }
+   ],
+   "proofNames": [
+    "Andrew",
+    "Danny Thomas"
+   ],
+   "faqs": [
+    {
+     "q": "Do you run A/B tests?",
+     "a": "Where it makes sense. Experimentation depends on sufficient traffic and reliable tracking — without enough volume, test results aren't readable and can be misleading. We'll tell you honestly whether your traffic supports testing, and prioritize direct improvements when it doesn't."
+    },
+    {
+     "q": "What does a typical month look like?",
+     "a": "A reviewed performance readout, a re-prioritized backlog, and shipped changes — the mix of copy, design, and new pages depends on where the biggest gains sit that month."
+    },
+    {
+     "q": "Can agencies use this white-label?",
+     "a": "Yes. Agencies use this as ongoing production capacity with conversion thinking attached — landing pages, location pages, and UX improvements delivered under your brand."
+    },
+    {
+     "q": "Is there a minimum commitment?",
+     "a": "We scope ongoing support around what your traffic and page count actually justify. That conversation starts with the free page review, not a contract."
+    },
+    {
+     "q": "Who do we work with day to day?",
+     "a": "Riz stays on strategy and quality review, supported by the specialist team that ships copy, design, and build work."
+    }
+   ],
+   "note": {
+    "title": "A note on A/B testing",
+    "body": "We don't promise split testing as a default. Reliable experiments need sufficient traffic and trustworthy tracking; below that threshold, test results mislead more than they inform. Where your numbers support experimentation, we'll recommend it. Where they don't, we focus on direct, evidence-based improvements instead."
+   }
+  }
+ ],
+ "PROBLEMS": [
+  {
+   "icon": "message",
+   "title": "The message doesn't match the ad",
+   "body": "Visitors expect one thing from your ad, then land on a page that tells a different story."
+  },
+  {
+   "icon": "pointer",
+   "title": "The page looks fine but doesn't persuade",
+   "body": "Design alone doesn't convert. The page needs a clear offer, relevant proof, and a logical flow."
+  },
+  {
+   "icon": "monitor",
+   "title": "The platform limits the execution",
+   "body": "Every platform behaves differently. A good page has to work inside the tool you already use."
+  },
+  {
+   "icon": "funnel",
+   "title": "Budget keeps growing before the page is fixed",
+   "body": "More traffic only makes the leak more expensive while the page isn't doing its job."
+  }
+ ],
+ "PROCESS": [
+  {
+   "title": "Diagnose",
+   "body": "We review your offer, audience, traffic source, current page, competitors, and conversion goal."
+  },
+  {
+   "title": "Structure",
+   "body": "We map the page flow and define the right sections to guide visitors toward action."
+  },
+  {
+   "title": "Write & design",
+   "body": "We write conversion-focused copy and design a clean layout around one clear action."
+  },
+  {
+   "title": "Build",
+   "body": "We build on your chosen platform with responsive, accessible implementation."
+  },
+  {
+   "title": "Improve",
+   "body": "For ongoing engagements we watch performance signals and keep improving the page."
+  }
+ ],
+ "WORK_FILTERS": [
+  {
+   "key": "all",
+   "label": "All work"
+  },
+  {
+   "key": "conversion-websites",
+   "label": "Websites"
+  },
+  {
+   "key": "landing-pages",
+   "label": "Landing pages"
+  },
+  {
+   "key": "ongoing-optimization",
+   "label": "Ongoing CRO"
+  },
+  {
+   "key": "cro-audits",
+   "label": "CRO audits"
+  }
+ ],
+ "WORK": [
+  {
+   "slug": "caseleap",
+   "title": "From a 3-second glance to an 18-second visit.",
+   "titleHighlight": "an 18-second visit",
+   "client": "CaseLeap",
+   "category": "B2B video services · CRO",
+   "trafficSource": "US organic and referral",
+   "goal": "Custom quote requests and strategy calls",
+   "platform": "Webflow",
+   "problem": "Ongoing CRO and UX optimization across the homepage, campaign pages, service pages and pricing journey.",
+   "originalProblem": "CaseLeap was already attracting visitors, but the homepage was losing them within seconds — the message, proof, and next step weren't landing fast enough.",
+   "clientContext": "A B2B testimonial video production company serving US marketing teams, backed by an established parent brand and a strong client roster.",
+   "beforeState": [
+    "Homepage visitors averaged 3 seconds before leaving",
+    "Trust proof and testimonials sat far below the fold",
+    "The primary CTA competed with equally weighted alternatives",
+    "Forms and mobile UX added friction at the decision point"
+   ],
+   "strategy": "Use GA4 and Microsoft Clarity to find where the homepage loses attention, then refine the message, surface proof earlier, clarify the CTA hierarchy, and reduce conversion friction.",
+   "changes": [
+    "Outcome-led hero messaging built around business results",
+    "Trust and testimonials moved closer to the decision point",
+    "Clearer primary and secondary CTA paths",
+    "Simpler forms and improved mobile conversion UX"
+   ],
+   "afterState": [
+    "Average time on the homepage rose from 3 seconds to 18 seconds",
+    "Events per homepage visit rose from 3.34 to 4.84",
+    "Quick backs fell from 21.4% to 11.8%"
+   ],
+   "measurement": "Results compare US traffic before and after Iteration 1, measured in GA4 and Microsoft Clarity.",
+   "testimonialName": "CaseLeap (company of Levitate Media), Founder",
+   "service": "ongoing-optimization",
+   "url": "https://caseleap.com",
+   "imgKey": "caseleap",
+   "featured": true,
+   "tag": "CaseLeap · B2B Video · CRO"
+  },
+  {
+   "slug": "frisco-spinal-rehab",
+   "title": "Frisco Spinal Rehab",
+   "titleHighlight": "Frisco Spinal Rehab",
+   "client": "Frisco Spinal Rehab",
+   "category": "Healthcare · Google Ads Funnel",
+   "trafficSource": "Google Ads",
+   "goal": "Form submission",
+   "platform": "GoHighLevel",
+   "problem": "Rebuilt a spinal decompression funnel around patient concerns, stronger proof, one consistent offer and a clearer form journey.",
+   "originalProblem": "High-intent Google Ads traffic was landing on a treatment-first funnel that asked patients to act before it earned their trust.",
+   "clientContext": "Frisco Spinal Rehab was sending high-intent Google Ads traffic to a spinal decompression funnel. We audited the landing and scheduling experience, then rebuilt it around patient concerns, credible proof, a consistent offer and a clearer path to submitting the form.",
+   "beforeState": [
+    "Treatment-led headline",
+    "Missing review proof",
+    "Conflicting free and paid offers",
+    "Calendar separated from the persuasive page",
+    "Uncertain confirmation language",
+    "Template-like presentation"
+   ],
+   "strategy": "Align the ad, the patient's concern and one clear next step — lead with the patient's pain, match high-intent searches, bring proof near decision points, and keep one consistent offer throughout.",
+   "changes": [
+    "Patient-first, search-aligned messaging",
+    "Trust proof near decision points",
+    "One consistent offer",
+    "Clear expectations before submission",
+    "More reassuring next-step language",
+    "Polished healthcare presentation",
+    "MS Clarity tracking installed"
+   ],
+   "afterState": [
+    "A clearer, more professional experience for people making a serious healthcare decision",
+    "Campaign message aligned with patient intent",
+    "Trust strengthened around the form journey",
+    "Tracking foundation established for continued optimization"
+   ],
+   "measurement": "This case study documents the strategy, redesign and client-verified delivery. No numerical conversion lift is presented because a controlled pre/post dataset was not available.",
+   "testimonialName": "Dr. David Kaff",
+   "service": "landing-pages",
+   "url": "https://drx.friscorehab.com/drx-9000-page",
+   "imgKey": "frisco",
+   "featured": true,
+   "tag": "Frisco Spinal · Healthcare · Landing Page"
+  },
+  {
+   "slug": "levitate-media",
+   "title": "Levitate Media",
+   "titleHighlight": "Levitate Media",
+   "client": "Levitate Media",
+   "category": "Video Production · UX & CRO Audit",
+   "trafficSource": "Organic search",
+   "goal": "Quote requests",
+   "platform": "Webflow",
+   "problem": "Analyzed visitor behavior across six established service pages to identify which content consistently earned attention and where targeted UX refinements could strengthen evaluation and lead capture.",
+   "originalProblem": "Six established service pages already carried strong work samples, credibility and process content. The engagement analyzed visitor behavior to find which elements earned attention and where targeted UX and CRO refinements could help.",
+   "clientContext": "A video production company whose six established service pages were reviewed through a behavioral UX and CRO audit.",
+   "beforeState": [
+    "An established service-page system with strong work samples, credibility and process content",
+    "Visitor behavior showed a clear preference for visual proof — video examples, case studies and the production process",
+    "Valuable decision-support content was sometimes overlooked lower on the page"
+   ],
+   "strategy": "Analyze visitor recordings and attention patterns across all six pages, then translate recurring behavioral patterns into targeted UX and CRO refinements and a recommended page sequence.",
+   "changes": [
+    "Reviewed visitor behavior across six service pages on desktop and mobile",
+    "Identified which content consistently earned attention and which was overlooked",
+    "Produced prioritized recommendations, a recommended page framework and interface concepts"
+   ],
+   "afterState": [
+    "A cross-page CRO plan grounded in the sections visitors were already engaging with",
+    "Existing strengths preserved, with improved emphasis, scannability, trust presentation and CTA treatment"
+   ],
+   "measurement": "This case study documents the audit evidence and recommended strategy. No conversion-lift percentage is shown because verified post-implementation performance data was not supplied.",
+   "testimonialName": "Levitate Media, Founder",
+   "service": "ongoing-optimization",
+   "url": "https://levitatemedia.com/strategy-first-multi-asset-video-production",
+   "imgKey": "levitate",
+   "featured": true,
+   "tag": "Levitate · Video Production · Audit"
+  },
+  {
+   "slug": "outdoor-living-remodeling",
+   "title": "A phased redesign that matches the quality of the spaces built.",
+   "titleHighlight": "the quality of the spaces built",
+   "client": "Confidential remodeling client",
+   "category": "Home remodeling · Agency-delivered",
+   "trafficSource": "Organic search",
+   "goal": "Quote and consultation requests",
+   "platform": "WordPress · Elementor",
+   "problem": "A phased Elementor redesign that transformed an aging, SEO-driven website into a more polished and conversion-focused customer experience.",
+   "originalProblem": "The existing website was attracting SEO traffic but looked dated, so the experience did not reflect the standard of the outdoor living and interior renovation work the company delivers.",
+   "clientContext": "An outdoor living and home remodeling company, delivered for an agency partner whose team managed SEO. Client identity withheld.",
+   "beforeState": [
+    "An aging design built primarily around SEO content",
+    "Presentation that undersold the quality of completed projects",
+    "A full rebuild was not practical to wait for"
+   ],
+   "strategy": "Make the website reflect the quality of the spaces the company creates — ship visible UI improvements immediately, then agree the full direction in a live prototype before phased implementation.",
+   "changes": [
+    "Initial UI fixes delivered visible improvements without waiting for a complete rebuild",
+    "A clickable, AI-assisted prototype produced in approximately one week",
+    "Design refined collaboratively inside the live prototype",
+    "Desktop and mobile experiences approved before development",
+    "Implementation phased across the homepage, location pages and service pages",
+    "Client-provided references informed the visual direction without being copied"
+   ],
+   "afterState": [
+    "A polished aesthetic that communicates design capability before visitors make contact",
+    "A consistent template system across homepage, location and service pages",
+    "A phased rollout that kept the live site working throughout"
+   ],
+   "measurement": "This case study documents the design process and delivery. No conversion or ranking claims are made because verified pre/post data was not supplied.",
+   "testimonialName": "Danny Thomas",
+   "service": "conversion-websites",
+   "imgKey": "outdoorLiving",
+   "featured": true,
+   "tag": "Remodeling Client · Home Services · Website"
+  },
+  {
+   "slug": "lourcey-photography",
+   "title": "An image-led site that stays fast on mobile.",
+   "titleHighlight": "stays fast on mobile",
+   "client": "Lourcey Photography",
+   "category": "Photography · Webflow",
+   "trafficSource": "Organic search and referral",
+   "goal": "Session enquiries",
+   "platform": "Webflow",
+   "problem": "An image-led Webflow redesign for a portrait photographer, balancing distinctive visual storytelling with mobile usability, performance and search visibility.",
+   "originalProblem": "An older Webflow experience needed a more distinctive visual system without letting image-heavy layouts compromise usability or performance.",
+   "clientContext": "A portrait studio serving Plano, Dallas and surrounding communities.",
+   "beforeState": [
+    "An older Webflow site with a less distinctive visual system",
+    "Image-heavy requirements that put pressure on mobile experience",
+    "Performance and technical SEO foundations needing attention"
+   ],
+   "strategy": "Create an immersive photography experience first, then engineer the image-heavy layouts so mobile usability, performance and search visibility hold up.",
+   "changes": [
+    "Replaced the older Webflow experience with a more distinctive visual system",
+    "Created a live, AI-assisted prototype for faster client review",
+    "Refined desktop and mobile layouts collaboratively before development",
+    "Solved complex, image-heavy layout requirements",
+    "Performed further optimization after initial PageSpeed results were unsatisfactory",
+    "Improved technical SEO and performance foundations"
+   ],
+   "afterState": [
+    "A distinctive, image-led experience that still works on mobile",
+    "Stronger performance foundations after post-launch optimization",
+    "Content structured for search and emerging AI discovery"
+   ],
+   "measurement": "This case study documents the design, build and optimization work. No conversion figures are published because verified post-launch data was not supplied.",
+   "service": "conversion-websites",
+   "url": "https://www.lourceyphotography.com",
+   "imgKey": "lourcey",
+   "featured": true,
+   "tag": "Lourcey · Photography · Website"
+  },
+  {
+   "slug": "one10-driving-school",
+   "title": "A custom theme built around enrollment and payment.",
+   "titleHighlight": "enrollment and payment",
+   "client": "One10 Driving School",
+   "category": "Education · Custom WordPress",
+   "trafficSource": "Organic search and direct",
+   "goal": "Course enrollments and payments",
+   "platform": "Custom WordPress theme",
+   "problem": "A custom WordPress website combining a distinctive brand experience with Moneris payments and a tailored course-enrollment checkout.",
+   "originalProblem": "The school needed a distinctive public-facing site that also handled the complexity of course registration and Canadian online payments.",
+   "clientContext": "A driving school enrolling students in courses online, taking payment through the Canadian Moneris gateway.",
+   "beforeState": [
+    "A design vision expressed through multiple client references",
+    "Enrollment requirements that generic templates could not carry",
+    "No tailored online payment experience"
+   ],
+   "strategy": "Turn a reference-led design vision into a custom enrollment and payment experience, balancing the public-facing design with the complexity of registration.",
+   "changes": [
+    "Used AI-assisted prototyping and development to accelerate delivery",
+    "Created an original design informed by multiple client references",
+    "Built a custom WordPress theme rather than relying on a generic template",
+    "Integrated the Canadian Moneris payment gateway",
+    "Developed a tailored checkout around the school's specific enrollment requirements"
+   ],
+   "afterState": [
+    "A distinctive brand experience on a purpose-built theme",
+    "Course enrollment and payment handled end to end on the site",
+    "A checkout shaped around how the school actually registers students"
+   ],
+   "measurement": "This case study documents the design and build. No enrollment or revenue figures are published because verified data was not supplied.",
+   "service": "conversion-websites",
+   "imgKey": "one10",
+   "url": "https://one10drivingschool.com/qa",
+   "featured": true,
+   "tag": "One10 · Driving School · Website"
+  },
+  {
+   "slug": "rset-wellness",
+   "title": "A supplement page structured around the subscription offer.",
+   "titleHighlight": "subscription offer",
+   "client": "RSET",
+   "category": "Ecommerce",
+   "trafficSource": "Paid social and direct",
+   "goal": "Wellness supplement orders",
+   "platform": "Shopify",
+   "problem": "Redesigned the page and copy around subscription and discount offers to drive more orders.",
+   "originalProblem": "The product story and the offer were competing. Visitors had to work out the subscription benefit for themselves before they could decide to buy.",
+   "clientContext": "A direct-to-consumer wellness supplement brand selling on Shopify, with paid social driving visitors straight to the product experience.",
+   "beforeState": [
+    "Product benefits and the purchase offer were separated",
+    "The subscription and discount terms were easy to miss",
+    "Proof and reassurance appeared after the buying decision, not before"
+   ],
+   "strategy": "Put the offer next to the reason to believe it: state the benefit plainly, make the subscription saving explicit at the point of choice, and reduce the steps between interest and checkout.",
+   "changes": [
+    "Restructured the page around the subscription and discount offer",
+    "Rewrote product copy to lead with outcome rather than ingredients",
+    "Redesigned the buying section so the offer is visible at the decision point",
+    "Built responsively on the existing Shopify theme"
+   ],
+   "afterState": [
+    "One clear buying path with the offer stated where it matters",
+    "Benefit-led copy that carries the paid-social promise through to the page",
+    "A mobile experience matched to where the traffic actually comes from"
+   ],
+   "measurement": "Performance is tracked inside the client's own Shopify analytics. No controlled experiment was run alongside the redesign, so no conversion claim is published here.",
+   "service": "landing-pages",
+   "url": "https://getrset.com",
+   "imgKey": "getrset",
+   "tag": "RSET · Wellness · Landing Page"
+  },
+  {
+   "slug": "stain-guys",
+   "title": "A colour-browsing page turned into a quote request funnel.",
+   "titleHighlight": "quote request funnel",
+   "client": "Confidential local services client",
+   "category": "Local services",
+   "trafficSource": "Organic search",
+   "goal": "Free quote requests",
+   "platform": "WordPress",
+   "problem": "Turned a color-browsing experience into a free quote request funnel.",
+   "originalProblem": "The fence staining colours page attracted interested local visitors but treated them as browsers, with no path from choosing a colour to requesting a quote.",
+   "clientContext": "A local home services business ranking for colour-related searches in its service area.",
+   "beforeState": [
+    "The page ended at colour selection with no next step",
+    "Service, area, and process details were on other pages",
+    "Enquiry required the visitor to go looking for a contact form"
+   ],
+   "strategy": "Keep the browsing value that earns the traffic, then convert intent at the moment a visitor picks a colour they like.",
+   "changes": [
+    "Restructured the page so colour browsing leads into the quote request",
+    "Added service and process context to the same page",
+    "Rewrote supporting copy for local search intent",
+    "Rebuilt the layout in WordPress on the existing theme"
+   ],
+   "afterState": [
+    "A browsing experience with a quote request built into it",
+    "Local service context available without leaving the page",
+    "One clear action for high-intent organic visitors"
+   ],
+   "measurement": "Quote requests are tracked in the client's own analytics. No controlled experiment accompanied the rebuild, so no conversion figure is claimed here.",
+   "service": "landing-pages",
+   "imgKey": "stainguys",
+   "tag": "Local Services · Landing Page"
+  }
+ ],
+ "FEATURED_CASE": {
+  "eyebrow": "Featured project",
+  "client": "Frisco Spinal Rehab",
+  "category": "Medical · GoHighLevel",
+  "title": "A treatment page rebuilt around booking the consultation.",
+  "challenge": "Paid traffic was landing on a page that explained the treatment but never made booking a free consultation the obvious next step.",
+  "work": "We rewrote the message hierarchy around the offer, redesigned the page for a single conversion goal, and rebuilt it in GoHighLevel with tracking wired in so performance could actually be read.",
+  "outcome": "A page that leads with the patient's problem, answers the objections that stall a booking, and puts the consultation request in front of the visitor at every decision point.",
+  "quote": "Rizvi has been a pleasure to work with. He is very sharp and understands his craft well. The landing page he built for us has been a major upgrade and he went above and beyond integrating MS Clarity for tracking and optimization. Nothing but positive things to say.",
+  "quoteName": "Dr. David Kaff",
+  "quoteRole": "Frisco Spinal Rehab, TX",
+  "url": "https://drx.friscorehab.com/drx-9000-page"
+ },
+ "TESTIMONIALS": [
+  {
+   "quote": "Working with Rizvi has been a dream come true for our marketing department. Before working w/ him we were utilizing different contractors for site design, development, and CRO. Rizvi is a one-stop shop and consistently executes at a high level. To add, and this is really appreciated in a fast moving marketing department- his communication is excellent so we always know where things stand day to day. Planning to use him ongoing for a long time to come.",
+   "name": "Andrew",
+   "role": "CaseLeap (company of Levitate Media), Founder"
+  },
+  {
+   "quote": "Working with Rizvi has been a dream come true for our marketing department. Before working w/ him we were utilizing different contractors for site design, development, and CRO. Rizvi is a one-stop shop and consistently executes at a high level. To add, and this is really appreciated in a fast moving marketing department- his communication is excellent so we always know where things stand day to day. Planning to use him ongoing for a long time to come.",
+   "name": "Andrew",
+   "role": "Levitate Media, Founder"
+  },
+  {
+   "quote": "If you're looking for somebody who gets Sh*t done, doesn't need hand-holding, and speaks and writes well. Riz is your man! He's been working alongside us for over 6 months, and it's been a pleasure. Knows his craft, is well-versed, and communicates clearly. If you need any sort of Web Dev/Design services, shoot him a message.",
+   "name": "Danny Thomas",
+   "role": "RevConstruct, Marketing Agency, CA"
+  },
+  {
+   "quote": "Rizvi has been a pleasure to work with. He is very sharp and understands his craft well. The landing page he built for us has been a major upgrade and he went above and beyond integrating MS Clarity for tracking and optimization. Nothing but positive things to say.",
+   "name": "Dr. David Kaff",
+   "role": "Frisco Spinal Rehab, TX"
+  },
+  {
+   "quote": "Rizvi delivered exceptional landing page design and refinement with a sharp web design eye and conversion-focused approach. Clear communication, fast turnaround, clean responsive files — highly recommend for landing page and CRO work.",
+   "name": "Wes Kennedy",
+   "role": "FBL Coaching Inc, Canada"
+  },
+  {
+   "quote": "He was receptive to feedback, detail-oriented in execution, and showed a genuine commitment to quality rather than rushing work just to “finish.” That mattered a lot to us, especially given we're building something in the healthcare space where clarity and precision are critical.",
+   "name": "Izaiah Jacobson",
+   "role": "WJMeda, NY"
+  },
+  {
+   "quote": "Rizvi did an excellent job building my new landing page. He was responsive, professional, and easy to work with throughout the project. He quickly understood what I was trying to accomplish, incorporated feedback without hesitation, and delivered a polished landing page.",
+   "name": "Dr. Jason Wayne",
+   "role": "Certified Chiropractor, TX"
+  },
+  {
+   "quote": "Rizvi did a fantastic job with our client's landing pages. Communication was clear, the timeline was met, and he was quick to make changes or requests we had. We will be using him for more projects in the future!",
+   "name": "Danny Thomas",
+   "role": "RevConstruct, Marketing Agency, CA"
+  },
+  {
+   "quote": "He did a good job improving a landing page.",
+   "name": "Tim Peacock",
+   "role": "Marketing Agency Owner, AZ"
+  }
+ ],
+ "VIDEO_TESTIMONIAL": {
+  "name": "Larry Lourcey",
+  "role": "Lourcey Photography, TX",
+  "youtubeId": "E-EcIqCFIIs",
+  "url": "https://www.youtube.com/watch?v=E-EcIqCFIIs",
+  "blurb": "Larry talks through the Webflow rebuild of his photography site and what it was like working together."
+ },
+ "UNIQUE_TESTIMONIALS": [
+  {
+   "quote": "Working with Rizvi has been a dream come true for our marketing department. Before working w/ him we were utilizing different contractors for site design, development, and CRO. Rizvi is a one-stop shop and consistently executes at a high level. To add, and this is really appreciated in a fast moving marketing department- his communication is excellent so we always know where things stand day to day. Planning to use him ongoing for a long time to come.",
+   "name": "Andrew",
+   "role": "CaseLeap (company of Levitate Media), Founder"
+  },
+  {
+   "quote": "If you're looking for somebody who gets Sh*t done, doesn't need hand-holding, and speaks and writes well. Riz is your man! He's been working alongside us for over 6 months, and it's been a pleasure. Knows his craft, is well-versed, and communicates clearly. If you need any sort of Web Dev/Design services, shoot him a message.",
+   "name": "Danny Thomas",
+   "role": "RevConstruct, Marketing Agency, CA"
+  },
+  {
+   "quote": "Rizvi has been a pleasure to work with. He is very sharp and understands his craft well. The landing page he built for us has been a major upgrade and he went above and beyond integrating MS Clarity for tracking and optimization. Nothing but positive things to say.",
+   "name": "Dr. David Kaff",
+   "role": "Frisco Spinal Rehab, TX"
+  },
+  {
+   "quote": "Rizvi delivered exceptional landing page design and refinement with a sharp web design eye and conversion-focused approach. Clear communication, fast turnaround, clean responsive files — highly recommend for landing page and CRO work.",
+   "name": "Wes Kennedy",
+   "role": "FBL Coaching Inc, Canada"
+  },
+  {
+   "quote": "He was receptive to feedback, detail-oriented in execution, and showed a genuine commitment to quality rather than rushing work just to “finish.” That mattered a lot to us, especially given we're building something in the healthcare space where clarity and precision are critical.",
+   "name": "Izaiah Jacobson",
+   "role": "WJMeda, NY"
+  },
+  {
+   "quote": "Rizvi did an excellent job building my new landing page. He was responsive, professional, and easy to work with throughout the project. He quickly understood what I was trying to accomplish, incorporated feedback without hesitation, and delivered a polished landing page.",
+   "name": "Dr. Jason Wayne",
+   "role": "Certified Chiropractor, TX"
+  },
+  {
+   "quote": "Rizvi did a fantastic job with our client's landing pages. Communication was clear, the timeline was met, and he was quick to make changes or requests we had. We will be using him for more projects in the future!",
+   "name": "Danny Thomas",
+   "role": "RevConstruct, Marketing Agency, CA"
+  },
+  {
+   "quote": "He did a good job improving a landing page.",
+   "name": "Tim Peacock",
+   "role": "Marketing Agency Owner, AZ"
+  }
+ ],
+ "ENQUIRY_SERVICES": [
+  "Free Page Review",
+  "Landing Page Sprints",
+  "Conversion-Focused Websites",
+  "CRO Audits & Quick Wins",
+  "Ongoing Conversion Support",
+  "Agency Partnerships",
+  "Not sure yet"
+ ],
+ "FAQS": [
+  {
+   "q": "How long does a landing page take?",
+   "a": "Most landing pages are completed in 5–7 business days, depending on scope and feedback rounds. Rush timelines are available."
+  },
+  {
+   "q": "What do you need from us to get started?",
+   "a": "Your offer details, any relevant assets, brand guidelines if you have them, and examples you like. We guide you through the rest."
+  },
+  {
+   "q": "Which platforms do you build on?",
+   "a": "Webflow, WordPress, Shopify, Unbounce, ClickFunnels, HighLevel, HubSpot, Wix, and more. We build where your page already lives, so you do not need to migrate."
+  },
+  {
+   "q": "Do you work with agencies?",
+   "a": "Yes. We provide white-label landing pages, location pages, website production, UX improvements, and technical support for SEO, PPC, and digital agencies."
+  },
+  {
+   "q": "Who actually does the work?",
+   "a": "Riz leads discovery, conversion strategy, and final quality review on every engagement, supported by a specialist copy, design, and development team."
+  },
+  {
+   "q": "Where are you based, and how do you handle time zones?",
+   "a": "Working with businesses and agencies across the US and Canada. Remote collaboration with daily availability for meetings during US business hours."
+  }
+ ]
+}

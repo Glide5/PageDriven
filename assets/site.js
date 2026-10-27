@@ -152,6 +152,31 @@ each("[data-copy]",function(b){
   });
 });
 
+/* ---------- Form delivery: POST to the Vercel function (api/submit.js), which emails riz@gopagedriven.com ---------- */
+var FORM_ENDPOINT="/api/submit", FORM_INBOX="riz@gopagedriven.com";
+/* no backend behind the claude.ai preview or a local file, so submissions there are only simulated */
+var FORM_PREVIEW=location.protocol==="file:" || /(^|\.)(claude\.ai|claudeusercontent\.com|anthropic\.com)$/.test(location.hostname);
+var FORM_FAIL='Couldn\u2019t send right now. Please email <a href="mailto:'+FORM_INBOX+'">'+FORM_INBOX+'</a> instead.';
+function sendForm(kind,data,form){
+  var hp=form && form.querySelector('[name="website"]');
+  data.kind=kind; data.page=location.pathname; data.website=hp ? hp.value : "";
+  if(FORM_PREVIEW) return Promise.resolve({preview:true});
+  var ctl=("AbortController" in window) ? new AbortController() : null, timer=setTimeout(function(){ if(ctl) ctl.abort(); },15000);
+  return fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data),signal:ctl?ctl.signal:undefined})
+    .then(function(r){ clearTimeout(timer); if(!r.ok) throw new Error("HTTP "+r.status); return {}; },function(e){ clearTimeout(timer); throw e; });
+}
+function formBusy(btn,on){
+  if(!btn) return;
+  if(on){ btn.setAttribute("data-label",btn.innerHTML); btn.disabled=true; btn.textContent="Sending\u2026"; }
+  else { btn.disabled=false; if(btn.hasAttribute("data-label")) btn.innerHTML=btn.getAttribute("data-label"); }
+}
+function previewNote(box,res){
+  var old=box.querySelector(".pv-note"); if(old) old.remove();
+  if(!res || !res.preview) return;
+  var p=document.createElement("p"); p.className="pv-note"; p.textContent="Preview only: this wasn\u2019t sent. On the live Vercel site it\u2019s emailed to "+FORM_INBOX+".";
+  box.appendChild(p);
+}
+
 /* ---------- Review modal (two-step) ---------- */
 var dlg=$("review");
 var openReview=function(){};
@@ -186,9 +211,13 @@ if(dlg){
       var n=$("f-name").value.trim(), em=$("f-email").value.trim();
       if(!n){ err.textContent="Add your name so Riz knows who to address."; return; }
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ err.textContent="Enter a valid email address, for example you@company.com."; return; }
-      /* Hook: POST the form data to your lead endpoint here. */
-      $("okTitle").textContent="Thanks, "+n.split(" ")[0]+". Request received.";
-      step=3; renderStep();
+      var goal=form.querySelector('[name="goal"]:checked');
+      formBusy(mNext,true);
+      sendForm("review",{url:$("f-url").value.trim(),goal:goal?goal.value:"",service:$("f-svc").value,name:n,email:em},form).then(function(res){
+        formBusy(mNext,false);
+        $("okTitle").textContent="Thanks, "+n.split(" ")[0]+". Request received.";
+        step=3; renderStep(); previewNote(s3,res);
+      },function(){ formBusy(mNext,false); err.innerHTML=FORM_FAIL; });
     }
   });
   each("[data-open-review]",function(b){ b.addEventListener("click",function(e){ e.preventDefault(); openReview(b.getAttribute("data-service")); }); });
@@ -207,8 +236,11 @@ if(cdlg){
     if(!n){ er.textContent="Add your name."; return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ er.textContent="Enter a valid email address, for example you@company.com."; return; }
     if(m.length<5){ er.textContent="Add a short message so Riz knows what you need."; return; }
-    /* Hook: POST the message to your inbox or CRM here. */
-    $("cForm").hidden=true; $("cOk").hidden=false; $("cOkT").textContent="Thanks, "+n.split(" ")[0]+". Message received.";
+    var cbtn=$("cForm").querySelector('[type="submit"]'); er.textContent=""; formBusy(cbtn,true);
+    sendForm("contact",{name:n,email:em,message:m},$("cForm")).then(function(res){
+      formBusy(cbtn,false); $("cForm").hidden=true; $("cOk").hidden=false; $("cOkT").textContent="Thanks, "+n.split(" ")[0]+". Message received.";
+      previewNote($("cOk"),res); $("cForm").reset();
+    },function(){ formBusy(cbtn,false); er.innerHTML=FORM_FAIL; });
   });
 }
 
@@ -220,9 +252,11 @@ each(".inline-review",function(f){
     if(!/^(https?:\/\/)?[\w-]+(\.[\w-]+)+/.test(g("url").value.trim())){ er.textContent="Enter the page address, for example yourbusiness.com/landing-page."; return; }
     if(!g("name").value.trim()){ er.textContent="Add your name so Riz knows who to address."; return; }
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g("email").value.trim())){ er.textContent="Enter a valid email address, for example you@company.com."; return; }
-    /* Hook: POST the form data to your lead endpoint here. */
-    er.textContent=""; f.querySelector(".ir-fields").hidden=true; var ok=f.querySelector(".ir-ok"); ok.hidden=false;
-    ok.querySelector("h3").textContent="Thanks, "+g("name").value.trim().split(" ")[0]+". Request received.";
+    var ibtn=f.querySelector('[type="submit"]'), nm=g("name").value.trim(); er.textContent=""; formBusy(ibtn,true);
+    sendForm("review",{url:g("url").value.trim(),goal:g("goal")?g("goal").value:"",service:"Free Page Review",name:nm,email:g("email").value.trim()},f).then(function(res){
+      formBusy(ibtn,false); f.querySelector(".ir-fields").hidden=true; var ok=f.querySelector(".ir-ok"); ok.hidden=false;
+      ok.querySelector("h3").textContent="Thanks, "+nm.split(" ")[0]+". Request received."; previewNote(ok,res);
+    },function(){ formBusy(ibtn,false); er.innerHTML=FORM_FAIL; });
   });
 });
 
@@ -453,13 +487,6 @@ each(".wgd-body",function(body){
   function set(i){ Array.prototype.forEach.call(rows,function(r,k){ r.classList.toggle("on",k===i); }); Array.prototype.forEach.call(pics,function(p,k){ p.classList.toggle("on",k===i); }); }
   var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting) set(Array.prototype.indexOf.call(rows,en.target)); }); },{rootMargin:"-48% 0px -48% 0px"});
   Array.prototype.forEach.call(rows,function(r){ io.observe(r); });
-});
-
-/* ---------- Footer wordmark: scale the type so it spans the content width ---------- */
-each(".f-mark",function(el){
-  var box=el.parentNode;
-  function fit(){ el.style.fontSize=""; var fs=parseFloat(getComputedStyle(el).fontSize), w=el.getBoundingClientRect().width; if(w) el.style.fontSize=(fs*box.clientWidth/w).toFixed(2)+"px"; }
-  fit(); window.addEventListener("resize",fit); if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 });
 
 /* ---------- THREE: line-wave (home hero full, inner heroes soft) ---------- */
