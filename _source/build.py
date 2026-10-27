@@ -21,7 +21,7 @@ from PIL import Image
 Image.open(os.path.join(BASE, "images", "riz.png")).save(f"{OUT}/assets/img/riz-full.webp", quality=90)
 import shutil
 for i in (8, 9, *range(10, 16)): shutil.copy(os.path.join(BASE, "images", f"i{i}.webp"), f"{OUT}/assets/img/i{i}.webp")  # 8 and 9 re-rendered upright
-shutil.copy(os.path.join(BASE, "images", "team.webp"), f"{OUT}/assets/img/team.webp")
+shutil.copy(os.path.join(BASE, "images", "team-review.webp"), f"{OUT}/assets/img/team-review.webp")
 shutil.copy(os.path.join(BASE, "images", "riz-meeting.webp"), f"{OUT}/assets/img/riz-meeting.webp")
 shutil.copy(os.path.join(BASE, "images", "andrew.webp"), f"{OUT}/assets/img/andrew.webp")
 shutil.copy(os.path.join(BASE, "images", "chat-riz.webp"), f"{OUT}/assets/img/chat-riz.webp")
@@ -794,7 +794,7 @@ WGD = [("s1", "Handled personally by Riz",
         '<img class="wgd-riz" src="assets/img/riz-meeting.webp" alt="Riz talking a client through their page" width="1254" height="1254">'),
        ("s2", "Supported by the specialist team",
         ["Conversion copywriting for campaigns and websites", "Design that serves the message rather than decorating it", "Development across the platforms clients already use"],
-        '<img class="wgd-team" src="assets/img/team.webp" alt="The PageDriven specialist team reviewing a page together" width="1200" height="900">')]
+        '<img class="wgd-team" src="assets/img/team-review.webp" alt="The PageDriven specialist team reviewing a page together on a laptop" width="1375" height="1144">')]
 rows = "".join(f'''<div class="wgd-row {c}{" on" if i == 0 else ""}"><div class="wrap wgd-cols">
       <div class="wgd-l"><h3>{e(t)}</h3></div>
       <div class="wgd-m"><div class="wgd-pic {c}">{img}</div></div>
