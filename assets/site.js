@@ -94,9 +94,12 @@ each("canvas[data-art]",function(cv){
     sizeArt(st); drawRibbon(st,0); arts.push(st);
     if("IntersectionObserver" in window) new IntersectionObserver(function(es){ st.vis=es[0].isIntersecting; }).observe(cv); }catch(e){}
 });
-/* one shared loop, ~24fps, only for thumbnails on screen */
-if(arts.length && !reduce){ var artLast=0; (function artLoop(now){ if(now-artLast>41){ artLast=now; var s=now/1000; arts.forEach(function(st){ if(st.vis) drawRibbon(st,s); }); } requestAnimationFrame(artLoop); })(0); }
-var artT; window.addEventListener("resize",function(){ clearTimeout(artT); artT=setTimeout(function(){ arts.forEach(function(st){ sizeArt(st); drawRibbon(st,reduce?0:performance.now()/1000); }); },250); });
+/* one shared loop, ~24fps, only for thumbnails on screen; it holds still while the page or a carousel
+   scrolls so redraws never compete with scrolling, and its clock resumes where it stopped */
+var artClock=0, artHold=0;
+window.addEventListener("scroll",function(){ artHold=performance.now()+200; },{passive:true,capture:true});
+if(arts.length && !reduce){ var artLast=0; (function artLoop(now){ if(now-artLast>41){ var dt=Math.min(now-artLast,60); artLast=now; if(now>artHold){ artClock+=dt/1000; arts.forEach(function(st){ if(st.vis) drawRibbon(st,artClock); }); } } requestAnimationFrame(artLoop); })(0); }
+var artT; window.addEventListener("resize",function(){ clearTimeout(artT); artT=setTimeout(function(){ arts.forEach(function(st){ sizeArt(st); drawRibbon(st,artClock); }); },250); });
 
 /* ---------- Carousels ---------- */
 each(".hs",function(sec){
@@ -615,7 +618,11 @@ if(hasG && !reduce){
   gsap.registerPlugin(ScrollTrigger);
   if(typeof window.Lenis!=="undefined"){
     try{
-      lenis=new Lenis({lerp:0.1,smoothWheel:true});
+      /* over a carousel, sideways swipes (and shift+wheel) scroll it natively; vertical wheel stays smooth */
+      lenis=new Lenis({lerp:0.1,smoothWheel:true,virtualScroll:function(v){
+        var t=v.event.target;
+        return !(t && t.closest && t.closest(".hs-outer") && (v.event.shiftKey || Math.abs(v.deltaX)>Math.abs(v.deltaY)));
+      }});
       lenis.on("scroll",ScrollTrigger.update);
       gsap.ticker.add(function(t){ lenis.raf(t*1000); });
       gsap.ticker.lagSmoothing(0);

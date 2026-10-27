@@ -316,7 +316,7 @@ def work_carousel(slugs, title='Find out how we\'ve helped businesses <span clas
     <div class="sec-head"><span class="eyebrow">{eyebrow}</span><h2 class="h2">{title}</h2></div>
     <a class="tlink" href="work.html">See all case studies <span>→</span></a>
   </div>
-  <div class="hs-outer" data-lenis-prevent><div class="hs-track">{"".join(wcard(s) for s in slugs)}</div></div>
+  <div class="hs-outer"><div class="hs-track">{"".join(wcard(s) for s in slugs)}</div></div>
   <div class="wrap"><div class="hs-ctrl">
     <div class="hs-progress" aria-hidden="true"><i></i></div><span class="hs-count">01 / {n:02d}</span>
     <div class="hs-btns">
