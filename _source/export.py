@@ -10,6 +10,14 @@ ROOT = os.path.dirname(BASE)
 SITE = os.environ.get("PD_OUT") or os.path.join(BASE, ".out", "site")
 INDEX_PREFIX = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>\n'
 INDEX_SUFFIX = "\n</body></html>"
+# Microsoft Clarity (project y1yxoxpvv3): production only, added to every page's <head>.
+# Not part of the build output, so the claude.ai preview never loads it.
+CLARITY = ('<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};'
+           't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);'
+           '})(window, document, "clarity", "script", "y1yxoxpvv3");</script>')
+def with_clarity(page):
+    assert "</head>" in page and "clarity.ms" not in page
+    return page.replace("</head>", CLARITY + "</head>", 1)
 
 if not os.path.exists(os.path.join(SITE, "index.html")):
     sys.exit("No build found. Run: python3 _source/build.py")
@@ -19,7 +27,9 @@ for d, _, files in os.walk(SITE):
         src = os.path.join(d, f); rel = os.path.relpath(src, SITE); dst = os.path.join(ROOT, rel)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         if rel == "index.html":
-            open(dst, "w").write(INDEX_PREFIX + open(src).read() + INDEX_SUFFIX)
+            open(dst, "w").write(with_clarity(INDEX_PREFIX) + open(src).read() + INDEX_SUFFIX)
+        elif rel.endswith(".html"):
+            open(dst, "w").write(with_clarity(open(src).read()))
         else:
             shutil.copyfile(src, dst)
         n += 1
