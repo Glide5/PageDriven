@@ -516,7 +516,7 @@ html,body{margin:0}
 .wgd-pic.on{opacity:1;transform:none}
 .wgd-pic.s1{background:radial-gradient(55% 55% at 50% 38%,#E6E3FF,transparent 72%),linear-gradient(180deg,var(--t-violet),#DAD7FF)}
 .wgd-pic.s2{background:radial-gradient(55% 55% at 50% 38%,#DDF0FA,transparent 72%),linear-gradient(180deg,var(--t-cyan),#CDE6F5)}
-.wgd-riz{position:absolute;left:50%;top:9%;height:128%;width:auto;max-width:none;transform:translateX(-50%)}
+.wgd-riz{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
 .wgd-team{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 @media (max-width:900px){
   .wgd-lines,.wgd-stick{display:none}

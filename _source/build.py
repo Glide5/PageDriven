@@ -22,6 +22,7 @@ Image.open(os.path.join(BASE, "images", "riz.png")).save(f"{OUT}/assets/img/riz-
 import shutil
 for i in (8, 9, *range(10, 16)): shutil.copy(os.path.join(BASE, "images", f"i{i}.webp"), f"{OUT}/assets/img/i{i}.webp")  # 8 and 9 re-rendered upright
 shutil.copy(os.path.join(BASE, "images", "team.webp"), f"{OUT}/assets/img/team.webp")
+shutil.copy(os.path.join(BASE, "images", "riz-meeting.webp"), f"{OUT}/assets/img/riz-meeting.webp")
 shutil.copy(os.path.join(BASE, "images", "andrew.webp"), f"{OUT}/assets/img/andrew.webp")
 shutil.copy(os.path.join(BASE, "images", "chat-riz.webp"), f"{OUT}/assets/img/chat-riz.webp")
 for n in ("logo.webp", "logo-foot.webp", "larry-video.webp") + tuple(f"{c}-logo.webp" for c in ("levitate", "frisco", "lourcey", "one10", "rset")) + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
@@ -790,7 +791,7 @@ WGD = [("s1", "Handled personally by Riz",
         ["Discovery: understanding your offer, audience, traffic sources, and goals before anything is designed",
          "Conversion strategy: the message hierarchy, page structure, and proof plan behind every engagement",
          "Final quality review: every page is personally reviewed before it reaches you"],
-        '<img class="wgd-riz" src="assets/img/riz-full.webp" alt="Riz, founder of PageDriven" width="337" height="629">'),
+        '<img class="wgd-riz" src="assets/img/riz-meeting.webp" alt="Riz talking a client through their page" width="1254" height="1254">'),
        ("s2", "Supported by the specialist team",
         ["Conversion copywriting for campaigns and websites", "Design that serves the message rather than decorating it", "Development across the platforms clients already use"],
         '<img class="wgd-team" src="assets/img/team.webp" alt="The PageDriven specialist team reviewing a page together" width="1200" height="900">')]
