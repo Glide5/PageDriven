@@ -248,6 +248,54 @@ blockquote{margin:0;font-size:clamp(19px,1.8vw,24px);line-height:1.45;color:var(
 .mini-bar{display:block;height:7px;border-radius:4px;background:#E6E9F2}
 .pillx{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px}
 .p-hi{background:#FCE9E2;color:#B4461F}.p-md{background:#FCF3DE;color:#8A6110}.p-lo{background:#E4F5EF;color:#0B7A65}
+/* Landing Page Sprints visual: a search ad, the page it opens, and a key for the numbered parts */
+.lpv-viz{container-type:size}
+.lpv{position:absolute;inset:0;font-size:clamp(8.5px,min(1.5cqw,2.9cqh),12px);line-height:1.3}
+.lpv .vcard{font-size:1em;padding:.95em 1.1em;border-radius:.9em}
+.lpv .k{font-size:.78em}
+.lpv-m{white-space:nowrap}
+.lpv mark{background:linear-gradient(transparent 52%,rgba(255,210,122,.85) 52%);color:inherit;padding:0 .08em}
+.lpv-n{display:inline-grid;place-items:center;width:1.6em;height:1.6em;margin-left:.4em;border-radius:50%;background:var(--violet);color:#fff;font-size:.72em;font-weight:700;font-style:normal;line-height:1;vertical-align:.15em;letter-spacing:0}
+.lpv-ad{left:4%;top:7%;width:41%;display:grid;gap:.45em}
+.lpv-q{display:flex;align-items:center;gap:.55em;height:2.3em;padding:0 .85em;border-radius:999px;background:var(--mist);color:var(--ink-2);font-size:.9em;white-space:nowrap;overflow:hidden}
+.lpv-q svg{flex:none;width:1.1em;height:1.1em;fill:none;stroke:var(--ink-3);stroke-width:1.7;stroke-linecap:round}
+.lpv-spon{margin-top:.2em;font-size:.84em;color:var(--mint)}
+.lpv-spon b{margin-right:.45em;color:var(--ink);font-weight:600}
+.lpv-adh{font-size:1.08em;font-weight:600;line-height:1.25;color:#2340C8}
+.lpv-add{margin:0;font-size:.86em;color:var(--ink-3)}
+.lpv-page{left:49%;top:5%;width:47%;padding:0!important;overflow:hidden}
+.lpv-bar{display:flex;align-items:center;gap:.32em;padding:.55em .8em;background:#F1F3F8;border-bottom:1px solid var(--line)}
+.lpv-bar i{flex:none;width:.55em;height:.55em;border-radius:50%;background:#D3D8E4}
+.lpv-bar span{flex:1;min-width:0;margin-left:.5em;padding:.18em .75em;border-radius:999px;background:#fff;font-size:.82em;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lpv-body{display:grid;gap:.5em;justify-items:start;padding:.9em 1.1em 1.05em}
+.lpv-eb{font-size:.76em;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.lpv-h{font-size:1.42em;font-weight:600;line-height:1.15;letter-spacing:-.03em;color:var(--ink)}
+.lpv-sub{margin:0;font-size:.88em;color:var(--ink-3)}
+.lpv-stars{font-size:.86em;letter-spacing:.06em;color:#F2A93B}
+.lpv-stars span{margin-left:.45em;letter-spacing:0;color:var(--ink-3)}
+.lpv-form{display:grid;grid-template-columns:1fr 1fr;gap:.45em;width:100%}
+.lpv-form span{display:flex;align-items:center;height:2.2em;padding:0 .75em;border-radius:.5em;box-shadow:inset 0 0 0 1px var(--line);font-size:.84em;color:var(--ink-3)}
+.lpv-cta{position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:2.55em;border-radius:999px;background:var(--violet);color:#fff;font-size:.94em;font-weight:600;box-shadow:0 8px 18px -8px rgba(84,82,246,.6)}
+.lpv-cta .lpv-n{background:#fff;color:var(--violet)}
+.lpv-flow{position:absolute;left:4%;top:45%;width:41%;display:flex;align-items:center;justify-content:flex-end;gap:.6em;font-size:.86em;font-weight:500;color:var(--ink-2)}
+.lpv-flow svg{flex:none;width:2.6em;height:1.3em;fill:none;stroke:var(--violet);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.lpv-trk{display:flex;align-items:center;gap:.45em;padding:.28em .75em;border-radius:999px;background:#E4F5EF;font-size:.8em;color:#0B7A65}
+.lpv-trk>i:first-child{flex:none;width:.6em;height:.6em;border-radius:50%;background:#0F9F84}
+.lpv-key{left:4%;bottom:7%;width:41%;display:grid;gap:.65em}
+.lpv-key ol{list-style:none;margin:0;padding:0;display:grid;gap:.5em}
+.lpv-key li{display:flex;align-items:center;gap:.6em;color:#fff}
+.lpv-key .lpv-n{margin:0;vertical-align:0}
+/* the hero copy of this visual has the 3D icon over its top-right corner */
+.pvis .lpv-page{top:17%}
+@container (max-width:460px){
+  .lpv{font-size:clamp(8px,2.45cqw,10px)}
+  .lpv-q,.lpv-add,.lpv-eb,.lpv-sub,.lpv-stars,.lpv-form,.lpv-key .k,.lpv-flow{display:none}
+  .lpv-ad{left:4%;top:6%;width:60%}
+  .lpv-page,.pvis .lpv-page{left:32%;top:35%;width:64%}
+  .lpv-h{font-size:1.25em}
+  .lpv-key{left:4%;right:4%;bottom:5%;width:auto;padding:.6em .9em}
+  .lpv-key ol{grid-auto-flow:column;justify-content:space-between;gap:.6em}
+}
 @media (max-width:960px){.svc-layout{grid-template-columns:1fr}.svc-side{position:static}.svc-nav{display:none}}
 @media (max-width:560px){.viz{aspect-ratio:4/3}.svc-body{padding:24px}}
 
