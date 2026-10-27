@@ -32,7 +32,7 @@ directly; the next build overwrites them. `api/submit.js` and `package.json` are
 
 ## Forms → riz@gopagedriven.com
 Every lead form (the review modal, the contact modal, the inline review form on Book and Work,
-and the chat widget's "leave your email") posts to Formspree at `https://formspree.io/f/xwllyvv`,
+and the chat widget's "leave your email") posts to Formspree at `https://formspree.io/f/xwlllyvv`,
 set as `FORM_ENDPOINT` in `site.js`. Formspree emails each submission to the address set on that
 form in the Formspree dashboard (riz@gopagedriven.com). The visitor's `email` field is used as reply-to.
 

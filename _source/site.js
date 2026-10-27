@@ -153,7 +153,7 @@ each("[data-copy]",function(b){
 });
 
 /* ---------- Form delivery: POST to Formspree, which emails every submission to riz@gopagedriven.com ---------- */
-var FORM_ENDPOINT="https://formspree.io/f/xwllyvv", FORM_INBOX="riz@gopagedriven.com";
+var FORM_ENDPOINT="https://formspree.io/f/xwlllyvv", FORM_INBOX="riz@gopagedriven.com";
 /* no backend behind the claude.ai preview or a local file, so submissions there are only simulated */
 var FORM_PREVIEW=location.protocol==="file:" || /(^|\.)(claude\.ai|claudeusercontent\.com|anthropic\.com)$/.test(location.hostname);
 var FORM_FAIL='Couldn\u2019t send right now. Please email <a href="mailto:'+FORM_INBOX+'">'+FORM_INBOX+'</a> instead.';
