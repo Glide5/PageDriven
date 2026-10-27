@@ -135,6 +135,12 @@ p{margin:0}
 .b-changed{grid-column:span 4}
 .b-m{grid-column:span 4}
 .b-quote{grid-column:span 12;display:grid;grid-template-columns:1fr auto;align-items:end;gap:28px 48px;padding:36px 40px}
+/* featured case study: title on the left, CTA at the right end of the same row */
+.case-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 40px}
+.case-head .sec-head{flex:1 1 auto;min-width:0}
+.case-head .btn{flex:none}
+@media (max-width:640px){.case-head{flex-direction:column;align-items:flex-start}}
+.case-lede{margin-top:16px}
 @media (max-width:1000px){.b-compare,.b-changed,.b-quote{grid-column:span 12}.b-m{grid-column:span 6}.b-m:last-of-type{grid-column:span 12}.b-quote{grid-template-columns:1fr;padding:28px}}
 @media (max-width:640px){.b-m,.b-m:last-of-type{grid-column:span 12}}
 .compare{position:relative;height:100%;min-height:460px;user-select:none;touch-action:pan-y}
@@ -502,9 +508,14 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
 <section class="band mist" id="case" aria-labelledby="h-case">
   <div class="bgfx gridbg" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Featured case study · CaseLeap</span>
-      <h2 id="h-case" class="h2">From a 3-second glance to an <span class="mute">18-second visit.</span></h2>
+    <div class="case-head">
+      <div class="sec-head">
+        <span class="eyebrow">Featured case study · CaseLeap</span>
+        <h2 id="h-case" class="h2">From a 3-second glance to an <span class="mute">18-second visit.</span></h2>
+      </div>
+      <button class="btn btn-primary" data-open-review>Get results like CaseLeap <span class="arr">→</span></button>
+    </div>
+    <div class="sec-head case-lede">
       <p class="lede">CaseLeap was already attracting visitors. We used GA4 and Microsoft Clarity to find where the homepage was losing attention, then refined the message, surfaced proof earlier, clarified the CTA hierarchy and reduced conversion friction.</p>
     </div>
 
@@ -576,7 +587,6 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
             <span class="logo-tile" style="background:var(--night)">CL</span>
             <div><b>Andrew, Founder</b><small>CaseLeap (company of Levitate Media)</small></div>
           </div>
-          <button class="btn btn-primary" data-open-review>Get results like CaseLeap <span class="arr">→</span></button>
         </div>
       </div>
     </div>
