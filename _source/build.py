@@ -24,7 +24,7 @@ for i in (8, 9, *range(10, 16)): shutil.copy(os.path.join(BASE, "images", f"i{i}
 shutil.copy(os.path.join(BASE, "images", "team.webp"), f"{OUT}/assets/img/team.webp")
 shutil.copy(os.path.join(BASE, "images", "andrew.webp"), f"{OUT}/assets/img/andrew.webp")
 shutil.copy(os.path.join(BASE, "images", "chat-riz.webp"), f"{OUT}/assets/img/chat-riz.webp")
-for n in ("logo.webp", "logo-foot.webp") + tuple(f"{c}-logo.webp" for c in ("levitate", "frisco", "lourcey", "one10", "rset")) + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
+for n in ("logo.webp", "logo-foot.webp", "larry-video.webp") + tuple(f"{c}-logo.webp" for c in ("levitate", "frisco", "lourcey", "one10", "rset")) + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
 IMG = {f"I{i}": f"assets/img/i{i}.webp" for i in range(16)}
 IMG.update(RIZ="assets/img/riz-waist.webp", AVATAR="assets/img/avatar.webp")
 def img_paths(s):
@@ -138,7 +138,7 @@ def tcard(t, light=False):
     if t.get("video"):
         return ('<figure class="tcard video">'
           '<div class="vplayer"><button class="vposter" type="button" data-yt="E-EcIqCFIIs" aria-label="Play the video testimonial from Larry Lourcey">'
-          f'<canvas data-art="{art_attr("lourcey-photography")}" aria-hidden="true"></canvas><span class="vtag">Video testimonial</span><span class="vname">Larry Lourcey · Lourcey Photography</span>'
+          '<img class="vthumb" src="assets/img/larry-video.webp" alt="" width="1280" height="721"><span class="vtag">Video testimonial</span><span class="vname">Larry Lourcey · Lourcey Photography</span>'
           '<span class="vplay" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.8v12.4L16.4 10z" fill="#5452F6"/></svg></span></button></div>'
           f'<p>{e(t["q"])}</p>{who(t["n"],t["r"],t["c"],t["i"])}'
           '<a class="vlink" href="https://www.youtube.com/watch?v=E-EcIqCFIIs" target="_blank" rel="noopener">Watch on YouTube <span aria-hidden="true">↗</span></a></figure>')
