@@ -670,3 +670,8 @@ html,body{margin:0}
 .wart{container-type:inline-size}
 .wart-logo{position:absolute;z-index:2;left:50%;top:50%;width:auto;height:auto;max-width:50%;max-height:30%;transform:translate(-50%,-50%);filter:drop-shadow(0 6px 22px rgba(20,14,90,.35));pointer-events:none;user-select:none;-webkit-user-drag:none}
 .wart-word{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap;color:#fff;font-weight:700;font-size:10.5cqw;line-height:1;letter-spacing:-.035em;text-shadow:0 4px 22px rgba(20,14,90,.35);pointer-events:none;user-select:none}
+/* video testimonial poster: Larry's video frame instead of wave art */
+.vposter .vthumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.vposter:hover .vthumb{transform:scale(1.05)}
+.vposter:has(.vthumb)::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(5,10,30,.62),rgba(5,10,30,0) 48%),linear-gradient(to bottom,rgba(5,10,30,.28),rgba(5,10,30,0) 30%);pointer-events:none}
+.vposter:has(.vthumb) .vplay{top:16%}
