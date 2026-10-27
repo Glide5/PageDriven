@@ -14,7 +14,8 @@ This folder is listed in `/.vercelignore`, so it is stored in Git but never depl
 | `site.js` | All interactions and animations → `assets/site.js` |
 | `images/` | Source images copied into `assets/img/` |
 | `assets.json` | A few original images stored as data URIs (icons 0–7, Riz waist, avatar) |
-| `export.py` | Copies the build into the repo root, adding production's wrapper to `index.html` and the Microsoft Clarity tag to every page's `<head>` |
+| `export.py` | Copies the build into the repo root, adding production's wrapper to `index.html` and the favicon links and Microsoft Clarity tag to every page's `<head>` |
+| `favicon.py` | Regenerates `images/favicon.ico`, `favicon-32.png` and `apple-touch-icon.png` from the D in `images/logo.webp`; run it by hand if the logo changes |
 | `tools/icon-renderer.html` | WebGL renderer used to make the 3D icons |
 
 ## Make a change
