@@ -254,6 +254,175 @@ blockquote{margin:0;font-size:clamp(19px,1.8vw,24px);line-height:1.45;color:var(
 .mini-bar{display:block;height:7px;border-radius:4px;background:#E6E9F2}
 .pillx{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px}
 .p-hi{background:#FCE9E2;color:#B4461F}.p-md{background:#FCF3DE;color:#8A6110}.p-lo{background:#E4F5EF;color:#0B7A65}
+/* Landing Page Sprints visual: an isometric landing page with glass panels for the ad, brand, responsive build and sprint.
+   The plane is drawn with a 2D transform (rotate, then squash) so all its text stays crisp; panels "float" by shadow. */
+.iso-viz{container-type:size;background:radial-gradient(70% 80% at 58% 42%,var(--ib1,#F5F4FF),var(--ib2,#E6E4FB) 68%,var(--ib3,#DAD8F6))}
+.iso-glow{position:absolute;left:22%;top:26%;width:58%;height:66%;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--iar2,141,136,255),.32),transparent)}
+.iso-stage{position:absolute;inset:0;font-size:min(calc(var(--ifw,.897)*1cqw),calc(var(--ifh,1.634)*1cqh));display:grid;place-items:center}
+.iso-stage>*{grid-area:1/1}
+.iso-plane{position:relative;width:var(--ipw,56em);height:var(--iph,44em);transform:translate(var(--ix,5em),calc(var(--iy,-1.2em) - var(--lift,0em))) scaleY(var(--isq,.643)) rotate(var(--irot,-28deg))}
+.iso-slab{position:absolute;inset:-2.6em;border-radius:4.4em;background:linear-gradient(135deg,rgba(255,255,255,.8),var(--islab,rgba(205,202,245,.6)));box-shadow:inset 0 0 0 .25em rgba(255,255,255,.85),0 0 0 .8em var(--irim,rgba(196,192,242,.6)),var(--slx,-1.1em) var(--sly,2.1em) 0 .8em var(--iedge,rgba(160,154,226,.55)),var(--sbx,-3em) var(--sby,5.6em) 6em 0 rgba(var(--ishd,60,52,170),.22)}
+.iso-page{position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto auto auto;gap:1.3em;padding:2em 2.3em;border-radius:2.6em;background:linear-gradient(160deg,#FFFFFF,#F2F1FD);color:var(--ink);font-size:1.15em}
+.iso-page b{font-weight:600}
+.iso-ln{display:block;height:.5em;width:70%;border-radius:1em;background:var(--iln,#DCDAF2)}
+.iso-ln.s{width:45%}
+.iso-btn{display:inline-flex;align-items:center;justify-content:center;height:2.3em;padding:0 1.1em;border-radius:3em;background:var(--ia,var(--violet));color:#fff;font-weight:600;font-size:.85em;white-space:nowrap;box-shadow:0 .6em 1.2em -.4em rgba(var(--iar,84,82,246),.7)}
+.iso-btn.sm{height:1.9em;font-size:.72em}
+.iso-nav{display:flex;align-items:center;gap:.7em;font-size:.85em}
+.iso-logo{width:1.4em;height:1.4em;border-radius:.4em;background:var(--violet)}
+.iso-dash{margin-left:auto;display:flex;gap:.8em}
+.iso-dash i{width:2.4em;height:.4em;border-radius:1em;background:#D3D1EE}
+.iso-hero{display:grid;grid-template-columns:1.45fr 1fr;gap:1.4em;align-items:center;padding:1.8em 2em;border-radius:1.8em;background:linear-gradient(150deg,#1A2554,#0F1A3E);color:#fff}
+.iso-hcopy{display:grid;gap:.65em;justify-items:start}
+.iso-hcopy b{font-size:2.1em;line-height:1.08;letter-spacing:-.03em}
+.iso-hcopy mark{background:linear-gradient(transparent 58%,rgba(255,210,122,.9) 58%);color:#fff;padding:0 .05em}
+.iso-hcopy .iso-ln{background:rgba(255,255,255,.2)}
+.iso-eb{font-size:.7em;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#A79CFF}
+.iso-himg{aspect-ratio:1.1;border-radius:1.3em;background:linear-gradient(140deg,#E4E1FF,#BDB8FF);box-shadow:0 0 3em rgba(167,156,255,.45)}
+.iso-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:1em}
+.iso-feats>div{display:grid;gap:.55em;padding:1em 1.1em;border-radius:1.3em;background:#fff;box-shadow:inset 0 0 0 .12em #E6E4F6;font-size:.85em}
+.iso-feats>div.on{background:#F0EFFF;box-shadow:inset 0 0 0 .12em #C9C6FF}
+.iso-feats>div>i:first-child{width:2em;height:2em;border-radius:.55em;background:var(--c)}
+.iso-conv{display:grid;grid-template-columns:1fr 1.6fr;gap:1em}
+.iso-proof{display:grid;gap:.5em;align-content:center;padding:1em 1.2em;border-radius:1.3em;background:#F0EFFF;font-size:.85em}
+.iso-stars{color:#F2A93B;letter-spacing:.1em}
+.iso-form{display:grid;grid-template-columns:1fr 1fr auto;gap:.55em;align-items:center;padding:1em 1.2em;border-radius:1.3em;background:#fff;box-shadow:inset 0 0 0 .12em #E6E4F6;font-size:.85em}
+.iso-form b{grid-column:1/-1}
+.iso-form>span:not(.iso-btn){height:2em;display:flex;align-items:center;padding:0 .8em;border-radius:.6em;box-shadow:inset 0 0 0 .12em #E1DFF3;color:var(--ink-3);font-size:.85em}
+.iso-form .iso-btn{height:2em}
+.iso-foot{display:flex;align-items:center;gap:1em;padding-top:.9em;border-top:.12em solid #E6E4F6;font-size:.72em;color:#0B7A65}
+.iso-foot span{padding:.3em .9em;border-radius:2em;background:#E4F5EF;white-space:nowrap;font-weight:600}
+.iso-foot .iso-ln{flex:1}
+.iso-panel{position:absolute;display:grid;gap:.75em;padding:1.5em 1.7em;border-radius:2em;background:linear-gradient(145deg,rgba(255,255,255,.93),var(--ipt,rgba(245,244,255,.78)));box-shadow:inset 0 0 0 .14em rgba(255,255,255,.95),var(--spx,-1.6em) var(--spy,3em) 4em -.8em rgba(var(--ishp,52,44,160),.34);color:var(--ink);font-size:1.3em}
+/* panel positions are in page units; the panel's own em is 1.3x larger */
+.iso-pt{font-size:1.6em;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.iso-panel small{font-size:.8em;color:var(--ink-3)}
+.iso-panel small b{color:var(--ink)}
+.iso-ad{left:calc(-13.9em/1.3);top:calc(-19.1em/1.3);width:calc(21em/1.3)}
+.iso-q{display:flex;align-items:center;gap:.5em;height:2.2em;padding:0 .8em;border-radius:2em;background:#fff;box-shadow:inset 0 0 0 .12em #E1DFF3;font-size:.85em;color:var(--ink-2);white-space:nowrap}
+.iso-q svg{width:1em;height:1em;fill:none;stroke:var(--ink-3);stroke-width:1.8;stroke-linecap:round}
+.iso-adh{color:#2340C8;font-size:1.05em;line-height:1.2}
+.iso-nw,.iso-hcopy mark{white-space:nowrap}
+.iso-adh mark{background:linear-gradient(transparent 55%,rgba(255,210,122,.9) 55%);color:inherit}
+.iso-tag{justify-self:start;padding:.3em .8em;border-radius:2em;background:#E4F5EF;color:#0B7A65;font-size:.8em;font-weight:600}
+.iso-brand{left:calc(-20.5em/1.3);top:calc(22.2em/1.3);width:calc(21em/1.3)}
+.iso-sw{display:flex;gap:.5em}
+.iso-sw i{width:2em;height:2em;border-radius:.6em;background:var(--c);box-shadow:inset 0 0 0 .12em rgba(13,27,51,.08)}
+.iso-type{display:grid;gap:.2em;padding-top:.4em;border-top:.12em solid #E1DFF3}
+.iso-type b{font-size:1.2em;letter-spacing:-.02em}.iso-type span{font-size:.9em;font-weight:500}.iso-type small{font-size:.75em}
+.iso-plat{display:flex;gap:.4em;flex-wrap:wrap}
+.iso-plat span{padding:.25em .7em;border-radius:2em;background:#fff;box-shadow:inset 0 0 0 .12em #DCDAF2;font-size:.75em;font-weight:500;color:var(--ink-2)}
+.iso-resp{left:calc(61.2em/1.3);top:calc(3.4em/1.3);width:calc(21em/1.3)}
+.iso-devs{display:grid;grid-template-columns:1.7fr 1.1fr .65fr;gap:.9em;align-items:end}
+.iso-devs>div{display:grid;gap:.4em;padding:.6em;border-radius:.8em;background:#fff;box-shadow:inset 0 0 0 .12em #D9D6F5}
+.iso-devs .d{aspect-ratio:1.5}.iso-devs .t{aspect-ratio:.8}.iso-devs .m{aspect-ratio:.52}
+.iso-devs i{display:block;border-radius:.3em;background:#E2DFFB}
+.iso-devs i:first-child{height:2.4em;background:#CFCBFA}.iso-devs i+i{height:.9em}
+.iso-ship{left:calc(20.3em/1.3);top:calc(59.9em/1.3);width:calc(29em/1.3);grid-template-columns:auto minmax(5em,1fr) auto auto;align-items:center;gap:.7em;padding:.9em 1em .9em 1.5em;border-radius:3em}
+.iso-ship .iso-pt{font-size:1.15em}
+.iso-track{height:.45em;border-radius:1em;background:#DCDAF2;overflow:hidden}
+.iso-track i{display:block;height:100%;width:72%;border-radius:1em;background:linear-gradient(90deg,#8D88FF,var(--violet));animation:isoFill 5s ease-in-out infinite alternate}
+.iso-btn.go{background:#fff;color:var(--ink);animation:isoGlow 2.6s ease-in-out infinite}
+@keyframes isoFill{from{width:16%}to{width:88%}}
+@keyframes isoGlow{0%,100%{box-shadow:0 0 0 .12em #DCDAF2,0 0 1.4em .1em rgba(80,220,230,.35)}50%{box-shadow:0 0 0 .12em #DCDAF2,0 0 2.6em .5em rgba(80,220,230,.65)}}
+/* the hero copy has the service's 3D icon over its top-right corner */
+/* small hero frames: the 3D icon covers more of the corner, so the scene sits a little smaller and lower */
+@container (max-width:460px){.pvis .iso-lp .iso-stage{font-size:min(.84cqw,1.53cqh)}.pvis .iso-lp .iso-plane{--iy:1.2em}}
+/* ---- the same isometric system for the other three services: each keeps its card colour and gets its own angle ---- */
+.iso-board,.iso-wf,.iso-dash2{position:absolute;inset:0;border-radius:2.6em;background:linear-gradient(160deg,#fff,var(--ipg));color:var(--ink)}
+.iso-k{font-size:.62em;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.iso-viz .iso-panel ol{list-style:none;margin:0;padding:0;display:grid;gap:.45em}
+.iso-viz .iso-panel li{display:flex;align-items:center;gap:.5em;font-size:.82em;color:var(--ink-2)}
+.iso-viz .iso-panel li>i{flex:none;display:grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;background:var(--ia);color:#fff;font-size:.78em;font-weight:700;font-style:normal}
+/* Conversion-Focused Websites: a sitemap board, mirrored angle */
+.iso-web{--ia:#3A9FD6;--iar:58,159,214;--iar2:120,196,236;--ib1:#F2F9FD;--ib2:#E0EFF8;--ib3:#D0E6F4;--islab:rgba(186,220,242,.6);--irim:rgba(176,214,238,.6);--iedge:rgba(128,182,218,.55);--ishd:30,96,150;--ishp:30,96,150;--ipt:rgba(240,248,253,.8);--iln:#D3E5F1;--ipg:#EEF6FB;--ibd:#D8E8F3;
+  --ipw:58em;--iph:46em;--isq:.62;--irot:30deg;--ifw:1.068;--ifh:1.556;--ix:2.9em;--iy:2.43em;--slx:1.2em;--sly:2.1em;--sbx:3.3em;--sby:5.7em;--spx:1.8em;--spy:3.1em}
+.iso-bt{position:absolute;left:2.2em;top:1.4em;font-size:1.1em;font-weight:600;color:var(--ink-3)}
+.iso-wire{position:absolute;border-left:.18em dashed #9CC6E2}
+.iso-wire.h{border-left:0;border-top:.18em dashed #9CC6E2}
+.iso-tile{position:absolute;width:19em;display:grid;gap:.5em;justify-items:start;padding:1.1em 1.2em 1.2em;border-radius:1.5em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd),0 1em 2em -1em rgba(30,96,150,.25)}
+.iso-tile b{font-size:1.05em;font-weight:600;line-height:1.15;letter-spacing:-.02em}
+.iso-tile .iso-btn{font-size:.78em;height:2.1em}
+.iso-tb{display:flex;gap:.3em}.iso-tb i{width:.5em;height:.5em;border-radius:50%;background:#CFE2EF}
+.iso-tile.lead{width:32em;grid-template-columns:auto 1fr 1fr auto;align-items:center;gap:.6em}
+.iso-fl{height:2em;display:flex;align-items:center;padding:0 .7em;border-radius:.6em;box-shadow:inset 0 0 0 .12em var(--ibd);color:var(--ink-3);font-size:.75em}
+.iso-qs{left:calc(-24em/1.3);top:calc(-6em/1.3);width:calc(22em/1.3)}
+.iso-cms{left:calc(52em/1.3);top:calc(30em/1.3);width:calc(22em/1.3)}
+.iso-cms .iso-plat span{box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-tog{display:flex;align-items:center;justify-content:space-between;gap:.6em;padding-top:.5em;border-top:.12em solid var(--ibd)}
+.iso-tog i{position:relative;width:2.4em;height:1.3em;border-radius:1em;background:var(--ia)}
+.iso-tog i::after{content:"";position:absolute;right:.15em;top:.15em;width:1em;height:1em;border-radius:50%;background:#fff}
+.iso-evt{left:calc(-6em/1.3);top:calc(50em/1.3);width:calc(26em/1.3);grid-template-columns:auto 1fr auto;align-items:center;gap:.6em;padding:.9em 1.2em;border-radius:3em;background:linear-gradient(145deg,#12345E,#0B2545);color:#fff;box-shadow:var(--spx) var(--spy) 4em -.8em rgba(11,37,69,.45)}
+.iso-evt b{font-size:.85em;font-weight:600}
+.iso-evt span{padding:.25em .8em;border-radius:2em;background:rgba(58,159,214,.25);color:#BFE3F7;font-size:.72em;font-weight:600}
+.iso-dot{width:.7em;height:.7em;border-radius:50%;background:#56C3F0;box-shadow:0 0 0 .3em rgba(86,195,240,.25);animation:isoPulse 2.4s ease-in-out infinite}
+/* CRO Audits & Quick Wins: an exploded stack, page -> heatmap -> friction pins, at a diamond angle */
+.iso-cro{--ia:#E07AAE;--iar:224,122,174;--iar2:236,160,198;--ib1:#FEF6FA;--ib2:#F9E6EF;--ib3:#F3D8E6;--islab:rgba(242,200,222,.6);--irim:rgba(238,192,216,.6);--iedge:rgba(214,150,186,.55);--ishd:150,50,100;--ishp:150,50,100;--ipt:rgba(253,244,249,.82);--iln:#F0D9E5;--ipg:#FBF2F6;--ibd:#F2DEE8;
+  --ipw:40em;--iph:50em;--isq:.58;--irot:-45deg;--ifw:.931;--ifh:1.677;--ix:-.61em;--iy:-.65em;--slx:-1.8em;--sly:1.8em;--sbx:-5em;--sby:5em;--spx:-2.7em;--spy:2.7em}
+.iso-wf{display:grid;grid-template-rows:auto auto 7em auto auto 1fr;gap:1em;padding:1.8em 2em}
+.iso-wf-nav{display:flex;align-items:center;gap:.7em}
+.iso-wf-hero{display:grid;gap:.6em;justify-items:start}
+.iso-wf-hero b{font-size:1.9em;line-height:1.08;letter-spacing:-.03em}
+.iso-wf-img{border-radius:1.2em;background:linear-gradient(140deg,#F8DCEA,#EDB7D2)}
+.iso-wf-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.8em}.iso-wf-row i{height:3.4em;border-radius:1em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-wf-rev{display:flex;align-items:center;gap:.8em;font-size:.9em;color:#F2A93B}
+.iso-wf-form{display:grid;grid-template-columns:1fr 1fr;gap:.5em;align-content:start;padding:1em;border-radius:1.2em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-wf-form b{grid-column:1/-1;font-size:.9em}.iso-wf-form i{height:1.7em;border-radius:.5em;box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-wf-form .iso-btn{grid-column:1/-1;height:2em}
+.iso-heat,.iso-pins{--lift:8em;border-radius:2.6em;box-shadow:inset 0 0 0 .15em rgba(255,255,255,.9);background:linear-gradient(160deg,rgba(255,255,255,.34),rgba(255,255,255,.12))}
+.iso-pins{--lift:16em;background:none;box-shadow:none}
+/* pin positions put each number over its anchor on the page; the dashed drop runs straight down the screen to it (135deg on this plane, 16em lift = 27.6em) */
+.iso-drop{position:absolute;left:1em;top:1em;width:26.3em;border-top:.14em dashed rgba(224,122,174,.75);transform-origin:0 0;transform:rotate(135deg);z-index:-1}
+.iso-lt{position:absolute;right:1.6em;top:1.4em;padding:.3em .9em;border-radius:2em;background:rgba(255,255,255,.85);font-size:.8em;font-weight:600;color:var(--ink-2)}
+.iso-heat i{position:absolute;border-radius:50%;filter:blur(1.2em)}
+.iso-heat .b1{left:3em;top:5em;width:22em;height:12em;background:radial-gradient(closest-side,rgba(232,70,90,.75),rgba(242,169,59,.45) 55%,transparent)}
+.iso-heat .b2{left:22em;top:13em;width:14em;height:9em;background:radial-gradient(closest-side,rgba(242,169,59,.55),transparent)}
+.iso-heat .b3{left:4em;top:33em;width:18em;height:9em;background:radial-gradient(closest-side,rgba(110,170,240,.5),transparent)}
+.iso-heat .b4{left:20em;top:38em;width:16em;height:9em;background:radial-gradient(closest-side,rgba(110,170,240,.35),transparent)}
+.iso-pin{position:absolute;isolation:isolate;display:flex;align-items:center;gap:.5em;padding:.35em .9em .35em .35em;border-radius:2em;background:#fff;box-shadow:0 .8em 1.6em -.6em rgba(150,50,100,.45);font-size:1.05em;font-weight:600;color:var(--ink);white-space:nowrap}
+.iso-pin i{display:grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:var(--ia);color:#fff;font-size:.8em;font-style:normal;font-weight:700}
+.iso-fix{left:calc(-28em/1.3);top:calc(4em/1.3);width:calc(26em/1.3)}
+.iso-fix li em{margin-left:auto;padding:.15em .6em;border-radius:2em;font-size:.82em;font-style:normal;font-weight:600;white-space:nowrap}
+.iso-fix li em.hi{background:#FCE9E2;color:#B4461F}.iso-fix li em.lo{background:#E4F5EF;color:#0B7A65}
+.iso-rec{left:calc(-24em/1.3);top:calc(40em/1.3);width:calc(25em/1.3)}
+.iso-scrub{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.6em}
+.iso-scrub>div{height:.45em;border-radius:1em;background:var(--iln);overflow:hidden}.iso-scrub>div i{display:block;height:100%;width:40%;background:var(--ia);animation:isoFill 6s linear infinite}
+.iso-play{width:1.8em;height:1.8em;border-radius:50%;background:var(--ia);clip-path:circle(50%)}
+.iso-play{background:var(--ia) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M8 6v8l6-4z' fill='%23fff'/%3E%3C/svg%3E") center/70% no-repeat}
+.iso-reb{left:calc(44em/1.3);top:calc(46em/1.3);width:calc(15em/1.3);gap:.15em;background:linear-gradient(145deg,#12345E,#0B2545);color:#fff;box-shadow:var(--spx) var(--spy) 4em -.8em rgba(11,37,69,.45)}
+.iso-reb b{font-size:1.5em;letter-spacing:-.02em}.iso-reb small{color:rgba(255,255,255,.6)}
+/* Ongoing Conversion Support: a monthly readout with page versions fanned beside it, gentler angle */
+.iso-ops{--ia:#0F9F84;--iar:15,159,132;--iar2:98,193,166;--ib1:#F3FBF8;--ib2:#E0F3EC;--ib3:#CFEAE0;--islab:rgba(186,228,214,.6);--irim:rgba(176,222,206,.6);--iedge:rgba(120,190,168,.55);--ishd:20,110,90;--ishp:20,110,90;--ipt:rgba(241,250,247,.82);--iln:#D3EBE3;--ipg:#EFF8F4;--ibd:#D9ECE5;
+  --ipw:60em;--iph:40em;--isq:.72;--irot:18deg;--ifw:.885;--ifh:1.689;--ix:-2.12em;--iy:.75em;--slx:.65em;--sly:2em;--sbx:1.8em;--sby:5.4em;--spx:.95em;--spy:2.9em}
+.iso-dash2{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:auto 1fr auto;gap:1.2em;padding:2em 2.2em}
+.iso-dh{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between}
+.iso-dh b{font-size:1.5em;letter-spacing:-.02em}
+.iso-tabs{display:flex;gap:.4em}.iso-tabs i{padding:.25em .8em;border-radius:2em;font-size:.75em;font-style:normal;font-weight:600;color:var(--ink-3);box-shadow:inset 0 0 0 .12em var(--ibd)}.iso-tabs i.on{background:var(--ia);color:#fff;box-shadow:none}
+.iso-chart{position:relative;display:grid;grid-template-rows:auto 1fr;gap:.6em;padding:1.2em 1.4em;border-radius:1.5em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-chart svg{width:100%;height:100%;min-height:10em}
+.iso-mk{position:absolute;padding:.2em .7em;border-radius:2em;background:#0B2545;color:#fff;font-size:.68em;font-weight:600;white-space:nowrap}
+.iso-kpis{display:grid;gap:.8em}
+.iso-kpis>div{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.3em .6em;padding:.9em 1.1em;border-radius:1.3em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd)}
+.iso-kpis b{color:var(--ia);font-size:1.3em}.iso-kpis .iso-ln{grid-column:1/-1;width:85%}
+.iso-shipped{grid-column:1/-1;display:flex;align-items:center;gap:.6em}
+.iso-shipped span:not(.iso-k){padding:.3em .9em;border-radius:2em;background:#E4F5EF;color:#0B7A65;font-size:.8em;font-weight:600}
+.iso-ver{width:calc(15em/1.3);gap:.5em;padding:1em 1.1em}
+.iso-ver .iso-k{font-size:.68em;color:var(--ia)}
+.iso-vh{display:block;height:4.2em;border-radius:.9em;background:linear-gradient(140deg,#DDF2EA,#A6DFCF)}
+.iso-chip{justify-self:start;padding:.2em .7em;border-radius:2em;background:#E4F5EF;color:#0B7A65;font-size:.68em;font-weight:600;white-space:nowrap}
+.iso-ver.v1{left:calc(-25em/1.3);top:calc(-3em/1.3);opacity:.75}
+.iso-ver.v2{left:calc(-20em/1.3);top:calc(5em/1.3);opacity:.9}
+.iso-ver.v3{left:calc(-15em/1.3);top:calc(13em/1.3)}
+.iso-kan{left:calc(55em/1.3);top:calc(8em/1.3);width:calc(28em/1.3)}
+.iso-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:.5em}
+.iso-cols>div{display:grid;gap:.35em;align-content:start}
+.iso-cols span{padding:.5em .6em;border-radius:.7em;background:#fff;box-shadow:inset 0 0 0 .12em var(--ibd);font-size:.66em;font-weight:500;line-height:1.25;color:var(--ink-2)}
+.iso-cols span.ok{color:#0B7A65;background:#E4F5EF;box-shadow:none}
+.iso-call{left:calc(30em/1.3);top:calc(44em/1.3);width:calc(26em/1.3);grid-template-columns:auto 1fr auto;align-items:center;gap:.7em;padding:.9em 1em;border-radius:3em}
+.iso-call img{width:2.6em;height:2.6em;border-radius:50%;object-fit:cover}
+.iso-call b{display:block;font-size:.85em}
+@keyframes isoPulse{0%,100%{box-shadow:0 0 0 .3em rgba(86,195,240,.25)}50%{box-shadow:0 0 0 .6em rgba(86,195,240,.1)}}
+@media (prefers-reduced-motion:reduce){.iso-track i,.iso-btn.go,.iso-dot,.iso-scrub>div i{animation:none}}
 @media (max-width:960px){.svc-layout{grid-template-columns:1fr}.svc-side{position:static}.svc-nav{display:none}}
 @media (max-width:560px){.viz{aspect-ratio:4/3}.svc-body{padding:24px}}
 
@@ -675,26 +844,44 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
 
     <div class="svc-list">
       <article class="svc-card s1" id="svc-1">
-        <div class="viz" aria-hidden="true">
-          <div class="viz-base" data-speed="-3"></div>
-          <div class="viz-accent" data-speed="5"></div>
-          <div class="vcard" style="left:8%;top:12%;width:42%" data-speed="-8">
-            <span class="k">Google Ads · search</span>
-            <div style="margin-top:6px;font-weight:600;color:var(--ink);font-size:14px">Spinal decompression in Frisco</div>
-            <div style="color:var(--mint);font-size:12px;margin-top:2px">Ad · drx.friscorehab.com</div>
-          </div>
-          <div class="vline" style="left:28%;top:42%;width:0;height:12%;border-width:0 0 0 1px"></div>
-          <div class="vcard" style="left:14%;top:54%;width:48%;display:grid;gap:7px" data-speed="4">
-            <span class="k">Landing page headline</span>
-            <span style="font-weight:600;color:var(--ink);font-size:14px">Relief for back pain, without surgery</span>
-            <span class="mini-bar" style="width:80%"></span>
-            <span style="height:24px;width:120px;border-radius:999px;background:var(--violet);margin-top:2px"></span>
-          </div>
-          <div class="vcard ink" style="right:6%;top:20%;width:30%" data-speed="11">
-            <span class="k">Message match</span>
-            <div style="font-size:24px;font-weight:600;margin-top:4px;letter-spacing:-.03em">Aligned</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.6)">ad promise → page headline</div>
-          </div>
+        <div class="viz iso-viz iso-lp" aria-hidden="true">
+          <div class="iso-glow"></div>
+          <div class="iso-stage"><div class="iso-plane">
+            <div class="iso-slab"></div>
+            <div class="iso-page">
+              <div class="iso-nav"><i class="iso-logo"></i><b>Frisco Spinal Rehab</b><span class="iso-dash"><i></i><i></i><i></i></span><span class="iso-btn sm">Book now</span></div>
+              <div class="iso-hero">
+                <div class="iso-hcopy"><span class="iso-eb">Spinal decompression · Frisco</span><b>Relief for back pain, <mark>without surgery</mark></b><i class="iso-ln"></i><i class="iso-ln s"></i><span class="iso-btn">Book a free consult →</span></div>
+                <div class="iso-himg"></div>
+              </div>
+              <div class="iso-feats"><div><i style="--c:#C9C6FF"></i><b>Non-surgical care</b><i class="iso-ln"></i></div><div class="on"><i style="--c:#8D88FF"></i><b>Free first consult</b><i class="iso-ln"></i></div><div><i style="--c:#9FE3EE"></i><b>Close to home</b><i class="iso-ln"></i></div></div>
+              <div class="iso-conv">
+                <div class="iso-proof"><span class="iso-stars">★★★★★</span><b>Patient reviews</b><i class="iso-ln"></i><i class="iso-ln s"></i></div>
+                <div class="iso-form"><b>Book a free consult</b><span>Name</span><span>Phone</span><span class="iso-btn">Send →</span></div>
+              </div>
+              <div class="iso-foot"><i class="iso-ln"></i><span>GA4 · form_submit tracked</span><i class="iso-ln s"></i></div>
+            </div>
+            <div class="iso-panel iso-ad">
+              <span class="iso-pt">Ad promise</span>
+              <div class="iso-q"><svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>back pain treatment frisco</div>
+              <small><b>Sponsored</b> drx.friscorehab.com</small>
+              <b class="iso-adh">Spinal Decompression <span class="iso-nw">| <mark>No Surgery</mark></span></b>
+              <span class="iso-tag">✓ Message match</span>
+            </div>
+            <div class="iso-panel iso-brand">
+              <span class="iso-pt">Your brand &amp; platform</span>
+              <div class="iso-sw"><i style="--c:#5452F6"></i><i style="--c:#8D88FF"></i><i style="--c:#0B2545"></i><i style="--c:#9FE3EE"></i><i style="--c:#fff"></i></div>
+              <div class="iso-type"><b>H1 Headline</b><span>H2 Section</span><small>Body copy</small></div>
+              <div class="iso-plat"><span>Webflow</span><span>Unbounce</span><span>HighLevel</span></div>
+            </div>
+            <div class="iso-panel iso-resp">
+              <span class="iso-pt">Responsive build</span>
+              <div class="iso-devs"><div class="d"><i></i><i></i><i></i></div><div class="t"><i></i><i></i></div><div class="m"><i></i><i></i></div></div>
+            </div>
+            <div class="iso-panel iso-ship">
+              <span class="iso-pt">Sprint</span><div class="iso-track"><i></i></div><small>5–7 days</small><span class="iso-btn go">Go live →</span>
+            </div>
+          </div></div>
         </div>
         <div class="svc-body">
           <div class="svc-title"><img src="__I4__" alt="" width="60" height="60"><h3>Landing Page Sprints</h3></div>
@@ -710,14 +897,23 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
       </article>
 
       <article class="svc-card s2" id="svc-2">
-        <div class="viz" aria-hidden="true">
-          <div class="viz-base" style="inset:10% 6% 8% 26%" data-speed="-3"></div>
-          <div class="viz-accent" style="inset:22% 64% 0 0" data-speed="6"></div>
-          <div class="vcard ink" style="left:40%;top:7%;width:22%;text-align:center" data-speed="-6"><span class="k">Home</span><div style="font-size:12px;margin-top:2px;color:rgba(255,255,255,.7)">Book a call</div></div>
-          <div class="vline" style="left:24%;top:24%;width:52%;height:10%;border-width:1px 1px 0 1px"></div>
-          <div class="vcard" style="left:7%;top:36%;width:32%" data-speed="5"><span class="k">Service</span><div style="font-weight:600;color:var(--ink);margin-top:4px">Request a quote</div><span class="pillx p-lo" style="margin-top:6px">1 job · 1 action</span></div>
-          <div class="vcard" style="left:58%;top:36%;width:34%" data-speed="9"><span class="k">Location</span><div style="font-weight:600;color:var(--ink);margin-top:4px">Call the Plano team</div><span class="pillx p-lo" style="margin-top:6px">1 job · 1 action</span></div>
-          <div class="vcard" style="left:30%;top:70%;width:40%;display:grid;gap:6px" data-speed="-5"><span class="k">Lead capture</span><span style="font-size:12px;color:var(--mint)">● GA4 events connected</span></div>
+        <div class="viz iso-viz iso-web" aria-hidden="true">
+          <div class="iso-glow"></div>
+          <div class="iso-stage"><div class="iso-plane">
+            <div class="iso-slab"></div>
+            <div class="iso-board">
+              <span class="iso-bt">Sitemap · one job per page</span>
+              <i class="iso-wire" style="left:29em;top:15em;height:2.2em"></i><i class="iso-wire h" style="left:12em;top:17.2em;width:34em"></i><i class="iso-wire" style="left:12em;top:17.2em;height:1.8em"></i><i class="iso-wire" style="left:46em;top:17.2em;height:1.8em"></i>
+              <i class="iso-wire" style="left:12em;top:31em;height:1.6em"></i><i class="iso-wire" style="left:46em;top:31em;height:1.6em"></i><i class="iso-wire h" style="left:12em;top:32.6em;width:34em"></i><i class="iso-wire" style="left:29em;top:32.6em;height:1.4em"></i>
+              <div class="iso-tile" style="left:19.5em;top:3.4em"><span class="iso-tb"><i></i><i></i><i></i></span><span class="iso-k">Home</span><b>Outdoor spaces, built to last</b><i class="iso-ln"></i><span class="iso-btn">Book a call</span></div>
+              <div class="iso-tile" style="left:2.5em;top:19em"><span class="iso-tb"><i></i><i></i><i></i></span><span class="iso-k">Service</span><b>Patios &amp; decks</b><i class="iso-ln"></i><span class="iso-btn">Request a quote</span></div>
+              <div class="iso-tile" style="left:36.5em;top:19em"><span class="iso-tb"><i></i><i></i><i></i></span><span class="iso-k">Location</span><b>Plano, TX</b><i class="iso-ln"></i><span class="iso-btn">Call the Plano team</span></div>
+              <div class="iso-tile lead" style="left:13em;top:34em"><span class="iso-k">Lead capture</span><span class="iso-fl">Name</span><span class="iso-fl">Phone</span><span class="iso-btn">Send</span></div>
+            </div>
+            <div class="iso-panel iso-qs"><span class="iso-pt">Buyer questions, in order</span><ol><li><i>1</i>What do you build?</li><li><i>2</i>Can I trust you?</li><li><i>3</i>What will it cost?</li><li><i>4</i>How do I start?</li></ol></div>
+            <div class="iso-panel iso-cms"><span class="iso-pt">Built on your platform</span><div class="iso-plat"><span>Webflow</span><span>WordPress</span><span>Shopify</span><span>HubSpot</span></div><div class="iso-tog"><small>Your team can edit it</small><i></i></div></div>
+            <div class="iso-panel iso-evt"><i class="iso-dot"></i><b>Lead events → GA4</b><span>Connected</span></div>
+          </div></div>
         </div>
         <div class="svc-body">
           <div class="svc-title"><img src="__I5__" alt="" width="60" height="60"><h3>Conversion-Focused Websites</h3></div>
@@ -733,24 +929,28 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
       </article>
 
       <article class="svc-card s3" id="svc-3">
-        <div class="viz" aria-hidden="true">
-          <div class="viz-base" data-speed="-3"></div>
-          <div class="viz-accent" data-speed="5"></div>
-          <div class="vcard" style="left:7%;top:10%;width:56%;display:grid;gap:9px" data-speed="-7">
-            <span class="k">Prioritized fixes</span>
-            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Rewrite hero for search intent</span><span class="pillx p-hi">High</span></div>
-            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Move reviews beside the form</span><span class="pillx p-hi">High</span></div>
-            <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="color:var(--ink)">Trim form to 3 fields</span><span class="pillx p-lo">Quick win</span></div>
-          </div>
-          <div class="vcard ink" style="right:6%;top:30%;width:28%" data-speed="10">
-            <span class="k">Rebuild needed?</span>
-            <div style="font-size:22px;font-weight:600;margin-top:4px">Not yet</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.6)">fix the page first</div>
-          </div>
-          <div class="vcard" style="left:20%;top:66%;width:38%" data-speed="4">
-            <span class="k">Session recordings</span>
-            <div style="display:flex;gap:4px;margin-top:8px;align-items:end;height:30px">
-              <i style="flex:1;height:90%;background:var(--violet);border-radius:3px"></i><i style="flex:1;height:70%;background:var(--lilac);border-radius:3px"></i><i style="flex:1;height:40%;background:#D9D6FF;border-radius:3px"></i><i style="flex:1;height:22%;background:#E6E9F2;border-radius:3px"></i><i style="flex:1;height:12%;background:#E6E9F2;border-radius:3px"></i>
+        <div class="viz iso-viz iso-cro" aria-hidden="true">
+          <div class="iso-glow"></div>
+          <div class="iso-stage">
+            <div class="iso-plane">
+              <div class="iso-slab"></div>
+              <div class="iso-wf">
+                <div class="iso-wf-nav"><i class="iso-logo"></i><i class="iso-ln s"></i></div>
+                <div class="iso-wf-hero"><b>Quality patios, fair prices</b><i class="iso-ln"></i><span class="iso-btn">Learn more</span></div>
+                <div class="iso-wf-img"></div>
+                <div class="iso-wf-row"><i></i><i></i><i></i></div>
+                <div class="iso-wf-rev"><span>★★★★★</span><i class="iso-ln s"></i></div>
+                <div class="iso-wf-form"><b>Get an estimate</b><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="iso-btn">Submit</span></div>
+              </div>
+              <div class="iso-panel iso-fix"><span class="iso-pt">Prioritized fixes</span><ol><li><i>1</i>Rewrite hero for search intent<em class="hi">High</em></li><li><i>2</i>Move reviews beside the form<em class="hi">High</em></li><li><i>3</i>Trim form to 3 fields<em class="lo">Quick win</em></li></ol></div>
+              <div class="iso-panel iso-rec"><span class="iso-pt">Session recordings</span><div class="iso-scrub"><i class="iso-play"></i><div><i></i></div><small>0:42</small></div></div>
+              <div class="iso-panel iso-reb"><small>Rebuild needed?</small><b>Not yet</b><small>Fix the page first</small></div>
+            </div>
+            <div class="iso-plane iso-heat"><span class="iso-lt">Heatmap</span><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+            <div class="iso-plane iso-pins">
+              <span class="iso-pin" style="left:13.57em;top:3.76em"><b class="iso-drop"></b><i>1</i>Vague headline</span>
+              <span class="iso-pin" style="left:12.81em;top:21.95em"><b class="iso-drop"></b><i>2</i>Reviews far from form</span>
+              <span class="iso-pin" style="left:19.67em;top:33.1em"><b class="iso-drop"></b><i>3</i>7 form fields</span>
             </div>
           </div>
         </div>
@@ -768,22 +968,25 @@ dialog::backdrop{background:rgba(11,37,69,.55);backdrop-filter:blur(4px)}
       </article>
 
       <article class="svc-card s4" id="svc-4">
-        <div class="viz" aria-hidden="true">
-          <div class="viz-base" style="inset:10% 6% 8% 26%" data-speed="-3"></div>
-          <div class="viz-accent" style="inset:22% 64% 0 0" data-speed="6"></div>
-          <div class="vcard" style="left:32%;top:9%;width:58%" data-speed="-6">
-            <span class="k">Monthly readout</span>
-            <svg viewBox="0 0 240 60" style="width:100%;height:56px;margin-top:6px"><path d="M0 52 C40 50 60 44 90 40 S150 26 180 20 S220 10 240 8" fill="none" stroke="#0F9F84" stroke-width="2"/><g fill="#0F9F84"><circle cx="90" cy="40" r="3"/><circle cx="180" cy="20" r="3"/><circle cx="240" cy="8" r="3.5"/></g></svg>
-          </div>
-          <div class="vcard" style="left:7%;top:50%;width:38%;display:grid;gap:6px" data-speed="8">
-            <span class="k">Backlog</span>
-            <span style="display:flex;gap:8px;align-items:center;color:var(--ink)"><i style="width:8px;height:8px;border-radius:50%;background:var(--mint)"></i>New location page</span>
-            <span style="display:flex;gap:8px;align-items:center;color:var(--ink)"><i style="width:8px;height:8px;border-radius:50%;background:var(--amber)"></i>Pricing page proof</span>
-          </div>
-          <div class="vcard ink" style="left:56%;top:58%;width:34%" data-speed="4">
-            <span class="k">Shipped this month</span>
-            <div style="font-size:20px;font-weight:600;margin-top:4px">Copy · UX · Pages</div>
-          </div>
+        <div class="viz iso-viz iso-ops" aria-hidden="true">
+          <div class="iso-glow"></div>
+          <div class="iso-stage"><div class="iso-plane">
+            <div class="iso-slab"></div>
+            <div class="iso-dash2">
+              <div class="iso-dh"><b>Monthly readout</b><span class="iso-tabs"><i>Apr</i><i>May</i><i class="on">Jun</i></span></div>
+              <div class="iso-chart"><span class="iso-k">Leads from the page</span>
+                <svg viewBox="0 0 300 110" preserveAspectRatio="none"><defs><linearGradient id="opsG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0F9F84" stop-opacity=".28"/><stop offset="1" stop-color="#0F9F84" stop-opacity="0"/></linearGradient></defs><path d="M0 96 C40 94 60 86 90 80 S150 60 180 48 S240 24 300 12 L300 110 L0 110Z" fill="url(#opsG)"/><path d="M0 96 C40 94 60 86 90 80 S150 60 180 48 S240 24 300 12" fill="none" stroke="#0F9F84" stroke-width="3"/><g fill="#fff" stroke="#0F9F84" stroke-width="3"><circle cx="90" cy="80" r="6"/><circle cx="180" cy="48" r="6"/><circle cx="294" cy="13" r="6"/></g></svg>
+                <span class="iso-mk" style="left:27%;top:58%">Hero test</span><span class="iso-mk" style="left:57%;top:30%">Proof added</span>
+              </div>
+              <div class="iso-kpis"><div><span class="iso-k">Leads</span><b>↑</b><i class="iso-ln"></i></div><div><span class="iso-k">Calls</span><b>↑</b><i class="iso-ln"></i></div><div><span class="iso-k">Form starts</span><b>↑</b><i class="iso-ln"></i></div></div>
+              <div class="iso-shipped"><span class="iso-k">Shipped this month</span><span>Copy</span><span>UX</span><span>Pages</span></div>
+            </div>
+            <div class="iso-panel iso-ver v1"><span class="iso-k">Month 1</span><i class="iso-vh"></i><i class="iso-ln"></i><i class="iso-ln s"></i><span class="iso-chip">Launch</span></div>
+            <div class="iso-panel iso-ver v2"><span class="iso-k">Month 2</span><i class="iso-vh"></i><i class="iso-ln"></i><i class="iso-ln s"></i><span class="iso-chip">+ Proof by form</span></div>
+            <div class="iso-panel iso-ver v3"><span class="iso-k">Month 3</span><i class="iso-vh"></i><i class="iso-ln"></i><i class="iso-ln s"></i><span class="iso-chip">+ Location page</span></div>
+            <div class="iso-panel iso-kan"><span class="iso-pt">Backlog</span><div class="iso-cols"><div><small>Next</small><span>New location page</span></div><div><small>Doing</small><span>Pricing page proof</span></div><div><small>Shipped</small><span class="ok">Hero copy ✓</span></div></div></div>
+            <div class="iso-panel iso-call"><img src="assets/img/chat-riz.webp" alt="" width="40" height="40"><div><b>Strategy call with Riz</b><small>Thu · 10:00</small></div><span class="iso-btn">Join</span></div>
+          </div></div>
         </div>
         <div class="svc-body">
           <div class="svc-title"><img src="__I7__" alt="" width="60" height="60"><h3>Ongoing Conversion Support</h3></div>

@@ -438,7 +438,7 @@ def process_section():
 
 def svc_viz(slug):
     n = SVC_META[slug][0][1]
-    s = SRC.index(f'<article class="svc-card s{n}" id="svc-{n}">'); s = SRC.index('<div class="viz"', s)
+    s = SRC.index(f'<article class="svc-card s{n}" id="svc-{n}">'); s = SRC.index('<div class="viz', s)
     t = SRC.index('<div class="svc-body">', s)
     return SRC[s:t].strip()
 
