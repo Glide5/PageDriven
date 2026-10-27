@@ -15,9 +15,13 @@ INDEX_SUFFIX = "\n</body></html>"
 CLARITY = ('<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};'
            't=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);'
            '})(window, document, "clarity", "script", "y1yxoxpvv3");</script>')
-def with_clarity(page):
-    assert "</head>" in page and "clarity.ms" not in page
-    return page.replace("</head>", CLARITY + "</head>", 1)
+# Favicon (files from _source/favicon.py, copied to the site root by build.py), added to every page's <head>.
+FAVICON = ('<link rel="icon" href="favicon.ico" sizes="any">'
+           '<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">'
+           '<link rel="apple-touch-icon" href="apple-touch-icon.png">')
+def with_head_tags(page):
+    assert "</head>" in page and "clarity.ms" not in page and 'rel="icon"' not in page
+    return page.replace("</head>", FAVICON + CLARITY + "</head>", 1)
 
 if not os.path.exists(os.path.join(SITE, "index.html")):
     sys.exit("No build found. Run: python3 _source/build.py")
@@ -27,9 +31,9 @@ for d, _, files in os.walk(SITE):
         src = os.path.join(d, f); rel = os.path.relpath(src, SITE); dst = os.path.join(ROOT, rel)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         if rel == "index.html":
-            open(dst, "w").write(with_clarity(INDEX_PREFIX) + open(src).read() + INDEX_SUFFIX)
+            open(dst, "w").write(with_head_tags(INDEX_PREFIX) + open(src).read() + INDEX_SUFFIX)
         elif rel.endswith(".html"):
-            open(dst, "w").write(with_clarity(open(src).read()))
+            open(dst, "w").write(with_head_tags(open(src).read()))
         else:
             shutil.copyfile(src, dst)
         n += 1

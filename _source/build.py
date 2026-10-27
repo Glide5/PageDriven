@@ -25,6 +25,7 @@ shutil.copy(os.path.join(BASE, "images", "team-review.webp"), f"{OUT}/assets/img
 shutil.copy(os.path.join(BASE, "images", "riz-meeting.webp"), f"{OUT}/assets/img/riz-meeting.webp")
 shutil.copy(os.path.join(BASE, "images", "andrew.webp"), f"{OUT}/assets/img/andrew.webp")
 shutil.copy(os.path.join(BASE, "images", "chat-riz.webp"), f"{OUT}/assets/img/chat-riz.webp")
+for n in ("favicon.ico", "favicon-32.png", "apple-touch-icon.png"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/{n}")  # made by favicon.py
 for n in ("logo.webp", "logo-foot.webp", "larry-video.webp") + tuple(f"{c}-logo.webp" for c in ("levitate", "frisco", "lourcey", "one10", "rset")) + tuple(f"{c}-{t}.webp" for c in ("caseleap", "frisco", "levitate", "outdoor", "lourcey") for t in ("before", "after")) + ("one10-site.webp", "rset-site.webp", "stainguys-site.webp"): shutil.copy(os.path.join(BASE, "images", n), f"{OUT}/assets/img/{n}")
 IMG = {f"I{i}": f"assets/img/i{i}.webp" for i in range(16)}
 IMG.update(RIZ="assets/img/riz-waist.webp", AVATAR="assets/img/avatar.webp")
